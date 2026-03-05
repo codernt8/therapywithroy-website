@@ -54,6 +54,13 @@
     .notice-box p { margin: 0; font-size: 0.93rem; color: var(--text-mid); }
     .notice-box strong { color: var(--sage-dark); }
 
+    /* DocuSeal signing section */
+    .signing-section { margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(122,158,159,0.2); }
+    .signing-section .section-label { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.6rem; font-weight: 500; }
+    .signing-section h2 { font-size: 1.4rem; font-family: 'Cormorant Garamond', serif; font-weight: 300; color: var(--text-dark); text-transform: none; letter-spacing: 0; margin-bottom: 0.75rem; }
+    .signing-section > p { font-size: 0.95rem; color: var(--text-mid); margin-bottom: 2rem; }
+    .docuseal-wrap { border: 1px solid rgba(122,158,159,0.25); border-radius: 6px; overflow: hidden; background: white; }
+
     footer { background: var(--text-dark); color: rgba(255,255,255,0.6); padding: 3rem 2rem; text-align: center; }
     .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 300; color: white; margin-bottom: 0.8rem; }
     .footer-tagline { font-size: 0.82rem; font-style: italic; color: rgba(255,255,255,0.45); margin-bottom: 1.5rem; }
@@ -186,6 +193,19 @@
 
     <div class="notice-box">
       <p><strong>Privacy Policy:</strong> By signing this agreement, you also confirm that you have read and understood the <a href="privacy-policy.html">Privacy Policy</a> at therapywithroy.co.uk/privacy-policy, which explains in full how your personal data is collected, stored, and protected.</p>
+    </div>
+
+    <!-- DocuSeal Signing Section -->
+    <div class="signing-section">
+      <p class="section-label">Your Signature</p>
+      <h2>Sign Your Agreement</h2>
+      <p>Please read the agreement above carefully, then complete and sign below. Once submitted, you and Roy will both receive a copy of the signed document by email.</p>
+      <div class="docuseal-wrap">
+        <script src="https://cdn.docuseal.com/js/form.js"></script>
+        <docuseal-form
+          data-src="https://docuseal.com/d/CAurQ8s1jacCH8">
+        </docuseal-form>
+      </div>
     </div>
 
   </div>
