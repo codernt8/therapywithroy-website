@@ -19,14 +19,12 @@
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', sans-serif; color: var(--text-dark); background: var(--warm-white); font-size: 16px; line-height: 1.8; padding-top: 72px; }
 
-    /* ── Nav (identical to index.html) ── */
+    /* ── Nav ── */
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 4rem; background: rgba(253,252,250,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(122,158,159,0.15); }
     .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--text-dark); text-decoration: none; letter-spacing: 0.02em; }
-    .nav-links { display: flex; align-items: center; gap: 2.5rem; list-style: none; }
-    .nav-links a { text-decoration: none; color: var(--text-mid); font-size: 0.85rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--sage-dark); }
-    .nav-cta { background: var(--sage-dark) !important; color: white !important; padding: 0.6rem 1.4rem; border-radius: 2rem; font-size: 0.82rem !important; transition: background 0.2s !important; }
-    .nav-cta:hover { background: var(--sage) !important; }
+    .nav-back { text-decoration: none; color: var(--text-mid); font-size: 0.82rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; display: flex; align-items: center; gap: 0.4rem; }
+    .nav-back:hover { color: var(--sage-dark); }
+    .nav-back::before { content: '\2190'; font-size: 1rem; }
 
     /* ── Page content ── */
     .page-container { max-width: 780px; margin: 0 auto; padding: 4rem 2rem 6rem; }
@@ -52,7 +50,7 @@
     tr:last-child td { border-bottom: none; }
     tr:nth-child(even) td { background: rgba(247,244,239,0.5); }
 
-    /* ── Footer (matching index.html) ── */
+    /* ── Footer ── */
     footer { background: var(--text-dark); color: rgba(255,255,255,0.6); padding: 3rem 2rem; text-align: center; }
     .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 300; color: white; margin-bottom: 0.8rem; }
     .footer-tagline { font-size: 0.82rem; font-style: italic; color: rgba(255,255,255,0.45); margin-bottom: 1.5rem; }
@@ -75,7 +73,6 @@
 
     @media (max-width: 768px) {
       nav { padding: 1rem 1.5rem; }
-      .nav-links { display: none; }
       .page-container { padding: 2.5rem 1.25rem 4rem; }
     }
   </style>
@@ -85,13 +82,7 @@
   <!-- Nav -->
   <nav>
     <a href="index.html" class="nav-logo">therapy with roy</a>
-    <ul class="nav-links">
-      <li><a href="index.html#who">Who I Help</a></li>
-      <li><a href="index.html#about">About Roy</a></li>
-      <li><a href="index.html#services">Services &amp; Fees</a></li>
-      <li><a href="index.html#faq">FAQ</a></li>
-      <li><a href="index.html#book" class="nav-cta">Book Now</a></li>
-    </ul>
+    <a href="index.html" class="nav-back">Return to main site</a>
   </nav>
 
   <div class="page-container">
@@ -217,7 +208,7 @@
     <p>I may update this policy from time to time to reflect changes in the law or my practice. Any material changes will be noted at the top of this page with an updated date. I encourage you to review this policy periodically.</p>
   </div>
 
-  <!-- Footer (matching index.html) -->
+  <!-- Footer -->
   <footer>
     <div class="footer-logo">therapy with roy</div>
     <div class="footer-tagline">Reflect. Connect. Grow.</div>
