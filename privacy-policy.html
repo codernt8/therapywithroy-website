@@ -19,14 +19,12 @@
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', sans-serif; color: var(--text-dark); background: var(--warm-white); font-size: 16px; line-height: 1.8; padding-top: 72px; }
 
-    /* ── Nav ── */
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 4rem; background: rgba(253,252,250,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(122,158,159,0.15); }
     .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--text-dark); text-decoration: none; letter-spacing: 0.02em; }
     .nav-back { text-decoration: none; color: var(--text-mid); font-size: 0.82rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; display: flex; align-items: center; gap: 0.4rem; }
     .nav-back:hover { color: var(--sage-dark); }
     .nav-back::before { content: '\2190'; font-size: 1rem; }
 
-    /* ── Page content ── */
     .page-container { max-width: 780px; margin: 0 auto; padding: 4rem 2rem 6rem; }
     .page-hero { padding: 3rem 0 2rem; border-bottom: 1px solid rgba(122,158,159,0.2); margin-bottom: 3rem; }
     .page-label { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.8rem; font-weight: 500; }
@@ -42,7 +40,6 @@
     a { color: var(--sage-dark); }
     a:hover { color: var(--sage); }
 
-    /* ── Tables ── */
     .table-wrap { overflow-x: auto; margin: 1rem 0 2rem; border-radius: 2px; border: 1px solid rgba(122,158,159,0.2); }
     table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
     th { background: var(--sage-dark); color: #fff; text-align: left; padding: 0.75rem 1rem; font-family: 'Inter', sans-serif; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500; }
@@ -50,7 +47,6 @@
     tr:last-child td { border-bottom: none; }
     tr:nth-child(even) td { background: rgba(247,244,239,0.5); }
 
-    /* ── Footer ── */
     footer { background: var(--text-dark); color: rgba(255,255,255,0.6); padding: 3rem 2rem; text-align: center; }
     .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 300; color: white; margin-bottom: 0.8rem; }
     .footer-tagline { font-size: 0.82rem; font-style: italic; color: rgba(255,255,255,0.45); margin-bottom: 1.5rem; }
@@ -61,7 +57,6 @@
     .footer-links a:hover { color: white; }
     .footer-legal { font-size: 0.75rem; color: rgba(255,255,255,0.3); line-height: 1.8; }
 
-    /* ── Cookie Banner ── */
     #cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; background: var(--text-dark); color: rgba(255,255,255,0.85); padding: 1.25rem 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; z-index: 2000; font-size: 0.85rem; flex-wrap: wrap; box-shadow: 0 -4px 20px rgba(0,0,0,0.2); }
     #cookie-banner p { margin: 0; flex: 1; min-width: 200px; line-height: 1.5; }
     #cookie-banner a { color: var(--sage-light); }
@@ -79,7 +74,6 @@
 </head>
 <body>
 
-  <!-- Nav -->
   <nav>
     <a href="index.html" class="nav-logo">therapy with roy</a>
     <a href="index.html" class="nav-back">Return to main site</a>
@@ -113,6 +107,7 @@
         <tr><td>Payment information</td><td>Transaction records (no card data stored by me)</td><td>Stripe via Acuity</td></tr>
         <tr><td>Health and wellbeing information</td><td>Reason for seeking therapy, relevant background shared in sessions</td><td>Intake form, sessions</td></tr>
         <tr><td>Session notes</td><td>Brief notes to support continuity of care</td><td>Recorded by me during/after sessions</td></tr>
+        <tr><td>Session recordings</td><td>Google Meet video recording of a therapy session</td><td>Only where you have given explicit prior consent via your Client Agreement; for clinical supervision purposes only</td></tr>
         <tr><td>Communication records</td><td>Emails or messages relating to bookings</td><td>Email, WhatsApp</td></tr>
         <tr><td>Website usage data</td><td>Pages visited, time on site (anonymised)</td><td>Google Analytics 4 (with your consent)</td></tr>
       </table>
@@ -124,7 +119,7 @@
       <li><strong>Contract:</strong> To deliver therapy services you have booked and paid for.</li>
       <li><strong>Legal obligation:</strong> To comply with BACP ethical requirements and applicable law.</li>
       <li><strong>Legitimate interests:</strong> To manage bookings, respond to enquiries, and maintain appropriate clinical records.</li>
-      <li><strong>Explicit consent:</strong> For website analytics cookies (you may accept or decline via the cookie banner).</li>
+      <li><strong>Explicit consent:</strong> For website analytics cookies (you may accept or decline via the cookie banner); and for any session recording (you may grant or withhold this separately via your Client Agreement — it is entirely optional and will never affect your access to therapy).</li>
     </ul>
 
     <h2>4. How I Use Your Data</h2>
@@ -134,12 +129,14 @@
       <li>To send appointment confirmations and reminders</li>
       <li>To maintain clinical records as required by BACP guidance</li>
       <li>To respond to your enquiries</li>
+      <li>To support clinical supervision (session recordings only, where explicit consent has been given)</li>
       <li>To understand how visitors use this website (analytics, with consent only)</li>
     </ul>
     <p>I do not use your personal data for marketing purposes and will never sell or share your data with third parties for commercial gain.</p>
 
     <h2>5. Confidentiality and Supervision</h2>
     <p>Everything discussed in your sessions is confidential. As a BACP Registered Member, I am required to attend regular clinical supervision. Aspects of our work may be discussed with my supervisor in an anonymised form — your full name and any identifying details will never be disclosed. My supervisor is bound by the same professional standards of confidentiality.</p>
+    <p>Where you have consented to session recording, recordings shared with my supervisor for supervision purposes are treated with the same strict confidentiality and deleted promptly after use (see Section 9).</p>
     <p>There are limited circumstances in which I may be required to break confidentiality:</p>
     <ul>
       <li>If I have serious concerns that you or someone else is at risk of significant harm</li>
@@ -154,7 +151,7 @@
         <tr><th>Service</th><th>Purpose</th><th>Data Shared</th><th>Privacy Policy</th></tr>
         <tr><td>Acuity Scheduling</td><td>Appointment booking and reminders</td><td>Name, email, phone, appointment details</td><td><a href="https://www.acuityscheduling.com/privacy.php" target="_blank" rel="noopener">acuityscheduling.com</a></td></tr>
         <tr><td>Stripe</td><td>Payment processing</td><td>Transaction data (card data not stored by me)</td><td><a href="https://stripe.com/gb/privacy" target="_blank" rel="noopener">stripe.com</a></td></tr>
-        <tr><td>Google Workspace</td><td>Email, calendar, and video sessions (Google Meet)</td><td>Communication content, meeting data</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com</a></td></tr>
+        <tr><td>Google Workspace &amp; Google Meet</td><td>Email, calendar, video sessions, and temporary storage of session recordings (where consent given)</td><td>Communication content, meeting data, session recordings (consent-only)</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com</a></td></tr>
         <tr><td>WhatsApp (Meta)</td><td>Booking-related communication (if you initiate contact via WhatsApp)</td><td>Name, phone number, message content</td><td><a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener">whatsapp.com</a></td></tr>
         <tr><td>Netlify</td><td>Website hosting</td><td>Standard server logs (IP address, browser type)</td><td><a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener">netlify.com</a></td></tr>
         <tr><td>Google Analytics 4</td><td>Website analytics (consent-gated)</td><td>Anonymised usage data (only if you accept cookies)</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com</a></td></tr>
@@ -169,11 +166,13 @@
     <ul>
       <li>Session notes are recorded on paper during sessions and transferred to a fully encrypted, password-protected personal laptop (FileVault/BitLocker enabled). Paper notes are securely destroyed by cross-cut shredding once digitised.</li>
       <li>Emails and booking information are held within Google Workspace and Acuity Scheduling respectively, both of which operate with appropriate security standards.</li>
+      <li>Session recordings (where consent has been given) are stored temporarily in an encrypted, access-restricted Google Drive folder. Recordings are never shared beyond my clinical supervisor and are deleted promptly after the relevant supervision session.</li>
       <li>I do not store payment card details. All payments are processed securely by Stripe.</li>
     </ul>
 
     <h2>9. Retention Period</h2>
     <p>Client records (including session notes and the signed client agreement) are retained for <strong>7 years from the date of our last session</strong>, in line with BACP guidance. After this period, records are securely destroyed.</p>
+    <p>Session recordings are subject to a <strong>separate, shorter retention period</strong>: they are permanently deleted within <strong>30 days of the supervision session</strong> for which they were used, and no later than 30 days after the recording was made if not used in supervision.</p>
 
     <h2>10. Your Rights</h2>
     <p>Under UK GDPR, you have the following rights regarding your personal data:</p>
@@ -184,7 +183,7 @@
       <li><strong>Restriction:</strong> You may ask me to restrict how I process your data in certain circumstances.</li>
       <li><strong>Portability:</strong> You may request your data in a portable, machine-readable format where applicable.</li>
       <li><strong>Objection:</strong> You may object to processing based on legitimate interests.</li>
-      <li><strong>Withdraw consent:</strong> Where processing is based on your consent (e.g. analytics cookies), you may withdraw that consent at any time without affecting the lawfulness of prior processing.</li>
+      <li><strong>Withdraw consent:</strong> Where processing is based on your consent — including consent to session recording — you may withdraw that consent at any time by contacting me at <a href="mailto:roy@therapywithroy.co.uk">roy@therapywithroy.co.uk</a>. Withdrawal will not affect the lawfulness of any processing carried out before withdrawal, and will never affect your access to therapy.</li>
     </ul>
     <p>To exercise any of these rights, please contact me at <a href="mailto:roy@therapywithroy.co.uk">roy@therapywithroy.co.uk</a>. I will respond within one calendar month.</p>
 
@@ -208,7 +207,6 @@
     <p>I may update this policy from time to time to reflect changes in the law or my practice. Any material changes will be noted at the top of this page with an updated date. I encourage you to review this policy periodically.</p>
   </div>
 
-  <!-- Footer -->
   <footer>
     <div class="footer-logo">therapy with roy</div>
     <div class="footer-tagline">Reflect. Connect. Grow.</div>
@@ -235,7 +233,6 @@
     </div>
   </footer>
 
-  <!-- Cookie Consent Banner -->
   <div id="cookie-banner" role="region" aria-label="Cookie consent">
     <p>This website uses analytics cookies to understand how visitors use the site. No personal data is collected without your consent. <a href="privacy-policy.html">Learn more</a>.</p>
     <div class="cookie-btns">
@@ -244,7 +241,6 @@
     </div>
   </div>
 
-  <!-- Google Analytics — loads only after consent -->
   <script>
     (function() {
       var GA_ID = 'G-EZDPQG16PQ';
