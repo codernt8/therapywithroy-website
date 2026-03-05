@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Booking Confirmed | Therapy with Roy</title>
+  <meta name="robots" content="noindex"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --sage-dark: #4a6e6f;
+      --sage-mid: #7a9e9f;
+      --cream: #f7f4ef;
+      --text-dark: #2c3e3f;
+      --text-light: #6b7c7d;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Inter', system-ui, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-sans);
+      background: var(--cream);
+      color: var(--text-dark);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    nav {
+      padding: 1.1rem 2rem;
+      border-bottom: 1px solid rgba(122,158,159,0.2);
+      background: var(--cream);
+    }
+    .nav-logo {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 300;
+      color: var(--text-dark);
+      text-decoration: none;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1.5rem;
+    }
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      max-width: 560px;
+      width: 100%;
+      padding: 3rem 2.5rem;
+      text-align: center;
+      box-shadow: 0 4px 30px rgba(74,110,111,0.1);
+    }
+    .check-icon {
+      width: 64px;
+      height: 64px;
+      background: rgba(122,158,159,0.12);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+    }
+    .check-icon svg {
+      width: 32px;
+      height: 32px;
+      stroke: var(--sage-dark);
+      stroke-width: 2.5;
+      fill: none;
+    }
+    h1 {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+    }
+    .subtitle {
+      color: var(--text-light);
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+    .info-box {
+      background: rgba(122,158,159,0.08);
+      border-left: 3px solid var(--sage-mid);
+      border-radius: 0 4px 4px 0;
+      padding: 1.25rem 1.5rem;
+      text-align: left;
+      margin-bottom: 2rem;
+      font-size: 0.9rem;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+    .info-box strong { color: var(--text-dark); }
+    .btn-home {
+      display: inline-block;
+      background: var(--sage-dark);
+      color: #fff;
+      text-decoration: none;
+      padding: 0.85rem 2rem;
+      border-radius: 3px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: opacity 0.2s;
+    }
+    .btn-home:hover { opacity: 0.85; }
+    footer {
+      background: var(--text-dark);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.8rem;
+    }
+    footer a { color: rgba(255,255,255,0.4); }
+  </style>
+  <!-- GA booking_complete event — fires when this page loads -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    var consent = localStorage.getItem('cookie_consent');
+    if (consent === 'accepted') {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-EZDPQG16PQ';
+      document.head.appendChild(s);
+      s.onload = function() {
+        gtag('js', new Date());
+        gtag('config', 'G-EZDPQG16PQ', {'anonymize_ip': true});
+        gtag('event', 'booking_complete', {
+          'event_category': 'conversion',
+          'event_label': 'Session booked'
+        });
+      };
+    }
+  </script>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">therapy with roy</a>
+</nav>
+
+<main>
+  <div class="card">
+    <div class="check-icon">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+    </div>
+    <h1>Your session is confirmed</h1>
+    <p class="subtitle">Thank you for booking. Roy is looking forward to speaking with you and will be in touch shortly to confirm your Google Meet link.</p>
+    <div class="info-box">
+      <strong>What happens next:</strong><br/>
+      You will receive a confirmation email from Acuity Scheduling with your appointment details. Your session will take place online via <strong>Google Meet</strong>. If you have any questions before your session, please email <a href="mailto:roy@therapywithroy.co.uk" style="color:var(--sage-dark);">roy@therapywithroy.co.uk</a> or call <strong>07824 426000</strong>.<br/><br/>
+      <strong>Cancellations:</strong> Please give at least 48 hours' notice to receive a full refund.
+    </div>
+    <a href="index.html" class="btn-home">Return to main site</a>
+  </div>
+</main>
+
+<footer>
+  &copy; 2026 Therapy with Roy &nbsp;&bull;&nbsp;
+  <a href="privacy-policy.html">Privacy Policy</a>
+</footer>
+
+</body>
+</html>
