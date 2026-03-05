@@ -4,116 +4,265 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Client Agreement | Therapy with Roy</title>
+  <meta name="description" content="Client agreement for Therapy with Roy. Sets out how we work together, fees, confidentiality, and your rights as a client." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij4KICA8Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSIzMiIgZmlsbD0iIzRhNmU2ZiIvPgogIDxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjI4IiBmaWxsPSJub25lIiBzdHJva2U9IiM3YTllOWYiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIwLjUiLz4KICA8dGV4dCB4PSIzMiIgeT0iNDQiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIzNCIgZm9udC13ZWlnaHQ9IjQwMCIgCiAgICAgICAgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2Y3ZjRlZiI+UjwvdGV4dD4KPC9zdmc+" />
+  <link rel="shortcut icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij4KICA8Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSIzMiIgZmlsbD0iIzRhNmU2ZiIvPgogIDxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjI4IiBmaWxsPSJub25lIiBzdHJva2U9IiM3YTllOWYiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIwLjUiLz4KICA8dGV4dCB4PSIzMiIgeT0iNDQiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIzNCIgZm9udC13ZWlnaHQ9IjQwMCIgCiAgICAgICAgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2Y3ZjRlZiI+UjwvdGV4dD4KPC9zdmc+" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Georgia', serif; color: #2c2c2c; background: #fafaf8; line-height: 1.8; font-size: 16px; }
-    header { background: #2c4a3e; padding: 20px 40px; display: flex; align-items: center; justify-content: space-between; }
-    header a { color: #e8d5b0; text-decoration: none; font-family: 'Arial', sans-serif; font-size: 14px; }
-    header .logo { color: #e8d5b0; font-size: 20px; font-weight: bold; letter-spacing: 1px; }
-    .container { max-width: 780px; margin: 60px auto; padding: 0 30px 80px; }
-    h1 { font-size: 2rem; color: #2c4a3e; margin-bottom: 10px; }
-    .version-note { color: #777; font-size: 14px; margin-bottom: 40px; font-family: Arial, sans-serif; }
-    .intro-box { background: #f0ece0; border-left: 4px solid #2c4a3e; padding: 18px 22px; margin-bottom: 40px; border-radius: 0 6px 6px 0; font-size: 15px; }
-    h2 { font-size: 1.1rem; color: #2c4a3e; margin: 36px 0 12px; font-family: Arial, sans-serif; text-transform: uppercase; letter-spacing: 0.5px; }
-    p { margin-bottom: 16px; }
-    ul { margin: 0 0 16px 24px; }
-    ul li { margin-bottom: 8px; }
-    .fee-table { width: 100%; border-collapse: collapse; margin: 20px 0 24px; font-size: 15px; }
-    .fee-table th { background: #2c4a3e; color: #e8d5b0; text-align: left; padding: 10px 14px; font-family: Arial, sans-serif; font-size: 13px; text-transform: uppercase; }
-    .fee-table td { padding: 10px 14px; border-bottom: 1px solid #ddd; }
-    .fee-table tr:nth-child(even) td { background: #f4f0e8; }
-    .cta-box { background: #2c4a3e; color: #e8d5b0; padding: 28px 32px; border-radius: 8px; text-align: center; margin-top: 50px; }
-    .cta-box p { color: #e8d5b0; margin-bottom: 16px; }
-    .cta-box a.btn { display: inline-block; background: #e8d5b0; color: #2c4a3e; padding: 12px 28px; border-radius: 4px; text-decoration: none; font-family: Arial, sans-serif; font-weight: bold; font-size: 15px; }
-    a { color: #2c4a3e; }
-    footer { background: #2c4a3e; color: #c8bfa8; text-align: center; padding: 24px; font-family: Arial, sans-serif; font-size: 13px; }
+    :root {
+      --sage: #7a9e9f; --sage-light: #b2cece; --sage-dark: #4a6e6f;
+      --cream: #f7f4ef; --warm-white: #fdfcfa;
+      --text-dark: #2c3e3e; --text-mid: #4a5e5e; --text-light: #7a9090;
+      --accent: #c9a96e;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text-dark); background: var(--warm-white); font-size: 16px; line-height: 1.8; padding-top: 72px; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 4rem; background: rgba(253,252,250,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(122,158,159,0.15); }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--text-dark); text-decoration: none; letter-spacing: 0.02em; }
+    .nav-back { text-decoration: none; color: var(--text-mid); font-size: 0.82rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; display: flex; align-items: center; gap: 0.4rem; }
+    .nav-back:hover { color: var(--sage-dark); }
+    .nav-back::before { content: '\2190'; font-size: 1rem; }
+
+    .page-container { max-width: 780px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+    .page-hero { padding: 3rem 0 2rem; border-bottom: 1px solid rgba(122,158,159,0.2); margin-bottom: 3rem; }
+    .page-label { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.8rem; font-weight: 500; }
+    h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 300; color: var(--text-dark); line-height: 1.2; margin-bottom: 0.75rem; }
+    .page-version { color: var(--text-light); font-size: 0.82rem; letter-spacing: 0.04em; }
+    .intro-box { background: var(--cream); border-left: 3px solid var(--sage); padding: 1.4rem 1.6rem; margin-bottom: 0; border-radius: 0 4px 4px 0; }
+    .intro-box p { margin: 0; color: var(--text-mid); font-size: 0.97rem; line-height: 1.85; }
+
+    h2 { font-family: 'Inter', sans-serif; font-size: 0.78rem; color: var(--sage-dark); margin: 3rem 0 0.9rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.15em; }
+    p { margin-bottom: 1.1rem; color: var(--text-mid); line-height: 1.85; }
+    ul { margin: 0 0 1.1rem 1.5rem; }
+    ul li { margin-bottom: 0.5rem; color: var(--text-mid); line-height: 1.75; }
+    ol { margin: 0 0 1.1rem 1.5rem; }
+    ol li { margin-bottom: 0.6rem; color: var(--text-mid); line-height: 1.75; }
+    strong { color: var(--text-dark); font-weight: 500; }
+    a { color: var(--sage-dark); }
+    a:hover { color: var(--sage); }
+
+    .table-wrap { overflow-x: auto; margin: 1rem 0 1.5rem; border-radius: 2px; border: 1px solid rgba(122,158,159,0.2); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    th { background: var(--sage-dark); color: #fff; text-align: left; padding: 0.75rem 1rem; font-family: 'Inter', sans-serif; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500; }
+    td { padding: 0.75rem 1rem; border-bottom: 1px solid rgba(122,158,159,0.15); vertical-align: top; color: var(--text-mid); }
+    tr:last-child td { border-bottom: none; }
+    tr:nth-child(even) td { background: rgba(247,244,239,0.5); }
+
+    .notice-box { background: var(--cream); border: 1px solid rgba(122,158,159,0.25); border-radius: 4px; padding: 1.4rem 1.6rem; margin: 1.5rem 0; }
+    .notice-box p { margin: 0; font-size: 0.93rem; color: var(--text-mid); }
+    .notice-box strong { color: var(--sage-dark); }
+
+    footer { background: var(--text-dark); color: rgba(255,255,255,0.6); padding: 3rem 2rem; text-align: center; }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 300; color: white; margin-bottom: 0.8rem; }
+    .footer-tagline { font-size: 0.82rem; font-style: italic; color: rgba(255,255,255,0.45); margin-bottom: 1.5rem; }
+    .footer-bacp { margin: 1.5rem auto; }
+    .footer-bacp img { max-height: 70px; width: auto; background: white; padding: 0.6rem 1rem; border-radius: 4px; }
+    .footer-links { display: flex; justify-content: center; gap: 2rem; list-style: none; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.06em; transition: color 0.2s; }
+    .footer-links a:hover { color: white; }
+    .footer-legal { font-size: 0.75rem; color: rgba(255,255,255,0.3); line-height: 1.8; }
+
+    #cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; background: var(--text-dark); color: rgba(255,255,255,0.85); padding: 1.25rem 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; z-index: 2000; font-size: 0.85rem; flex-wrap: wrap; box-shadow: 0 -4px 20px rgba(0,0,0,0.2); }
+    #cookie-banner p { margin: 0; flex: 1; min-width: 200px; line-height: 1.5; }
+    #cookie-banner a { color: var(--sage-light); }
+    .cookie-btns { display: flex; gap: 0.75rem; flex-shrink: 0; }
+    .cookie-accept { background: var(--sage-dark); color: #fff; border: none; padding: 0.55rem 1.25rem; border-radius: 3px; cursor: pointer; font-size: 0.85rem; font-family: 'Inter', sans-serif; font-weight: 500; transition: opacity 0.2s; }
+    .cookie-accept:hover { opacity: 0.85; }
+    .cookie-decline { background: transparent; color: rgba(255,255,255,0.6); border: 1px solid rgba(255,255,255,0.3); padding: 0.55rem 1.25rem; border-radius: 3px; cursor: pointer; font-size: 0.85rem; font-family: 'Inter', sans-serif; transition: opacity 0.2s; }
+    .cookie-decline:hover { opacity: 0.75; }
+
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      .page-container { padding: 2.5rem 1.25rem 4rem; }
+    }
   </style>
 </head>
 <body>
 
-<header>
-  <span class="logo">Therapy with Roy</span>
-  <a href="index.html">&larr; Back to main site</a>
-</header>
+  <nav>
+    <a href="index.html" class="nav-logo">therapy with roy</a>
+    <a href="index.html" class="nav-back">Return to main site</a>
+  </nav>
 
-<div class="container">
-  <h1>Client Agreement</h1>
-  <p class="version-note">Version 2 &nbsp;|&nbsp; March 2026</p>
+  <div class="page-container">
 
-  <div class="intro-box">
-    This agreement sets out how we will work together and outlines my professional obligations, including around confidentiality. At our first session I will set aside time to discuss this with you and answer any questions. You will receive a copy to sign electronically via DocuSeal before we begin working together.
+    <div class="page-hero">
+      <p class="page-label">Working Together</p>
+      <h1>Client Agreement</h1>
+      <p class="page-version">Version 1 &nbsp;&middot;&nbsp; March 2026</p>
+    </div>
+
+    <div class="intro-box">
+      <p>This agreement sets out how we will work together and outlines my professional obligations, including around confidentiality. At our first session I will set aside time to discuss this with you and answer any questions. You will receive a copy to sign electronically before we begin working together.</p>
+    </div>
+
+    <h2>Qualifications and Professional Membership</h2>
+    <p>I hold an MSocSc in Counselling from the University of Hong Kong (2017). I am a Registered Member of the British Association for Counselling and Psychotherapy (BACP), Membership No. 397064, and as such I abide by their <a href="https://www.bacp.co.uk/ethical-framework" target="_blank" rel="noopener">Ethical Framework</a>.</p>
+
+    <h2>Anti-Discriminatory Practice</h2>
+    <p>I am committed to providing an anti-discriminatory service and strive to ensure this is present in all our work together. I welcome clients of all backgrounds, cultures, identities, and orientations.</p>
+
+    <h2>The Way I Work</h2>
+    <p>I am trained in an integrative therapeutic approach, drawing on Cognitive Behavioural Therapy (CBT), Emotion-Focused Therapy, and Bowen&rsquo;s Family Systems Theory. This means I tailor my approach to your individual needs rather than following a single fixed method. For more information on therapeutic approaches, please see <a href="https://www.bacp.co.uk/about-therapy/types-of-therapy" target="_blank" rel="noopener">bacp.co.uk/about-therapy</a>.</p>
+    <p>Sessions are held online via Google Meet, by appointment only, and are 50 minutes in duration. Sessions are typically offered on a weekly basis, though we can discuss the frequency that best suits your needs.</p>
+
+    <h2>Online Therapy</h2>
+    <p>As all sessions are delivered online, there are some specific considerations to be aware of:</p>
+    <ul>
+      <li><strong>Technology:</strong> You are responsible for ensuring you have a stable internet connection and a private, confidential space for sessions. If you experience technical difficulties at the start of a session, please contact me by phone or email and we will attempt to reconnect or reschedule as appropriate.</li>
+      <li><strong>Connectivity failure mid-session:</strong> If we are unexpectedly disconnected during a session, I will attempt to re-establish contact via Google Meet first, then by phone. If we are unable to reconnect, the session will be considered to have ended and will be charged as normal.</li>
+      <li><strong>Limitations:</strong> Online therapy is not suitable for everyone. If at any point I believe that online working is not meeting your needs, I will discuss this with you and, where appropriate, suggest alternative options.</li>
+      <li><strong>Crisis:</strong> Online therapy has limitations in a crisis situation. If you are in immediate danger or require urgent support, please refer to the crisis contacts listed under &ldquo;Contact Between Sessions&rdquo; below.</li>
+    </ul>
+
+    <h2>Duration and Ending Therapy</h2>
+    <p>I offer both short and long-term therapy. We will discuss the planned duration of our work together during our initial consultation. If you wish to end therapy, I ask that you let me know as early as possible. I recommend at least one or two closing sessions to bring our work to a considered end, where possible. This helps ensure a safe and supportive ending.</p>
+
+    <h2>Fees</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Session Type</th><th>Duration</th><th>Fee</th></tr>
+        <tr><td>Individual Therapy</td><td>50 mins</td><td>&pound;80</td></tr>
+        <tr><td>Couples Therapy</td><td>50 mins</td><td>&pound;120</td></tr>
+        <tr><td>Free Initial Consultation</td><td>30 mins</td><td>No charge</td></tr>
+      </table>
+    </div>
+    <p>I do not offer concessionary or reduced-rate sessions. Payment is taken at the time of booking via Stripe through Acuity Scheduling. I review my fees periodically and will give you <strong>at least four weeks&rsquo; written notice</strong> of any proposed changes.</p>
+
+    <h2>Cancellation Policy</h2>
+    <p>I require a minimum of <strong>48 hours&rsquo; notice</strong> to cancel or reschedule a session. Cancellations made with less than 48 hours&rsquo; notice are non-refundable. Late arrivals cannot be accommodated beyond the scheduled end time of the session.</p>
+
+    <h2>Holidays and Availability</h2>
+    <p>My normal working hours are Monday to Friday, 9am to 7pm UK time. I only see clients by prior appointment. If you need to take a holiday or extended break, please let me know as early as possible so we can plan accordingly. I will give you a minimum of one session&rsquo;s notice of my own holidays.</p>
+
+    <h2>Contact Between Sessions</h2>
+    <p>I work with clients only within scheduled sessions. Outside of these sessions, I am not available for therapeutic contact, and I am unable to respond to messages of a therapeutic nature between appointments.</p>
+    <p>If you need to contact me for administrative purposes (such as booking, cancelling, or rescheduling), you may reach me by email at <a href="mailto:roy@therapywithroy.co.uk">roy@therapywithroy.co.uk</a> or by phone/WhatsApp at 07824 426000 during normal working hours.</p>
+    <p>If you are in crisis or require urgent support outside of our sessions, please contact one of the following:</p>
+    <ul>
+      <li>NHS 111 (call or visit <a href="https://111.nhs.uk" target="_blank" rel="noopener">111.nhs.uk</a>)</li>
+      <li>Samaritans: 116 123 (free, 24/7)</li>
+      <li>Emergency services: 999</li>
+    </ul>
+
+    <h2>Supervision</h2>
+    <p>As a BACP Registered Member, I am required to attend regular clinical supervision to ensure my practice is safe, ethical, and effective. Aspects of our work may be discussed in supervision in an anonymised form. Your full name and any identifying details will never be disclosed. My supervisor is bound by the same professional standards of confidentiality as I am.</p>
+
+    <h2>Recording of Sessions</h2>
+    <p>I may wish to record a session via Google Meet for the purpose of clinical supervision. This helps me to reflect on my practice and ensure I am providing you with the best possible support.</p>
+    <p><strong>Recording is entirely optional and will never affect your access to therapy or the quality of care you receive.</strong> A session will only ever be recorded if you have given explicit prior consent, indicated by signing the separate recording consent section of this agreement. You may withdraw this consent at any time by contacting me at <a href="mailto:roy@therapywithroy.co.uk">roy@therapywithroy.co.uk</a>, and this will not affect your therapy in any way.</p>
+    <p>Recordings are stored securely in an encrypted, access-restricted folder. They are shared only with my clinical supervisor and are <strong>permanently deleted within 30 days of the supervision session</strong> for which they were used. No recording will ever be used for any other purpose.</p>
+    <p>Sessions may not be recorded by either party without prior written agreement.</p>
+
+    <h2>Confidentiality</h2>
+    <p>As a BACP Registered Member, I am bound by their Ethical Framework to protect your confidentiality. Everything we discuss in sessions is confidential, with the following exceptions:</p>
+    <ol>
+      <li><strong>Harm to yourself or others:</strong> If I have serious concerns that you or someone else is at risk of significant harm, I may need to break confidentiality. Where possible, I will discuss this with you and my supervisor before taking any action.</li>
+      <li><strong>Legal and ethical obligations:</strong> I am not bound by confidentiality if I believe, in good faith, that disclosure may assist in the prevention or detection of a serious crime. This includes safeguarding concerns relating to children or vulnerable adults, acts of terrorism, or matters involving substantial financial crime.</li>
+    </ol>
+
+    <h2>Keep Safe Policy</h2>
+    <p>In certain situations where you have expressed a clear intention to end your life, or where I have serious reason to believe this to be the case, we may agree &mdash; after careful discussion &mdash; to put in place a Keep Safe Plan. This would involve you agreeing to take specific steps to protect your safety, such as contacting your GP, a crisis team, or the Samaritans, should you feel at risk between sessions.</p>
+
+    <h2>Attending Sessions</h2>
+    <p>I am unable to deliver effective therapy if you attend a session under the influence of non-prescribed substances or alcohol. If this occurs, I will discuss it with you and we may agree a period of abstinence as a condition of continuing our work together.</p>
+
+    <h2>Record Keeping and Data Protection</h2>
+    <p>I keep brief, accurate session notes to support the continuity of our work. Notes are stored securely on an encrypted, password-protected laptop used only by me. Paper notes are destroyed by cross-cut shredding once transferred to secure digital storage. Client records are retained for <strong>7 years from the date of our last session</strong>, in line with BACP guidance, after which they are securely destroyed.</p>
+    <p>I am registered with the Information Commissioner&rsquo;s Office (ICO Registration No. ZC100652). All personal data is processed in accordance with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018. Please see my full <a href="privacy-policy.html">Privacy Policy</a> for more detail, including how session recordings are handled where consent has been given.</p>
+
+    <h2>Letters and Reports</h2>
+    <p>I am willing to write letters or reports where relevant and appropriate, but will require your written consent before doing so. A fee will apply, based on the time required to prepare the document.</p>
+
+    <h2>Complaints</h2>
+    <p>If you have any concerns about our sessions or the quality of my work, I hope you will feel able to raise these with me directly. I take all feedback seriously. If you feel unable to raise a concern with me directly, or in the event of a serious complaint, you may contact BACP&rsquo;s Get Help with Counselling Concerns service:</p>
+    <ul>
+      <li>Phone: <a href="tel:01455883300">01455 883300</a></li>
+      <li>Email: <a href="mailto:gethelp@bacp.co.uk">gethelp@bacp.co.uk</a></li>
+      <li>Post: BACP, 15 St John&rsquo;s Business Park, Lutterworth, LE17 4HB</li>
+    </ul>
+
+    <div class="notice-box">
+      <p><strong>Privacy Policy:</strong> By signing this agreement, you also confirm that you have read and understood the <a href="privacy-policy.html">Privacy Policy</a> at therapywithroy.co.uk/privacy-policy, which explains in full how your personal data is collected, stored, and protected.</p>
+    </div>
+
   </div>
 
-  <h2>Qualifications and Professional Membership</h2>
-  <p>I hold an MSocSc in Counselling from the University of Hong Kong (2017). I am a Registered Member of the British Association for Counselling and Psychotherapy (BACP), Membership No. 397064, and abide by their <a href="https://www.bacp.co.uk/ethical-framework" target="_blank">Ethical Framework</a>.</p>
+  <footer>
+    <div class="footer-logo">therapy with roy</div>
+    <div class="footer-tagline">Reflect. Connect. Grow.</div>
+    <div class="footer-bacp">
+      <a href="https://www.bacp.co.uk/therapists/397064/roy-ka-yiu-lam/london-se17" target="_blank" rel="noopener">
+        <img src="BACP Logo - 397064.png" alt="BACP Registered Member logo - Roy Lam membership number 397064" />
+      </a>
+    </div>
+    <ul class="footer-links">
+      <li><a href="index.html#who">Who I Help</a></li>
+      <li><a href="index.html#about">About Roy</a></li>
+      <li><a href="index.html#services">Services &amp; Fees</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a href="index.html#book">Book Now</a></li>
+      <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="client-agreement.html">Client Agreement</a></li>
+    </ul>
+    <div class="footer-legal">
+      Roy Lam &bull; MBACP Registered Member No. 397064 &bull; ICO Registration No. ZC100652<br />
+      <a href="mailto:roy@therapywithroy.co.uk" style="color:rgba(255,255,255,0.4);">roy@therapywithroy.co.uk</a><br />
+      Online sessions only &bull; Available Mon&ndash;Fri, 9am&ndash;7pm<br /><br />
+      &copy; 2026 Therapy with Roy. All rights reserved.<br />
+      This site does not provide crisis support. If you are in immediate distress, please contact the <a href="https://www.samaritans.org" style="color:rgba(255,255,255,0.4);">Samaritans on 116 123</a>.
+    </div>
+  </footer>
 
-  <h2>Anti-Discriminatory Practice</h2>
-  <p>I am committed to providing an anti-discriminatory service and strive to ensure this is present in all our work together. I welcome clients of all backgrounds, cultures, identities, and orientations.</p>
-
-  <h2>The Way I Work</h2>
-  <p>I am trained in an integrative therapeutic approach, drawing on Cognitive Behavioural Therapy (CBT), Emotion-Focused Therapy, and Bowen's Family Systems Theory. This means I tailor my approach to your individual needs rather than following a single fixed method.</p>
-  <p>Sessions are held online via Google Meet, by appointment only, and are 50 minutes in duration. Sessions are typically offered on a weekly basis, though we can discuss the frequency that best suits your needs.</p>
-
-  <h2>Duration and Ending Therapy</h2>
-  <p>I offer both short and long-term therapy. We will discuss the planned duration of our work together during our initial consultation. If you wish to end therapy, I ask that you let me know as early as possible. I recommend at least one or two closing sessions to bring our work to a considered end.</p>
-
-  <h2>Fees</h2>
-  <table class="fee-table">
-    <tr><th>Session Type</th><th>Duration</th><th>Fee</th></tr>
-    <tr><td>Individual Therapy</td><td>50 mins</td><td>£80</td></tr>
-    <tr><td>Couples Therapy</td><td>50 mins</td><td>£120</td></tr>
-    <tr><td>Free Initial Consultation</td><td>30 mins</td><td>No charge</td></tr>
-  </table>
-  <p>I do not offer concessionary or reduced-rate sessions. Payment is taken at the time of booking via Stripe through Acuity Scheduling. I review my fees periodically and will give reasonable notice of any changes.</p>
-
-  <h2>Cancellation Policy</h2>
-  <p>I require a minimum of 48 hours' notice to cancel or reschedule a session. Cancellations made with less than 48 hours' notice are non-refundable. Late arrivals cannot be accommodated beyond the scheduled end time of the session.</p>
-
-  <h2>Holidays and Availability</h2>
-  <p>My normal working hours are Monday to Friday, 9am to 7pm UK time. If you need to take a break from sessions, please let me know as early as possible. I will give you a minimum of one session's notice of my own holidays.</p>
-
-  <h2>Contact Between Sessions</h2>
-  <p>I work with clients only within scheduled sessions. I am not available for therapeutic contact between appointments. For administrative matters (bookings, cancellations), you may contact me at <a href="mailto:roy@therapywithroy.co.uk">roy@therapywithroy.co.uk</a> or 07824 426000 during normal working hours.</p>
-  <p>If you are in crisis outside of sessions, please contact:</p>
-  <ul>
-    <li>NHS 111 (call or visit <a href="https://111.nhs.uk" target="_blank">111.nhs.uk</a>)</li>
-    <li>Samaritans: 116 123 (free, 24/7)</li>
-    <li>Emergency services: 999</li>
-  </ul>
-
-  <h2>Supervision</h2>
-  <p>As a BACP Registered Member, I attend regular clinical supervision to ensure my practice is safe, ethical, and effective. Aspects of our work may be discussed in supervision in anonymised form. Your full name and any identifying details will never be disclosed. My supervisor is bound by the same professional standards of confidentiality as I am.</p>
-
-  <h2>Confidentiality</h2>
-  <p>Everything we discuss in sessions is confidential, with the following exceptions:</p>
-  <ul>
-    <li><strong>Harm to yourself or others:</strong> If I have serious concerns that you or someone else is at risk of significant harm, I may need to break confidentiality. Where possible, I will discuss this with you before taking action.</li>
-    <li><strong>Legal and ethical obligations:</strong> I am not bound by confidentiality where disclosure may assist in the prevention or detection of serious crime, including safeguarding concerns relating to children or vulnerable adults, terrorism, or substantial financial crime.</li>
-  </ul>
-
-  <h2>Record Keeping and Data Protection</h2>
-  <p>I keep brief, accurate session notes stored on an encrypted, password-protected laptop. Paper notes are destroyed by cross-cut shredding once transferred to secure digital storage. Client records are retained for 7 years from the date of our last session, in line with BACP guidance.</p>
-  <p>I am registered with the Information Commissioner's Office (ICO Registration No. ZC100652). All personal data is processed in accordance with UK GDPR and the Data Protection Act 2018. See my full <a href="privacy-policy.html">Privacy Policy</a> for more detail.</p>
-
-  <h2>Complaints</h2>
-  <p>If you have any concerns about our work together, I hope you will feel able to raise them with me directly. If you feel unable to do so, or in the event of a serious complaint, you may contact BACP's Get Help with Counselling Concerns service:</p>
-  <ul>
-    <li>Phone: 01455 883300</li>
-    <li>Email: <a href="mailto:gethelp@bacp.co.uk">gethelp@bacp.co.uk</a></li>
-    <li>Post: BACP, 15 St John's Business Park, Lutterworth, LE17 4HB</li>
-  </ul>
-
-  <div class="cta-box">
-    <p>Ready to get started? Book a free 30-minute consultation and I'll send you the agreement to sign before our first session.</p>
-    <a class="btn" href="index.html#book">Book a Free Consultation</a>
+  <div id="cookie-banner" role="region" aria-label="Cookie consent">
+    <p>This website uses analytics cookies to understand how visitors use the site. No personal data is collected without your consent. <a href="privacy-policy.html">Learn more</a>.</p>
+    <div class="cookie-btns">
+      <button class="cookie-decline" id="cookie-decline">Decline</button>
+      <button class="cookie-accept" id="cookie-accept">Accept Analytics</button>
+    </div>
   </div>
-</div>
 
-<footer>
-  &copy; 2026 Therapy with Roy &nbsp;|&nbsp; Roy Lam (Ka Yiu Lam), MBACP Registered Member No. 397064 &nbsp;|&nbsp; ICO Registration No. ZC100652
-  <br>
-  <a href="index.html" style="color:#c8bfa8;">Back to main site</a> &nbsp;|&nbsp; <a href="privacy-policy.html" style="color:#c8bfa8;">Privacy Policy</a>
-</footer>
+  <script>
+    (function() {
+      var GA_ID = 'G-EZDPQG16PQ';
+      function loadGA() {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', GA_ID, { 'anonymize_ip': true });
+      }
+      function hideBanner() {
+        var b = document.getElementById('cookie-banner');
+        if (b) b.style.display = 'none';
+      }
+      var consent = localStorage.getItem('cookie_consent');
+      if (consent === 'accepted') { loadGA(); hideBanner(); }
+      else if (consent === 'declined') { hideBanner(); }
+      document.addEventListener('DOMContentLoaded', function() {
+        var acceptBtn = document.getElementById('cookie-accept');
+        var declineBtn = document.getElementById('cookie-decline');
+        if (acceptBtn) {
+          acceptBtn.addEventListener('click', function() {
+            localStorage.setItem('cookie_consent', 'accepted');
+            loadGA(); hideBanner();
+          });
+        }
+        if (declineBtn) {
+          declineBtn.addEventListener('click', function() {
+            localStorage.setItem('cookie_consent', 'declined');
+            hideBanner();
+          });
+        }
+      });
+    })();
+  </script>
 
 </body>
 </html>
