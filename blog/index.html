@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog | Therapy with Roy — Online Therapy Insights & Advice</title>
+  <meta name="description" content="Thoughts, insights and practical guidance from Roy Lam, MBACP registered online therapist. Covering anxiety, relationships, couples therapy, identity and more.">
+  <link rel="canonical" href="https://therapywithroy.co.uk/blog/" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij4KICA8Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSIzMiIgZmlsbD0iIzRhNmU2ZiIvPgogIDxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjI4IiBmaWxsPSJub25lIiBzdHJva2U9IiM3YTllOWYiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIwLjUiLz4KICA8dGV4dCB4PSIzMiIgeT0iNDQiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIzNCIgZm9udC13ZWlnaHQ9IjQwMCIgCiAgICAgICAgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2Y3ZjRlZiI+UjwvdGV4dD4KPC9zdmc+"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --sage: #7a9e9f; --sage-light: #b2cece; --sage-dark: #4a6e6f;
+      --cream: #f7f4ef; --warm-white: #fdfcfa;
+      --text-dark: #2c3e3e; --text-mid: #4a5e5e; --text-light: #7a9090;
+      --accent: #c9a96e;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text-dark); background: var(--warm-white); font-size: 16px; line-height: 1.7; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 4rem; background: rgba(253,252,250,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(122,158,159,0.15); }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--text-dark); text-decoration: none; letter-spacing: 0.02em; }
+    .nav-links { display: flex; align-items: center; gap: 2.5rem; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--text-mid); font-size: 0.85rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--sage-dark); }
+    .nav-cta { background: var(--sage-dark) !important; color: white !important; padding: 0.6rem 1.4rem; border-radius: 2rem; font-size: 0.82rem !important; }
+    .blog-index-hero { padding: 8rem 2rem 4rem; background: var(--cream); text-align: center; }
+    .section-label { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.8rem; font-weight: 500; }
+    .page-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 300; color: var(--text-dark); margin-bottom: 1rem; }
+    .page-subtitle { color: var(--text-mid); font-size: 1.05rem; max-width: 540px; margin: 0 auto; }
+    .blog-grid { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem 6rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; }
+    .blog-card { background: white; border: 1px solid rgba(122,158,159,0.2); border-radius: 2px; overflow: hidden; transition: all 0.25s; text-decoration: none; display: flex; flex-direction: column; }
+    .blog-card:hover { border-color: var(--sage); box-shadow: 0 8px 32px rgba(74,110,111,0.1); transform: translateY(-2px); }
+    .blog-card-img { width: 100%; height: 220px; object-fit: cover; display: block; }
+    .blog-card-body { padding: 1.8rem; flex: 1; display: flex; flex-direction: column; }
+    .blog-card-cat { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sage-dark); font-weight: 500; margin-bottom: 0.6rem; }
+    .blog-card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 400; color: var(--text-dark); line-height: 1.3; margin-bottom: 0.8rem; }
+    .blog-card-excerpt { color: var(--text-mid); font-size: 0.9rem; line-height: 1.7; flex: 1; }
+    .blog-card-footer { display: flex; align-items: center; gap: 0.8rem; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(122,158,159,0.15); }
+    .blog-card-author-img { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; object-position: center top; }
+    .blog-card-meta { font-size: 0.78rem; color: var(--text-light); }
+    footer { background: var(--text-dark); color: rgba(255,255,255,0.6); padding: 3rem 2rem; text-align: center; }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 300; color: white; margin-bottom: 0.8rem; }
+    .footer-tagline { font-size: 0.82rem; font-style: italic; color: rgba(255,255,255,0.45); margin-bottom: 1.5rem; }
+    .footer-links { display: flex; justify-content: center; gap: 2rem; list-style: none; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.06em; transition: color 0.2s; }
+    .footer-links a:hover { color: white; }
+    .footer-legal { font-size: 0.75rem; color: rgba(255,255,255,0.3); line-height: 1.8; }
+    .footer-bacp img { max-height: 70px; width: auto; background: white; padding: 0.6rem 1rem; border-radius: 4px; margin: 1.5rem auto; display: block; }
+    @media (max-width: 768px) { nav { padding: 1rem 1.5rem; } .nav-links { display: none; } .blog-grid { padding: 2rem 1.2rem 4rem; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="../index.html" class="nav-logo">therapy with roy</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#who">Who I Help</a></li>
+      <li><a href="../index.html#about">About Roy</a></li>
+      <li><a href="../index.html#services">Services &amp; Fees</a></li>
+      <li><a href="../blog/" class="active">Blog</a></li>
+      <li><a href="../index.html#book" class="nav-cta">Book Now</a></li>
+    </ul>
+  </nav>
+
+  <div class="blog-index-hero">
+    <p class="section-label">Insights &amp; Guidance</p>
+    <h1 class="page-title">From the therapy room</h1>
+    <p class="page-subtitle">Honest, practical writing on relationships, wellbeing, and the courage it takes to grow.</p>
+  </div>
+
+  <div class="blog-grid">
+    <a href="couples-therapy.html" class="blog-card">
+      <img src="images/couples-therapy-hero.jpg" alt="Couple in warm conversation representing couples therapy" class="blog-card-img" />
+      <div class="blog-card-body">
+        <p class="blog-card-cat">Couples Therapy</p>
+        <h2 class="blog-card-title">What Actually Happens in Couples Therapy? (And Is It Right for Us?)</h2>
+        <p class="blog-card-excerpt">Many couples arrive at therapy feeling a mixture of hope and nervousness. Here&rsquo;s what really happens &mdash; from the first session onwards.</p>
+        <div class="blog-card-footer">
+          <img src="../roy pic.jpg" alt="Roy Lam" class="blog-card-author-img" />
+          <span class="blog-card-meta">Roy Lam &bull; 7 March 2026 &bull; 4 min read</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <footer>
+    <div class="footer-logo">therapy with roy</div>
+    <div class="footer-tagline">Reflect. Connect. Grow.</div>
+    <a href="https://www.bacp.co.uk/therapists/397064/roy-ka-yiu-lam/london-se17" target="_blank" rel="noopener">
+      <img src="../BACP Logo - 397064.png" alt="BACP Registered Member logo" class="footer-bacp" />
+    </a>
+    <ul class="footer-links">
+      <li><a href="../index.html#who">Who I Help</a></li>
+      <li><a href="../index.html#about">About Roy</a></li>
+      <li><a href="../index.html#services">Services &amp; Fees</a></li>
+      <li><a href="../blog/">Blog</a></li>
+      <li><a href="../index.html#book">Book Now</a></li>
+      <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+    </ul>
+    <div class="footer-legal">
+      Roy Lam &bull; MBACP Registered Member No. 397064 &bull; ICO Registration No. ZC100652<br/>
+      &copy; 2026 Therapy with Roy. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
