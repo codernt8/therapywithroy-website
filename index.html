@@ -26,6 +26,7 @@
     .nav-links a:hover { color: var(--sage-dark); }
     .nav-cta { background: var(--sage-dark) !important; color: white !important; padding: 0.6rem 1.4rem; border-radius: 2rem; font-size: 0.82rem !important; transition: background 0.2s !important; }
     .nav-cta:hover { background: var(--sage) !important; }
+    .menu-toggle { display: none; background: none; border: none; font-size: 1.8rem; color: var(--text-dark); cursor: pointer; line-height: 1; padding: 0.2rem; }
 
     #hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #2c4a4e 0%, #4a7a7e 40%, #7aacac 70%, #b2cece 100%); position: relative; overflow: hidden; text-align: center; padding: 6rem 2rem 4rem; }
     #hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 60% 40%, rgba(201,169,110,0.12) 0%, transparent 60%); }
@@ -135,8 +136,24 @@
     .footer-legal { font-size: 0.75rem; color: rgba(255,255,255,0.3); line-height: 1.8; }
 
     @media (max-width: 768px) {
-      nav { padding: 1rem 1.5rem; }
-      .nav-links { display: none; }
+      nav { padding: 1rem 1.5rem; flex-wrap: wrap; }
+      .menu-toggle { display: block; }
+      .nav-links { 
+        display: none; 
+        flex-direction: column; 
+        width: 100%; 
+        padding: 1.5rem 0; 
+        gap: 1.5rem; 
+        text-align: center; 
+        background: rgba(253,252,250,0.98);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        border-bottom: 1px solid rgba(122,158,159,0.15);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      }
+      .nav-links.active { display: flex; }
+      .nav-cta { display: inline-block; }
       .who-grid, .about-grid { grid-template-columns: 1fr; gap: 2rem; }
       .steps-grid, .services-grid { grid-template-columns: 1fr; }
       .testimonials-grid { grid-template-columns: 1fr; }
@@ -285,13 +302,15 @@
 
   <nav>
     <a href="#hero" class="nav-logo">therapy with roy</a>
-    <ul class="nav-links">
+    <button class="menu-toggle" aria-label="Toggle menu" id="mobile-menu-btn">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
       <li><a href="#who">Who I Help</a></li>
       <li><a href="#about">About Roy</a></li>
       <li><a href="#services">Services &amp; Fees</a></li>
       <li><a href="#testimonials">Testimonials</a></li>
       <li><a href="#faq">FAQ</a></li>
-          <li><a href="#book" class="nav-cta">Book Now</a></li>
+      <li><a href="blog/">Blog</a></li>
+      <li><a href="#book" class="nav-cta">Book Now</a></li>
     </ul>
   </nav>
 
@@ -600,6 +619,7 @@
       <li><a href="#services">Services &amp; Fees</a></li>
       <li><a href="#testimonials">Testimonials</a></li>
       <li><a href="#faq">FAQ</a></li>
+      <li><a href="blog/">Blog</a></li>
       <li><a href="#book">Book Now</a></li>
       <li><a href="privacy-policy.html">Privacy Policy</a></li>
       <li><a href="client-agreement.html">Client Agreement</a></li>
@@ -667,6 +687,32 @@
     });
   </script>
 
+  <!-- Mobile Menu Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const navLinksList = document.getElementById('nav-links');
+      if(menuBtn && navLinksList) {
+        menuBtn.addEventListener('click', function() {
+          navLinksList.classList.toggle('active');
+          if(navLinksList.classList.contains('active')) {
+            menuBtn.innerHTML = '&times;';
+            menuBtn.style.fontSize = '2.2rem';
+          } else {
+            menuBtn.innerHTML = '&#9776;';
+            menuBtn.style.fontSize = '1.8rem';
+          }
+        });
+        navLinksList.querySelectorAll('a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            navLinksList.classList.remove('active');
+            menuBtn.innerHTML = '&#9776;';
+            menuBtn.style.fontSize = '1.8rem';
+          });
+        });
+      }
+    });
+  </script>
 
   <!-- Cookie Consent Banner -->
   <div id="cookie-banner" role="region" aria-label="Cookie consent">
