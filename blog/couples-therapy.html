@@ -46,6 +46,8 @@
     .nav-links a:hover, .nav-links a.active { color: var(--sage-dark); }
     .nav-cta { background: var(--sage-dark) !important; color: white !important; padding: 0.6rem 1.4rem; border-radius: 2rem; font-size: 0.82rem !important; transition: background 0.2s !important; }
     .nav-cta:hover { background: var(--sage) !important; }
+    .menu-toggle { display: none; background: none; border: none; font-size: 1.8rem; color: var(--text-dark); cursor: pointer; line-height: 1; padding: 0.2rem; }
+    
     .blog-hero { padding-top: 7rem; background: var(--cream); }
     .blog-hero-img { width: 100%; max-height: 480px; object-fit: cover; display: block; }
     .blog-hero-inner { max-width: 760px; margin: 0 auto; padding: 3rem 2rem 1rem; }
@@ -90,14 +92,36 @@
     .footer-legal { font-size: 0.75rem; color: rgba(255,255,255,0.3); line-height: 1.8; }
     .footer-bacp { margin: 1.5rem auto; }
     .footer-bacp img { max-height: 70px; width: auto; background: white; padding: 0.6rem 1rem; border-radius: 4px; }
-    @media (max-width: 768px) { nav { padding: 1rem 1.5rem; } .nav-links { display: none; } .blog-hero-inner, .blog-body, .blog-back { padding-left: 1.2rem; padding-right: 1.2rem; } }
+    
+    @media (max-width: 768px) { 
+      nav { padding: 1rem 1.5rem; flex-wrap: wrap; } 
+      .menu-toggle { display: block; }
+      .nav-links { 
+        display: none; 
+        flex-direction: column; 
+        width: 100%; 
+        padding: 1.5rem 0; 
+        gap: 1.5rem; 
+        text-align: center; 
+        background: rgba(253,252,250,0.98);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        border-bottom: 1px solid rgba(122,158,159,0.15);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      }
+      .nav-links.active { display: flex; }
+      .nav-cta { display: inline-block; }
+      .blog-hero-inner, .blog-body, .blog-back { padding-left: 1.2rem; padding-right: 1.2rem; } 
+    }
   </style>
 </head>
 <body>
 
   <nav>
     <a href="../index.html" class="nav-logo">therapy with roy</a>
-    <ul class="nav-links">
+    <button class="menu-toggle" aria-label="Toggle menu" id="mobile-menu-btn">&#9776;</button>
+    <ul class="nav-links" id="nav-links">
       <li><a href="../index.html#who">Who I Help</a></li>
       <li><a href="../index.html#about">About Roy</a></li>
       <li><a href="../index.html#services">Services &amp; Fees</a></li>
@@ -207,5 +231,31 @@
     </div>
   </footer>
 
+  <!-- Mobile Menu Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const navLinksList = document.getElementById('nav-links');
+      if(menuBtn && navLinksList) {
+        menuBtn.addEventListener('click', function() {
+          navLinksList.classList.toggle('active');
+          if(navLinksList.classList.contains('active')) {
+            menuBtn.innerHTML = '&times;';
+            menuBtn.style.fontSize = '2.2rem';
+          } else {
+            menuBtn.innerHTML = '&#9776;';
+            menuBtn.style.fontSize = '1.8rem';
+          }
+        });
+        navLinksList.querySelectorAll('a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            navLinksList.classList.remove('active');
+            menuBtn.innerHTML = '&#9776;';
+            menuBtn.style.fontSize = '1.8rem';
+          });
+        });
+      }
+    });
+  </script>
 </body>
 </html>
