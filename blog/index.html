@@ -41,8 +41,6 @@
     .blog-card-footer { display: flex; align-items: center; gap: 0.8rem; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(122,158,159,0.15); }
     .blog-card-author-img { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; object-position: center top; }
     .blog-card-meta { font-size: 0.78rem; color: var(--text-light); }
-    .blog-card-no-img { width: 100%; height: 220px; background: linear-gradient(135deg, #2c4a4e 0%, #4a7a7e 100%); display: flex; align-items: center; justify-content: center; }
-    .blog-card-no-img-text { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-style: italic; font-weight: 300; color: rgba(255,255,255,0.8); text-align: center; padding: 1.5rem; line-height: 1.5; }
     footer { background: var(--text-dark); color: rgba(255,255,255,0.6); padding: 3rem 2rem; text-align: center; }
     .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 300; color: white; margin-bottom: 0.8rem; }
     .footer-tagline { font-size: 0.82rem; font-style: italic; color: rgba(255,255,255,0.45); margin-bottom: 1.5rem; }
@@ -98,9 +96,7 @@
   <div class="blog-grid">
 
     <a href="cultural-identity-family-expectations.html" class="blog-card">
-      <div class="blog-card-no-img">
-        <p class="blog-card-no-img-text">Family. Identity. Belonging.</p>
-      </div>
+      <img src="images/Male.png" alt="A young East Asian man by a window, soft light, calm and reflective" class="blog-card-img" />
       <div class="blog-card-body">
         <p class="blog-card-cat">Cultural Identity</p>
         <h2 class="blog-card-title">Navigating the Space Between Family Expectations and Your True Self</h2>
@@ -113,7 +109,7 @@
     </a>
 
     <a href="couples-therapy.html" class="blog-card">
-      <img src="../couple%20image.png" alt="Couple in warm conversation representing couples therapy" class="blog-card-img" />
+      <img src="images/Couple%20on%20Sofa.png" alt="A couple sitting together on a sofa in calm, warm conversation" class="blog-card-img" />
       <div class="blog-card-body">
         <p class="blog-card-cat">Couples Therapy</p>
         <h2 class="blog-card-title">What Actually Happens in Couples Therapy? (And Is It Right for Us?)</h2>
@@ -166,7 +162,6 @@
     </div>
   </footer>
 
-  <!-- Mobile Menu Script -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const menuBtn = document.getElementById('mobile-menu-btn');
