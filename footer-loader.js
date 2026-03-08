@@ -1,5 +1,27 @@
-// Loads the shared footer and initialises cookie banner logic after injection
+// Loads the shared footer and initialises cookie banner + GA logic after injection
 (function() {
+  var GA_ID = 'G-EZDPQG16PQ';
+  var CONSENT_KEY = 'cookie-consent';
+
+  function loadGA() {
+    if (window._gaLoaded) return;
+    window._gaLoaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA_ID, { 'anonymize_ip': true });
+  }
+
+  // Fire GA immediately if already accepted (e.g. returning visitor)
+  if (localStorage.getItem(CONSENT_KEY) === 'accepted') {
+    loadGA();
+  }
+
   fetch('/footer.html')
     .then(function(res) { return res.text(); })
     .then(function(html) {
@@ -14,8 +36,18 @@
     var banner = document.getElementById('cookie-banner');
     if (!banner) return;
 
-    // Hide banner if consent already given
-    if (localStorage.getItem('cookie-consent')) {
+    var consent = localStorage.getItem(CONSENT_KEY);
+
+    // Also migrate any old key variants so returning visitors aren't re-prompted
+    if (!consent) {
+      var legacy = localStorage.getItem('cookie_consent');
+      if (legacy) {
+        localStorage.setItem(CONSENT_KEY, legacy);
+        consent = legacy;
+      }
+    }
+
+    if (consent) {
       banner.style.display = 'none';
       return;
     }
@@ -27,18 +59,15 @@
 
     if (acceptBtn) {
       acceptBtn.addEventListener('click', function() {
-        localStorage.setItem('cookie-consent', 'accepted');
+        localStorage.setItem(CONSENT_KEY, 'accepted');
         banner.style.display = 'none';
-        // Enable GA if it was deferred
-        if (typeof gtag === 'function') {
-          gtag('consent', 'update', { analytics_storage: 'granted' });
-        }
+        loadGA();
       });
     }
 
     if (declineBtn) {
       declineBtn.addEventListener('click', function() {
-        localStorage.setItem('cookie-consent', 'declined');
+        localStorage.setItem(CONSENT_KEY, 'declined');
         banner.style.display = 'none';
       });
     }
