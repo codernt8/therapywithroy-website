@@ -77,7 +77,7 @@
     .blog-cta { background: var(--cream); border: 1px solid rgba(122,158,159,0.25); border-radius: 2px; padding: 2.5rem; margin: 3rem 0; text-align: center; }
     .blog-cta h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; color: var(--text-dark); margin-bottom: 0.8rem; }
     .blog-cta p { color: var(--text-mid); font-size: 0.97rem; margin-bottom: 1.5rem; }
-    .btn-primary { background: var(--accent); color: #fff; padding: 0.9rem 2.2rem; border-radius: 3rem; text-decoration: none; font-size: 0.88rem; font-weight: 500; letter-spacing: 0.04em; transition: all 0.25s; display: inline-block; }
+    .btn-primary { background: var(--accent); color: #fff; padding: 0.9rem 2.2rem; border-radius: 3rem; text-decoration: none; font-size: 0.88rem; font-weight: 500; letter-spacing: 0.04em; transition: all 0.25s; display: inline-block; cursor: pointer; border: none; }
     .btn-primary:hover { background: #b8924a; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
     .blog-back { max-width: 760px; margin: 0 auto; padding: 0 2rem 2rem; }
     .blog-back a { font-size: 0.85rem; color: var(--sage-dark); text-decoration: none; letter-spacing: 0.06em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.4rem; }
@@ -99,6 +99,17 @@
     .cookie-accept:hover { opacity: 0.85; }
     .cookie-decline { background: transparent; color: rgba(255,255,255,0.6); border: 1px solid rgba(255,255,255,0.3); padding: 0.55rem 1.25rem; border-radius: 3px; cursor: pointer; font-size: 0.85rem; transition: opacity 0.2s; }
     .cookie-decline:hover { opacity: 0.75; }
+    /* Booking Modal */
+    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(20,40,40,0.75); z-index: 1000; align-items: center; justify-content: center; padding: 1rem; }
+    .modal-overlay.active { display: flex; }
+    .modal-box { background: #fff; border-radius: 6px; width: 100%; max-width: 860px; max-height: 92vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.35); }
+    .modal-header { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.5rem; background: var(--sage-dark); color: #fff; flex-shrink: 0; }
+    .modal-header h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.2rem; margin: 0; color: #fff; }
+    .modal-close { background: none; border: none; color: #fff; font-size: 1.6rem; cursor: pointer; line-height: 1; padding: 0 0.25rem; opacity: 0.85; transition: opacity 0.2s; }
+    .modal-close:hover { opacity: 1; }
+    .modal-body { flex: 1; overflow-y: auto; padding: 0; }
+    .modal-body iframe { display: block; width: 100%; height: 780px; border: none; }
+    body.modal-open { overflow: hidden; }
     @media (max-width: 768px) {
       nav { padding: 1rem 1.5rem; flex-wrap: wrap; }
       .menu-toggle { display: block; }
@@ -119,7 +130,7 @@
       <li><a href="/#about">About Roy</a></li>
       <li><a href="/#services">Services &amp; Fees</a></li>
       <li><a href="/blog/">Blog</a></li>
-      <li><a href="/#book" class="nav-cta">Book Now</a></li>
+      <li><a href="#" class="nav-cta" id="navBookBtn">Book Now</a></li>
     </ul>
   </nav>
 
@@ -185,7 +196,7 @@
     <div class="blog-cta">
       <h3>Not sure if what you&rsquo;re feeling is burnout?</h3>
       <p>I offer a free initial consultation to explore what&rsquo;s going on and whether therapy might help. I work with individuals online, across the UK and internationally, via Google Meet.</p>
-      <a href="/#book" class="btn-primary">Book a Free Consultation &rarr;</a>
+      <button class="btn-primary" id="ctaBookBtn">Book a Free Consultation &rarr;</button>
     </div>
   </div>
 
@@ -195,7 +206,47 @@
 
   <div id="shared-footer"></div>
 
+  <!-- Booking Modal -->
+  <div class="modal-overlay" id="bookingModal" role="dialog" aria-modal="true" aria-label="Book a free consultation">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3>Book a Free Consultation with Roy Lam</h3>
+        <button class="modal-close" id="modalClose" aria-label="Close booking">&times;</button>
+      </div>
+      <div class="modal-body">
+        <iframe src="https://app.acuityscheduling.com/schedule.php?owner=38582431&appointmentType=89898149"
+          title="Book a free consultation with Roy Lam"></iframe>
+      </div>
+    </div>
+  </div>
+
   <script src="/footer-loader.js"></script>
+
+  <script>
+    const modal = document.getElementById('bookingModal');
+    const closeBtn = document.getElementById('modalClose');
+
+    function openModal(e) {
+      if (e) e.preventDefault();
+      modal.classList.add('active');
+      document.body.classList.add('modal-open');
+    }
+    function closeModal() {
+      modal.classList.remove('active');
+      document.body.classList.remove('modal-open');
+    }
+
+    document.getElementById('ctaBookBtn').addEventListener('click', openModal);
+    document.getElementById('navBookBtn').addEventListener('click', openModal);
+
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) closeModal();
+    });
+    closeBtn.addEventListener('click', closeModal);
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -213,11 +264,13 @@
           }
         });
         navLinksList.querySelectorAll('a').forEach(function(link) {
-          link.addEventListener('click', function() {
-            navLinksList.classList.remove('active');
-            menuBtn.innerHTML = '&#9776;';
-            menuBtn.style.fontSize = '1.8rem';
-          });
+          if (!link.id) {
+            link.addEventListener('click', function() {
+              navLinksList.classList.remove('active');
+              menuBtn.innerHTML = '&#9776;';
+              menuBtn.style.fontSize = '1.8rem';
+            });
+          }
         });
       }
     });
