@@ -41,7 +41,6 @@
     .blog-card-footer { display: flex; align-items: center; gap: 0.8rem; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(122,158,159,0.15); }
     .blog-card-author-img { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; object-position: center top; }
     .blog-card-meta { font-size: 0.78rem; color: var(--text-light); }
-    /* Shared footer styles */
     footer { background: var(--text-dark); color: rgba(255,255,255,0.6); padding: 3rem 2rem; text-align: center; }
     .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 300; color: white; margin-bottom: 0.8rem; }
     .footer-tagline { font-size: 0.82rem; font-style: italic; color: rgba(255,255,255,0.45); margin-bottom: 1.5rem; }
@@ -62,20 +61,7 @@
     @media (max-width: 768px) {
       nav { padding: 1rem 1.5rem; flex-wrap: wrap; }
       .menu-toggle { display: block; }
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        padding: 1.5rem 0;
-        gap: 1.5rem;
-        text-align: center;
-        background: rgba(253,252,250,0.98);
-        position: absolute;
-        top: 100%;
-        left: 0;
-        border-bottom: 1px solid rgba(122,158,159,0.15);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-      }
+      .nav-links { display: none; flex-direction: column; width: 100%; padding: 1.5rem 0; gap: 1.5rem; text-align: center; background: rgba(253,252,250,0.98); position: absolute; top: 100%; left: 0; border-bottom: 1px solid rgba(122,158,159,0.15); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
       .nav-links.active { display: flex; }
       .nav-cta { display: inline-block; }
       .blog-grid { padding: 2rem 1.2rem 4rem; }
@@ -103,6 +89,19 @@
 
   <div class="blog-grid">
 
+    <a href="burnout-recognising-the-signs.html" class="blog-card">
+      <img src="images/burnout-group.png" alt="A group of professionals looking tired and overwhelmed, representing the widespread impact of workplace burnout" class="blog-card-img" />
+      <div class="blog-card-body">
+        <p class="blog-card-cat">Anxiety &amp; Stress</p>
+        <h2 class="blog-card-title">When Work Becomes Too Much: Recognising Burnout Before It Breaks You</h2>
+        <p class="blog-card-excerpt">Burnout builds slowly, and high achievers are often the last to notice. Here are the signs worth taking seriously, and what recovery really involves.</p>
+        <div class="blog-card-footer">
+          <img src="/roy pic.jpg" alt="Roy Lam" class="blog-card-author-img" />
+          <span class="blog-card-meta">Roy Lam &bull; 8 March 2026 &bull; 5 min read</span>
+        </div>
+      </div>
+    </a>
+
     <a href="cultural-identity-family-expectations.html" class="blog-card">
       <img src="images/Male.png" alt="A young East Asian man by a window, soft light, calm and reflective" class="blog-card-img" />
       <div class="blog-card-body">
@@ -121,7 +120,7 @@
       <div class="blog-card-body">
         <p class="blog-card-cat">Couples Therapy</p>
         <h2 class="blog-card-title">What Actually Happens in Couples Therapy? (And Is It Right for Us?)</h2>
-        <p class="blog-card-excerpt">Many couples arrive at therapy feeling a mixture of hope and nervousness. Here&rsquo;s what really happens &mdash; from the first session onwards.</p>
+        <p class="blog-card-excerpt">Many couples arrive at therapy feeling a mixture of hope and nervousness. Here&rsquo;s what really happens, from the first session onwards.</p>
         <div class="blog-card-footer">
           <img src="/roy pic.jpg" alt="Roy Lam" class="blog-card-author-img" />
           <span class="blog-card-meta">Roy Lam &bull; 6 March 2026 &bull; 4 min read</span>
@@ -142,20 +141,11 @@
       if(menuBtn && navLinksList) {
         menuBtn.addEventListener('click', function() {
           navLinksList.classList.toggle('active');
-          if(navLinksList.classList.contains('active')) {
-            menuBtn.innerHTML = '&times;';
-            menuBtn.style.fontSize = '2.2rem';
-          } else {
-            menuBtn.innerHTML = '&#9776;';
-            menuBtn.style.fontSize = '1.8rem';
-          }
+          if(navLinksList.classList.contains('active')) { menuBtn.innerHTML = '&times;'; menuBtn.style.fontSize = '2.2rem'; }
+          else { menuBtn.innerHTML = '&#9776;'; menuBtn.style.fontSize = '1.8rem'; }
         });
         navLinksList.querySelectorAll('a').forEach(function(link) {
-          link.addEventListener('click', function() {
-            navLinksList.classList.remove('active');
-            menuBtn.innerHTML = '&#9776;';
-            menuBtn.style.fontSize = '1.8rem';
-          });
+          link.addEventListener('click', function() { navLinksList.classList.remove('active'); menuBtn.innerHTML = '&#9776;'; menuBtn.style.fontSize = '1.8rem'; });
         });
       }
     });
