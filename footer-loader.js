@@ -37,6 +37,16 @@
     if (!banner) return;
 
     var consent = localStorage.getItem(CONSENT_KEY);
+
+    // Also migrate any old key variants so returning visitors aren't re-prompted
+    if (!consent) {
+      var legacy = localStorage.getItem('cookie_consent');
+      if (legacy) {
+        localStorage.setItem(CONSENT_KEY, legacy);
+        consent = legacy;
+      }
+    }
+
     if (consent) {
       banner.style.display = 'none';
       return;

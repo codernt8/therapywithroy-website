@@ -41,51 +41,11 @@
 </footer>
 
 <!-- Cookie Banner -->
-<div id="cookie-banner" role="region" aria-label="Cookie consent">
+<!-- Controlled entirely by footer-loader.js — do not add inline script here -->
+<div id="cookie-banner" role="region" aria-label="Cookie consent" style="display:none;">
   <p>This website uses analytics cookies to understand how visitors use the site. No personal data is collected without your consent. <a href="/privacy-policy.html">Learn more</a>.</p>
   <div class="cookie-btns">
-    <button class="cookie-decline" id="cookie-decline">Decline</button>
-    <button class="cookie-accept" id="cookie-accept">Accept Analytics</button>
+    <button class="cookie-decline">Decline</button>
+    <button class="cookie-accept">Accept Analytics</button>
   </div>
 </div>
-
-<!-- Google Analytics — loads only after consent -->
-<script>
-  (function() {
-    var GA_ID = 'G-EZDPQG16PQ';
-    function loadGA() {
-      var s = document.createElement('script');
-      s.async = true;
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
-      document.head.appendChild(s);
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){ dataLayer.push(arguments); }
-      window.gtag = gtag;
-      gtag('js', new Date());
-      gtag('config', GA_ID, { 'anonymize_ip': true });
-    }
-    function hideBanner() {
-      var b = document.getElementById('cookie-banner');
-      if (b) b.style.display = 'none';
-    }
-    var consent = localStorage.getItem('cookie_consent');
-    if (consent === 'accepted') { loadGA(); hideBanner(); }
-    else if (consent === 'declined') { hideBanner(); }
-    document.addEventListener('DOMContentLoaded', function() {
-      var acceptBtn = document.getElementById('cookie-accept');
-      var declineBtn = document.getElementById('cookie-decline');
-      if (acceptBtn) {
-        acceptBtn.addEventListener('click', function() {
-          localStorage.setItem('cookie_consent', 'accepted');
-          loadGA(); hideBanner();
-        });
-      }
-      if (declineBtn) {
-        declineBtn.addEventListener('click', function() {
-          localStorage.setItem('cookie_consent', 'declined');
-          hideBanner();
-        });
-      }
-    });
-  })();
-</script>
