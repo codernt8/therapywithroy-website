@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Online Therapy UK | Individuals, Couples &amp; LGBT+ | Roy Lam MBACP</title>
-    <meta name="description" content="Online therapy with Roy Lam, MBACP registered counsellor. Support for anxiety, depression, relationships, identity and life transitions. UK &amp; international. Book a free consultation.">
+  <title>Online Therapy UK | Therapy with Roy | Roy Lam MBACP</title>
+  <meta name="description" content="Online therapy with Roy Lam, MBACP registered counsellor. Support for anxiety, depression, relationships, identity and life transitions. UK-based, available worldwide. Book a free consultation.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij4KICA8Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSIzMiIgZmlsbD0iIzRhNmU2ZiIvPgogIDxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjI4IiBmaWxsPSJub25lIiBzdHJva2U9IiM3YTllOWYiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIwLjUiLz4KICA8dGV4dCB4PSIzMiIgeT0iNDQiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIzNCIgZm9udC13ZWlnaHQ9IjQwMCIgCiAgICAgICAgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2Y3ZjRlZiI+UjwvdGV4dD4KPC9zdmc+"/>
   <link rel="shortcut icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij4KICA8Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSIzMiIgZmlsbD0iIzRhNmU2ZiIvPgogIDxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjI4IiBmaWxsPSJub25lIiBzdHJva2U9IiM3YTllOWYiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIwLjUiLz4KICA8dGV4dCB4PSIzMiIgeT0iNDQiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIzNCIgZm9udC13ZWlnaHQ9IjQwMCIgCiAgICAgICAgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2Y3ZjRlZiI+UjwvdGV4dD4KPC9zdmc+"/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
@@ -34,7 +34,12 @@
     .hero-eyebrow { font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sage-light); margin-bottom: 1.5rem; font-weight: 400; }
     .hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 300; color: #fff; line-height: 1.2; margin-bottom: 1.5rem; }
     .hero-title em { font-style: italic; color: var(--sage-light); }
-    .hero-subtitle { font-size: 1.05rem; color: rgba(255,255,255,0.8); max-width: 540px; margin: 0 auto 2.5rem; font-weight: 300; line-height: 1.8; }
+    .hero-subtitle { font-size: 1.05rem; color: rgba(255,255,255,0.8); max-width: 540px; margin: 0 auto 2rem; font-weight: 300; line-height: 1.8; }
+
+    /* Approach strip inside hero */
+    .hero-approach { display: flex; align-items: center; justify-content: center; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 2rem; }
+    .hero-approach-tag { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); color: rgba(255,255,255,0.9); font-size: 0.78rem; padding: 0.3rem 0.85rem; border-radius: 2rem; letter-spacing: 0.04em; }
+
     .hero-badges { display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
     .hero-badge { font-size: 0.78rem; color: rgba(255,255,255,0.7); letter-spacing: 0.06em; display: flex; align-items: center; gap: 0.4rem; }
     .hero-badge::before { content: '✦'; color: var(--accent); font-size: 0.6rem; }
@@ -44,15 +49,15 @@
     .btn-secondary { border: 1px solid rgba(255,255,255,0.4); color: rgba(255,255,255,0.9); padding: 0.9rem 2.2rem; border-radius: 3rem; text-decoration: none; font-size: 0.88rem; font-weight: 400; letter-spacing: 0.04em; transition: all 0.25s; display: inline-block; }
     .btn-secondary:hover { border-color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.08); }
 
-    section { padding: 5rem 2rem; }
+    section { padding: 3.5rem 2rem; }
     .container { max-width: 1100px; margin: 0 auto; }
     .section-label { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.8rem; font-weight: 500; }
     .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; color: var(--text-dark); line-height: 1.25; margin-bottom: 1.5rem; }
 
     #who { background: var(--cream); }
-    .who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; margin-top: 3rem; }
+    .who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; margin-top: 2rem; }
     .who-text p { color: var(--text-mid); margin-bottom: 1.2rem; font-size: 1.02rem; }
-    .issues-grid { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.5rem; }
+    .issues-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.2rem; }
     .issue-item { }
     .who-visual { border-radius: 2px; position: relative; overflow: hidden; }
     .who-visual img { width: 100%; height: auto; display: block; }
@@ -76,16 +81,16 @@
     .approach-tag { background: var(--cream); border: 1px solid var(--sage-light); color: var(--sage-dark); font-size: 0.8rem; padding: 0.35rem 0.9rem; border-radius: 2rem; letter-spacing: 0.04em; }
 
     #how { background: var(--cream); }
-    .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3.5rem; }
-    .step { text-align: center; padding: 2.5rem 1.5rem; background: var(--warm-white); border-radius: 2px; position: relative; }
+    .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2.5rem; }
+    .step { text-align: center; padding: 2rem 1.5rem; background: var(--warm-white); border-radius: 2px; position: relative; }
     .step-number { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 300; color: var(--sage-light); line-height: 1; margin-bottom: 1rem; }
     .step h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--text-dark); margin-bottom: 0.8rem; }
     .step p { font-size: 0.9rem; color: var(--text-mid); line-height: 1.7; }
     .step-connector { position: absolute; right: -1rem; top: 50%; transform: translateY(-50%); color: var(--sage-light); font-size: 1.2rem; }
 
     #services { background: var(--warm-white); }
-    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3.5rem; }
-    .service-card { border: 1px solid rgba(122,158,159,0.2); padding: 2.5rem 2rem; border-radius: 2px; transition: all 0.25s; }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2.5rem; }
+    .service-card { border: 1px solid rgba(122,158,159,0.2); padding: 2rem 1.75rem; border-radius: 2px; transition: all 0.25s; }
     .service-card:hover { border-color: var(--sage); box-shadow: 0 8px 32px rgba(74,110,111,0.08); }
     .service-card.featured { background: var(--sage-dark); border-color: var(--sage-dark); }
     .service-card.featured .service-name,
@@ -105,7 +110,7 @@
     .service-card.featured .btn-book { background: var(--accent); border-color: var(--accent); color: white; }
     .service-card.featured .btn-book:hover { background: #b8924a; border-color: #b8924a; }
 
-    #testimonials { background: linear-gradient(135deg, #2c4a4e 0%, #4a7a7e 100%); padding: 5rem 2rem; }
+    #testimonials { background: linear-gradient(135deg, #2c4a4e 0%, #4a7a7e 100%); padding: 3.5rem 2rem; }
     #testimonials .section-label { color: var(--sage-light); }
     #testimonials .section-title { color: white; }
     .testimonials-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 3rem; }
@@ -271,31 +276,31 @@
 
   </style>
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Roy Lam",
-      "alternateName": "Ka Yiu Lam",
-      "jobTitle": "Online Therapist & Counsellor",
-      "description": "MBACP registered online therapist specialising in anxiety, depression, relationships, identity and life transitions.",
-      "url": "https://therapywithroy.co.uk",
-      "telephone": "07824426000",
-      "email": "roy@therapywithroy.co.uk",
-      "hasCredential": {
-        "@type": "EducationalOccupationalCredential",
-        "credentialCategory": "Professional Membership",
-        "recognizedBy": {"@type": "Organization", "name": "British Association for Counselling and Psychotherapy (BACP)", "url": "https://www.bacp.co.uk"}
-      },
-      "knowsAbout": ["Cognitive Behavioural Therapy","Emotion-Focused Therapy","Bowen Family Systems Theory","Anxiety","Depression","Relationship Therapy","LGBT Identity","Cultural Identity"],
-      "offers": [
-        {"@type": "Offer", "name": "Free Initial Consultation", "price": "0", "priceCurrency": "GBP"},
-        {"@type": "Offer", "name": "Individual Therapy", "price": "80", "priceCurrency": "GBP"},
-        {"@type": "Offer", "name": "Couples Therapy", "price": "120", "priceCurrency": "GBP"}
-      ]
-    }
-    </script>
-  </head>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Roy Lam",
+    "alternateName": "Ka Yiu Lam",
+    "jobTitle": "Online Therapist & Counsellor",
+    "description": "MBACP registered online therapist specialising in anxiety, depression, relationships, identity and life transitions.",
+    "url": "https://therapywithroy.co.uk",
+    "telephone": "07824426000",
+    "email": "roy@therapywithroy.co.uk",
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "Professional Membership",
+      "recognizedBy": {"@type": "Organization", "name": "British Association for Counselling and Psychotherapy (BACP)", "url": "https://www.bacp.co.uk"}
+    },
+    "knowsAbout": ["Cognitive Behavioural Therapy","Emotion-Focused Therapy","Bowen Family Systems Theory","Anxiety","Depression","Relationship Therapy","LGBT Identity","Cultural Identity","Expat Relocation","Job Displacement"],
+    "offers": [
+      {"@type": "Offer", "name": "Free Initial Consultation", "price": "0", "priceCurrency": "GBP"},
+      {"@type": "Offer", "name": "Individual Therapy", "price": "80", "priceCurrency": "GBP"},
+      {"@type": "Offer", "name": "Couples Therapy", "price": "120", "priceCurrency": "GBP"}
+    ]
+  }
+  </script>
+</head>
 <body>
 
   <nav>
@@ -314,18 +319,24 @@
 
   <section id="hero">
     <div class="hero-content">
-      <p class="hero-eyebrow">Online Counselling &amp; Therapy &mdash; UK &amp; International</p>
+      <p class="hero-eyebrow">Online Counselling &amp; Therapy &mdash; UK-based, available worldwide</p>
       <h1 class="hero-title">Supporting you through<br/><em>life&rsquo;s significant challenges</em></h1>
-      <p class="hero-subtitle">A confidential, non-judgemental space to reflect, reconnect with yourself, and build the resilience to move forward.</p>
+      <p class="hero-subtitle">A confidential, non-judgemental space to reflect, reconnect with yourself and build the resilience to move forward.</p>
+      <div class="hero-approach">
+        <span class="hero-approach-tag">CBT</span>
+        <span class="hero-approach-tag">Emotion-Focused Therapy</span>
+        <span class="hero-approach-tag">Bowen Family Systems</span>
+        <span class="hero-approach-tag">Integrative</span>
+        <span class="hero-approach-tag">Person-Centred</span>
+      </div>
       <div class="hero-badges">
         <span class="hero-badge">MBACP Registered Member</span>
-        <span class="hero-badge">Integrative Approach</span>
         <span class="hero-badge">Online Sessions</span>
         <span class="hero-badge">Individuals &amp; Couples</span>
-            <span class="hero-badge">English &amp; Cantonese</span>
+        <span class="hero-badge">English &amp; Cantonese</span>
       </div>
       <div class="hero-btns">
-        <a href="#book" class="btn-primary">Book a Free 30-Min Consultation</a>
+        <a href="#book" class="btn-primary">Book a Free 15&ndash;30 Min Consultation</a>
         <a href="#about" class="btn-secondary">Meet Roy</a>
       </div>
     </div>
@@ -337,14 +348,16 @@
       <div class="who-grid">
         <div class="who-text">
           <h2 class="section-title">You don&rsquo;t have to navigate this alone</h2>
-          <p>Whether you&rsquo;re feeling overwhelmed by anxiety, struggling in your relationships, questioning your identity, or simply feeling stuck — reaching out is a courageous first step.</p>
-          <p>I work with adults online, both individuals and couples, across the UK and internationally. Many of my clients are navigating high-pressure professional lives alongside deeply personal challenges. It's something I understand from over 30 years working in HR across various demanding industries.</p>
+          <p>Whether you&rsquo;re feeling overwhelmed by anxiety, struggling in your relationships, questioning your identity, or simply feeling stuck &mdash; reaching out is a courageous first step.</p>
+          <p>I work with adults (18+) online, both individuals and couples, across the UK and internationally. Many of my clients are navigating high-pressure professional lives alongside deeply personal challenges &mdash; something I understand from over 30 years working in Human Resources across banking, aviation, luxury retail and hospitality.</p>
           <div class="issues-grid">
             <div class="issue-item approach-tag">Anxiety &amp; stress</div>
             <div class="issue-item approach-tag">Depression</div>
             <div class="issue-item approach-tag">LGBT+ identity</div>
             <div class="issue-item approach-tag">Cultural identity</div>
             <div class="issue-item approach-tag">Career &amp; workplace</div>
+            <div class="issue-item approach-tag">Job displacement &amp; AI anxiety</div>
+            <div class="issue-item approach-tag">Expat &amp; relocation</div>
             <div class="issue-item approach-tag">Relationship challenges</div>
             <div class="issue-item approach-tag">Family challenges</div>
             <div class="issue-item approach-tag">Self-esteem &amp; confidence</div>
@@ -380,18 +393,18 @@
             <div class="credential-tag"><span class="dot"></span> MSocSc Counselling (2017)</div>
             <div class="credential-tag"><span class="dot"></span> MBA (2000)</div>
             <div class="credential-tag"><span class="dot"></span> BSocSc (1993)</div>
-            <div class="credential-tag"><span class="dot"></span> 30+ Years HR Leadership Experience</div>
+            <div class="credential-tag"><span class="dot"></span> 30+ Years Human Resources Leadership</div>
             <div class="credential-tag"><span class="dot"></span> Online Sessions &mdash; UK &amp; International</div>
-                <div class="credential-tag"><span class="dot"></span> Sessions available in English &amp; Cantonese</div>
+            <div class="credential-tag"><span class="dot"></span> Sessions available in English &amp; Cantonese</div>
           </div>
         </div>
         <div class="about-content">
           <h2 class="section-title">A therapist who understands the weight of professional life</h2>
-          <p>Before becoming a full-time counsellor, I spent over 30 years in senior Human Resources roles across banking, aviation, luxury retail, and hospitality. I saw every day how people were expected to keep performing — to stay composed, capable, and driven — even while carrying enormous personal burdens.</p>
+          <p>Before becoming a full-time counsellor, I spent over 30 years in senior Human Resources roles across banking, aviation, luxury retail and hospitality. I saw every day how people were expected to keep performing &mdash; to stay composed, capable and driven &mdash; even while carrying enormous personal burdens.</p>
           <p>That experience taught me something important: without genuine attention to mental health, it is very difficult to truly thrive in life. It&rsquo;s what led me to retrain as a therapist.</p>
-          <p>I graduated with a Master in Social Sciences (Counselling) from the University of Hong Kong in 2017, and went on to volunteer as a counsellor working with clients facing family difficulties, relationship challenges, LGBT-related concerns, depression, anxiety, and career development issues.</p>
+          <p>I graduated with a Master in Social Sciences (Counselling) from the University of Hong Kong in 2017, and went on to volunteer as a counsellor working with clients facing family difficulties, relationship challenges, LGBT-related concerns, depression, anxiety and career development issues.</p>
           <p>Originally from Hong Kong, I relocated to the UK in 2021 and now work with clients online across the UK and internationally. I have a particular understanding of the cultural pressures that many East Asian and immigrant communities face, particularly the tension between family expectations and personal identity. I offer sessions in both English and Cantonese.</p>
-          <p>My approach is integrative and tailored to each individual. I draw on Cognitive Behavioural Therapy (CBT), Emotion-Focused Therapy, and Bowen&rsquo;s Family Systems Theory, combining evidence-based techniques with a warm, genuinely non-judgemental presence.</p>
+          <p>My approach is integrative and tailored to each individual. I draw on Cognitive Behavioural Therapy (CBT), Emotion-Focused Therapy and Bowen&rsquo;s Family Systems Theory, combining evidence-based techniques with a warm, genuinely non-judgemental presence.</p>
           <p style="font-style: italic; color: var(--sage-dark);">&ldquo;I look forward to providing my support to you and helping you reflect, connect and grow.&rdquo;</p>
           <div class="approach-tags">
             <span class="approach-tag">CBT</span>
@@ -413,19 +426,19 @@
         <div class="step">
           <div class="step-number">01</div>
           <h3>Free Consultation</h3>
-          <p>Book a free 30-minute call. We&rsquo;ll talk about what&rsquo;s brought you here and whether we&rsquo;re a good fit — no commitment required.</p>
+          <p>Book a free 15&ndash;30 minute call. We&rsquo;ll talk about what&rsquo;s brought you here and whether we&rsquo;re a good fit &mdash; no commitment required.</p>
           <span class="step-connector">&rarr;</span>
         </div>
         <div class="step">
           <div class="step-number">02</div>
           <h3>Begin Sessions</h3>
-          <p>We meet online via Google Meet at a time that suits you, Monday to Friday, 9am to 7pm. Sessions are 50 minutes, at your own pace.</p>
+          <p>We meet online via Google Meet, Monday to Friday, 9am&ndash;7pm GMT. Sessions are 50 minutes, at your own pace.</p>
           <span class="step-connector">&rarr;</span>
         </div>
         <div class="step">
           <div class="step-number">03</div>
           <h3>Reflect &amp; Grow</h3>
-          <p>Over time, acquire greater self-awareness, emotional resilience, and the tools to handle whatever life brings — with me alongside you.</p>
+          <p>Over time, acquire greater self-awareness, emotional resilience and the tools to handle whatever life brings &mdash; with me alongside you.</p>
         </div>
       </div>
     </div>
@@ -439,7 +452,7 @@
         <div class="service-card">
           <h3 class="service-name">Free Consultation</h3>
           <p class="service-price">Free</p>
-          <p class="service-duration">30 minutes &bull; Online via Google Meet</p>
+          <p class="service-duration">15&ndash;30 minutes &bull; Online via Google Meet</p>
           <ul class="service-features">
             <li>No obligation or commitment</li>
             <li>Discuss what&rsquo;s brought you here</li>
@@ -456,7 +469,7 @@
             <li>Weekly or fortnightly sessions</li>
             <li>Tailored integrative approach</li>
             <li>Confidential &amp; non-judgemental</li>
-            <li>Available Mon&ndash;Fri, 9am&ndash;7pm</li>
+            <li>Available Mon&ndash;Fri, 9am&ndash;7pm GMT</li>
           </ul>
           <a href="#book" class="btn-book">Book Now</a>
         </div>
@@ -468,12 +481,12 @@
             <li>For partners facing difficulties</li>
             <li>Communication &amp; conflict support</li>
             <li>Integrative, tailored approach</li>
-            <li>Available Mon&ndash;Fri, 9am&ndash;7pm</li>
+            <li>Available Mon&ndash;Fri, 9am&ndash;7pm GMT</li>
           </ul>
           <a href="#book" class="btn-book">Book Now</a>
         </div>
       </div>
-      <p style="text-align:center; margin-top:1.5rem; font-size:0.82rem; color:var(--text-light);">Payment is taken at the time of booking. You may reschedule or cancel with at least 48 hours' notice for a full refund. Cancellations made within 48 hours of your appointment are non-refundable.</p>
+      <p style="text-align:center; margin-top:1.5rem; font-size:0.82rem; color:var(--text-light);">Payment is taken at the time of booking. You may reschedule or cancel with at least 48 hours&rsquo; notice for a full refund. Cancellations made within 48 hours of your appointment are non-refundable.</p>
     </div>
   </section>
 
@@ -487,7 +500,7 @@
           <p class="testimonial-source">Verified client testimonial</p>
         </div>
         <div class="testimonial">
-          <p class="testimonial-quote">Thanks to our sessions I have found a way to cope better with events that are out of my control. He always listens, offers very helpful advice, and reminds me that there is a light at the end of the tunnel — which gives me strength and hope.</p>
+          <p class="testimonial-quote">Thanks to our sessions I have found a way to cope better with events that are out of my control. He always listens, offers very helpful advice, and reminds me that there is a light at the end of the tunnel &mdash; which gives me strength and hope.</p>
           <p class="testimonial-source">Verified client testimonial</p>
         </div>
         <div class="testimonial">
@@ -495,14 +508,14 @@
           <p class="testimonial-source">Verified client testimonial</p>
         </div>
         <div class="testimonial">
-          <p class="testimonial-quote">I was hesitant about therapy because of previous experiences, but I have never been more grateful — Roy has been a great match for me.</p>
+          <p class="testimonial-quote">I was hesitant about therapy because of previous experiences, but I have never been more grateful &mdash; Roy has been a great match for me.</p>
           <p class="testimonial-source">Verified client testimonial</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="faq" style="background: var(--warm-white); padding: 5rem 0;">
+  <section id="faq" style="background: var(--warm-white); padding: 3.5rem 0;">
     <div style="max-width: 760px; margin: 0 auto; padding: 0 2rem;">
       <h2 class="section-title" style="margin-bottom: 0.5rem;">Have a question?</h2>
       <p style="color: var(--text-mid); font-size: 1rem; margin-bottom: 0;">Here are some of the things people ask before getting started.</p>
@@ -525,27 +538,27 @@
 
         <details style="border-bottom: 1px solid rgba(122,158,159,0.2); padding: 1.2rem 0;">
           <summary style="font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:400; color:var(--text-dark); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">What happens in the free consultation? <span style="color:var(--sage); font-size:1.6rem; font-weight:200; line-height:1;">+</span></summary>
-          <p style="margin-top:0.8rem; color:var(--text-mid); font-size:0.97rem; line-height:1.8;">The free 30-minute consultation is an informal, no-obligation conversation. We'll talk about what's brought you here, what you're hoping to get from therapy, and I'll answer any questions you have about how I work. It's also a chance for you to get a feel for whether we're the right fit — there's no pressure to proceed.</p>
+          <p style="margin-top:0.8rem; color:var(--text-mid); font-size:0.97rem; line-height:1.8;">The free consultation is an informal, no-obligation conversation lasting 15&ndash;30 minutes. We'll talk about what's brought you here, what you're hoping to get from therapy, and I'll answer any questions you have about how I work. It's also a chance for you to get a feel for whether we're the right fit &mdash; there's no pressure to proceed.</p>
         </details>
 
         <details style="border-bottom: 1px solid rgba(122,158,159,0.2); padding: 1.2rem 0;">
           <summary style="font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:400; color:var(--text-dark); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">How many sessions will I need? <span style="color:var(--sage); font-size:1.6rem; font-weight:200; line-height:1;">+</span></summary>
-          <p style="margin-top:0.8rem; color:var(--text-mid); font-size:0.97rem; line-height:1.8;">Every person is different, and there's no fixed number of sessions. Some people find that a focused course of 6–12 sessions is enough to address a specific issue; others prefer longer-term support. We'll review how things are going together and you're free to end or pause at any time. There's no minimum commitment.</p>
+          <p style="margin-top:0.8rem; color:var(--text-mid); font-size:0.97rem; line-height:1.8;">Every person is different, and there's no fixed number of sessions. Some people find that a focused course of 6&ndash;12 sessions is enough to address a specific issue; others prefer longer-term support. We'll review how things are going together and you're free to end or pause at any time. There's no minimum commitment.</p>
         </details>
 
         <details style="border-bottom: 1px solid rgba(122,158,159,0.2); padding: 1.2rem 0;">
           <summary style="font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:400; color:var(--text-dark); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">Is everything I share confidential? <span style="color:var(--sage); font-size:1.6rem; font-weight:200; line-height:1;">+</span></summary>
-          <p style="margin-top:0.8rem; color:var(--text-mid); font-size:0.97rem; line-height:1.8;">Yes. Everything you share is treated with the strictest confidence. The only exceptions are rare situations where there is a serious risk of harm to yourself or others — in those cases, I have a professional duty to act. I'll explain the full boundaries of confidentiality before we begin working together.</p>
+          <p style="margin-top:0.8rem; color:var(--text-mid); font-size:0.97rem; line-height:1.8;">Yes. Everything you share is treated with the strictest confidence. The only exceptions are rare situations where there is a serious risk of harm to yourself or others &mdash; in those cases, I have a professional duty to act. I'll explain the full boundaries of confidentiality before we begin working together.</p>
         </details>
 
         <details style="border-bottom: 1px solid rgba(122,158,159,0.2); padding: 1.2rem 0;">
           <summary style="font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:400; color:var(--text-dark); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">What is your cancellation policy? <span style="color:var(--sage); font-size:1.6rem; font-weight:200; line-height:1;">+</span></summary>
-          <p style="margin-top:0.8rem; color:var(--text-mid); font-size:0.97rem; line-height:1.8;">Payment is taken at the time of booking. If you need to reschedule or cancel, please give at least 48 hours' notice and you'll receive a full refund. Cancellations made within 48 hours of your appointment are non-refundable. This policy reflects the value of the time we've set aside together.</p>
+          <p style="margin-top:0.8rem; color:var(--text-mid); font-size:0.97rem; line-height:1.8;">Payment is taken at the time of booking. If you need to reschedule or cancel, please give at least 48 hours&rsquo; notice and you'll receive a full refund. Cancellations made within 48 hours of your appointment are non-refundable. This policy reflects the value of the time we've set aside together.</p>
         </details>
 
         <details style="border-bottom: 1px solid rgba(122,158,159,0.2); padding: 1.2rem 0;">
           <summary style="font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:400; color:var(--text-dark); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">Do you work with clients outside the UK? <span style="color:var(--sage); font-size:1.6rem; font-weight:200; line-height:1;">+</span></summary>
-          <p style="margin-top:0.8rem; color:var(--text-mid); font-size:0.97rem; line-height:1.8;">Yes, I work with clients across the UK and internationally. Sessions are conducted entirely online, so location is no barrier. All fees are charged in GBP. If you're in a different time zone, we'll find a session time that works for both of us within my available hours (Monday to Friday, 9am–7pm UK time).</p>
+          <p style="margin-top:0.8rem; color:var(--text-mid); font-size:0.97rem; line-height:1.8;">Yes, I work with clients across the UK and internationally. Sessions are conducted entirely online, so location is no barrier. All fees are charged in GBP. All sessions run Monday to Friday, 9am&ndash;7pm GMT &mdash; please factor this in when booking from a different time zone.</p>
         </details>
 
         <details style="padding: 1.2rem 0;">
@@ -562,7 +575,7 @@
       <div class="book-inner">
         <p class="section-label">Book an Appointment</p>
         <h2 class="section-title">Ready to take the first step?</h2>
-        <p>Start with a free 30-minute consultation: a relaxed, no-obligation conversation to see if we&rsquo;re the right fit for each other.</p>
+        <p>Start with a free 15&ndash;30 minute consultation: a relaxed, no-obligation conversation to see if we&rsquo;re the right fit for each other.</p>
         <div class="booking-details">
           <div class="booking-detail">
             <div class="booking-detail-value">Mon &ndash; Fri</div>
@@ -570,7 +583,7 @@
           </div>
           <div class="booking-detail">
             <div class="booking-detail-value">9am &ndash; 7pm</div>
-            <div class="booking-detail-label">Hours (UK time)</div>
+            <div class="booking-detail-label">Hours (GMT)</div>
           </div>
           <div class="booking-detail">
             <div class="booking-detail-value">Online</div>
@@ -582,7 +595,7 @@
           </div>
         </div>
         <div style="text-align:center; padding: 2rem 0 1rem;">
-          <p style="font-size:1.05rem; color:var(--text-light); margin-bottom:2rem; max-width:520px; margin-left:auto; margin-right:auto;">Choose a time that suits you. Sessions are available Monday to Friday, 9am – 7pm UK time.</p>
+          <p style="font-size:1.05rem; color:var(--text-light); margin-bottom:2rem; max-width:520px; margin-left:auto; margin-right:auto;">Sessions are available Monday to Friday, 9am &ndash; 7pm GMT.</p>
           <a href="#book" class="btn-primary" style="font-size:1.05rem; padding: 1rem 2.5rem;">View Available Times</a>
         </div>
         <p style="margin-top:1.5rem; font-size:0.85rem; color:var(--text-light);">
