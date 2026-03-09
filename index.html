@@ -56,13 +56,6 @@
       background: rgba(255,255,255,0.22);
       border-color: rgba(255,255,255,0.55);
     }
-    .hero-approach-tag .tag-hint {
-      display: inline-block;
-      margin-left: 0.3rem;
-      font-size: 0.65rem;
-      opacity: 0.6;
-      vertical-align: middle;
-    }
     .tag-tooltip {
       display: none;
       position: absolute;
@@ -285,24 +278,24 @@
       <p class="hero-subtitle">A confidential, non-judgemental space to reflect, reconnect with yourself and build the resilience to move forward.</p>
       <div class="hero-approach">
         <span class="hero-approach-tag" role="button" aria-expanded="false" tabindex="0">
-          CBT<span class="tag-hint">&#9432;</span>
-          <span class="tag-tooltip">A structured, evidence-based approach that explores how thoughts, feelings and behaviours are connected &mdash; and how changing unhelpful patterns can improve wellbeing.</span>
+          CBT
+          <span class="tag-tooltip">A structured, evidence-based approach that explores how thoughts, feelings and behaviours are connected, and how changing unhelpful patterns can improve wellbeing.</span>
         </span>
         <span class="hero-approach-tag" role="button" aria-expanded="false" tabindex="0">
-          Emotion-Focused Therapy<span class="tag-hint">&#9432;</span>
+          Emotion-Focused Therapy
           <span class="tag-tooltip">Helps you identify, understand and transform difficult emotions, building greater emotional awareness and resilience in relationships and daily life.</span>
         </span>
         <span class="hero-approach-tag" role="button" aria-expanded="false" tabindex="0">
-          Bowen Family Systems<span class="tag-hint">&#9432;</span>
-          <span class="tag-tooltip">Explores how family relationships and patterns across generations shape who we are &mdash; helping you understand yourself in the context of those closest to you.</span>
+          Bowen Family Systems
+          <span class="tag-tooltip">Explores how family relationships and patterns across generations shape who we are, helping you understand yourself in the context of those closest to you.</span>
         </span>
         <span class="hero-approach-tag" role="button" aria-expanded="false" tabindex="0">
-          Integrative<span class="tag-hint">&#9432;</span>
+          Integrative
           <span class="tag-tooltip">Draws on multiple therapeutic approaches tailored to your individual needs, rather than following a single fixed method.</span>
         </span>
         <span class="hero-approach-tag" role="button" aria-expanded="false" tabindex="0">
-          Person-Centred<span class="tag-hint">&#9432;</span>
-          <span class="tag-tooltip">Places you at the heart of the process &mdash; built on empathy, acceptance and the belief that you have the inner capacity to grow and heal.</span>
+          Person-Centred
+          <span class="tag-tooltip">Places you at the heart of the process, built on empathy, acceptance and the belief that you have the inner capacity to grow and heal.</span>
         </span>
       </div>
       <div class="hero-badges">
@@ -598,7 +591,7 @@
   <div class="modal-overlay" id="modalIndividual" role="dialog" aria-modal="true" aria-label="Book individual therapy">
     <div class="modal-box">
       <div class="modal-header">
-        <h3>Book Individual Therapy &mdash; &pound;80</h3>
+        <h3>Book Individual Therapy (&pound;80)</h3>
         <button class="modal-close" aria-label="Close">&times;</button>
       </div>
       <div class="modal-body">
@@ -610,7 +603,7 @@
   <div class="modal-overlay" id="modalCouples" role="dialog" aria-modal="true" aria-label="Book couples therapy">
     <div class="modal-box">
       <div class="modal-header">
-        <h3>Book Couples Therapy &mdash; &pound;120</h3>
+        <h3>Book Couples Therapy (&pound;120)</h3>
         <button class="modal-close" aria-label="Close">&times;</button>
       </div>
       <div class="modal-body">
@@ -710,11 +703,9 @@
       var tags = document.querySelectorAll('.hero-approach-tag');
 
       tags.forEach(function(tag) {
-        // Toggle on tap/click
         tag.addEventListener('click', function(e) {
           e.stopPropagation();
           var isActive = tag.classList.contains('active');
-          // Close all others first
           tags.forEach(function(t) {
             t.classList.remove('active');
             t.setAttribute('aria-expanded', 'false');
@@ -724,7 +715,6 @@
             tag.setAttribute('aria-expanded', 'true');
           }
         });
-        // Keyboard support
         tag.addEventListener('keydown', function(e) {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
@@ -733,7 +723,6 @@
         });
       });
 
-      // Tap anywhere else to close all
       document.addEventListener('click', function() {
         tags.forEach(function(t) {
           t.classList.remove('active');
