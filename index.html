@@ -36,10 +36,76 @@
     .hero-title em { font-style: italic; color: var(--sage-light); }
     .hero-subtitle { font-size: 1.05rem; color: rgba(255,255,255,0.8); max-width: 540px; margin: 0 auto 2rem; font-weight: 300; line-height: 1.8; }
     .hero-approach { display: flex; align-items: center; justify-content: center; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 2rem; }
-    .hero-approach-tag { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); color: rgba(255,255,255,0.9); font-size: 0.78rem; padding: 0.3rem 0.85rem; border-radius: 2rem; letter-spacing: 0.04em; }
+
+    /* Approach tag tooltip system */
+    .hero-approach-tag {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.9);
+      font-size: 0.78rem;
+      padding: 0.3rem 0.85rem;
+      border-radius: 2rem;
+      letter-spacing: 0.04em;
+      position: relative;
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .hero-approach-tag:hover,
+    .hero-approach-tag.active {
+      background: rgba(255,255,255,0.22);
+      border-color: rgba(255,255,255,0.55);
+    }
+    .hero-approach-tag .tag-hint {
+      display: inline-block;
+      margin-left: 0.3rem;
+      font-size: 0.65rem;
+      opacity: 0.6;
+      vertical-align: middle;
+    }
+    .tag-tooltip {
+      display: none;
+      position: absolute;
+      bottom: calc(100% + 10px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(30,50,50,0.96);
+      color: rgba(255,255,255,0.92);
+      font-size: 0.78rem;
+      line-height: 1.55;
+      padding: 0.65rem 0.9rem;
+      border-radius: 8px;
+      width: 220px;
+      text-align: left;
+      z-index: 50;
+      pointer-events: none;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+      letter-spacing: 0;
+    }
+    .tag-tooltip::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 6px solid transparent;
+      border-top-color: rgba(30,50,50,0.96);
+    }
+    .hero-approach-tag.active .tag-tooltip,
+    .hero-approach-tag:hover .tag-tooltip {
+      display: block;
+    }
+    /* On small screens keep tooltip within viewport */
+    @media (max-width: 480px) {
+      .tag-tooltip {
+        width: 180px;
+        font-size: 0.75rem;
+      }
+    }
+
     .hero-badges { display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
     .hero-badge { font-size: 0.78rem; color: rgba(255,255,255,0.7); letter-spacing: 0.06em; display: flex; align-items: center; gap: 0.4rem; }
-    .hero-badge::before { content: '✦'; color: var(--accent); font-size: 0.6rem; }
+    .hero-badge::before { content: '\2726'; color: var(--accent); font-size: 0.6rem; }
     .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
     .btn-primary { background: var(--accent); color: #fff; padding: 0.9rem 2.2rem; border-radius: 3rem; text-decoration: none; font-size: 0.88rem; font-weight: 500; letter-spacing: 0.04em; transition: all 0.25s; display: inline-block; cursor: pointer; border: none; }
     .btn-primary:hover { background: #b8924a; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
@@ -99,7 +165,7 @@
     .service-duration { font-size: 0.82rem; color: var(--text-light); margin-bottom: 1.5rem; }
     .service-features { list-style: none; margin-bottom: 2rem; }
     .service-features li { font-size: 0.88rem; color: var(--text-mid); padding: 0.4rem 0; border-bottom: 1px solid rgba(122,158,159,0.1); display: flex; align-items: center; gap: 0.5rem; }
-    .service-features li::before { content: '✓'; color: var(--sage); font-size: 0.75rem; }
+    .service-features li::before { content: '\2713'; color: var(--sage); font-size: 0.75rem; }
     .btn-book { display: block; text-align: center; padding: 0.8rem; border: 1px solid var(--sage); color: var(--sage-dark); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.06em; border-radius: 2rem; transition: all 0.2s; cursor: pointer; background: none; width: 100%; font-family: 'Inter', sans-serif; }
     .btn-book:hover { background: var(--sage-dark); color: white; border-color: var(--sage-dark); }
     .service-card.featured .btn-book { background: var(--accent); border-color: var(--accent); color: white; }
@@ -123,7 +189,6 @@
     .booking-detail-value { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; color: var(--text-dark); }
     .booking-detail-label { font-size: 0.75rem; color: var(--text-light); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 0.2rem; }
 
-    /* Contact CTA row — both buttons use same sage outline style */
     .contact-row { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem; }
     .btn-contact { display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.7rem 1.5rem; border-radius: 3rem; font-size: 0.86rem; font-weight: 500; text-decoration: none; transition: all 0.2s; letter-spacing: 0.02em; background: transparent; color: var(--sage-dark); border: 1px solid var(--sage); }
     .btn-contact:hover { background: var(--sage-dark); color: white; border-color: var(--sage-dark); }
@@ -138,7 +203,6 @@
     .footer-links a:hover { color: white; }
     .footer-legal { font-size: 0.75rem; color: rgba(255,255,255,0.3); line-height: 1.8; }
 
-    /* Booking Modal */
     .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(20,40,40,0.75); z-index: 1000; align-items: center; justify-content: center; padding: 1rem; }
     .modal-overlay.active { display: flex; }
     .modal-box { background: #fff; border-radius: 6px; width: 100%; max-width: 860px; max-height: 92vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.35); }
@@ -220,11 +284,26 @@
       <h1 class="hero-title">Supporting you through<br/><em>life&rsquo;s significant challenges</em></h1>
       <p class="hero-subtitle">A confidential, non-judgemental space to reflect, reconnect with yourself and build the resilience to move forward.</p>
       <div class="hero-approach">
-        <span class="hero-approach-tag">CBT</span>
-        <span class="hero-approach-tag">Emotion-Focused Therapy</span>
-        <span class="hero-approach-tag">Bowen Family Systems</span>
-        <span class="hero-approach-tag">Integrative</span>
-        <span class="hero-approach-tag">Person-Centred</span>
+        <span class="hero-approach-tag" role="button" aria-expanded="false" tabindex="0">
+          CBT<span class="tag-hint">&#9432;</span>
+          <span class="tag-tooltip">A structured, evidence-based approach that explores how thoughts, feelings and behaviours are connected &mdash; and how changing unhelpful patterns can improve wellbeing.</span>
+        </span>
+        <span class="hero-approach-tag" role="button" aria-expanded="false" tabindex="0">
+          Emotion-Focused Therapy<span class="tag-hint">&#9432;</span>
+          <span class="tag-tooltip">Helps you identify, understand and transform difficult emotions, building greater emotional awareness and resilience in relationships and daily life.</span>
+        </span>
+        <span class="hero-approach-tag" role="button" aria-expanded="false" tabindex="0">
+          Bowen Family Systems<span class="tag-hint">&#9432;</span>
+          <span class="tag-tooltip">Explores how family relationships and patterns across generations shape who we are &mdash; helping you understand yourself in the context of those closest to you.</span>
+        </span>
+        <span class="hero-approach-tag" role="button" aria-expanded="false" tabindex="0">
+          Integrative<span class="tag-hint">&#9432;</span>
+          <span class="tag-tooltip">Draws on multiple therapeutic approaches tailored to your individual needs, rather than following a single fixed method.</span>
+        </span>
+        <span class="hero-approach-tag" role="button" aria-expanded="false" tabindex="0">
+          Person-Centred<span class="tag-hint">&#9432;</span>
+          <span class="tag-tooltip">Places you at the heart of the process &mdash; built on empathy, acceptance and the belief that you have the inner capacity to grow and heal.</span>
+        </span>
       </div>
       <div class="hero-badges">
         <span class="hero-badge">MBACP Registered Member</span>
@@ -624,6 +703,43 @@
           });
         });
       }
+    });
+
+    // Approach tag tap-to-toggle tooltips
+    document.addEventListener('DOMContentLoaded', function() {
+      var tags = document.querySelectorAll('.hero-approach-tag');
+
+      tags.forEach(function(tag) {
+        // Toggle on tap/click
+        tag.addEventListener('click', function(e) {
+          e.stopPropagation();
+          var isActive = tag.classList.contains('active');
+          // Close all others first
+          tags.forEach(function(t) {
+            t.classList.remove('active');
+            t.setAttribute('aria-expanded', 'false');
+          });
+          if (!isActive) {
+            tag.classList.add('active');
+            tag.setAttribute('aria-expanded', 'true');
+          }
+        });
+        // Keyboard support
+        tag.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            tag.click();
+          }
+        });
+      });
+
+      // Tap anywhere else to close all
+      document.addEventListener('click', function() {
+        tags.forEach(function(t) {
+          t.classList.remove('active');
+          t.setAttribute('aria-expanded', 'false');
+        });
+      });
     });
   </script>
 
