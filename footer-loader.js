@@ -28,6 +28,10 @@
       var el = document.getElementById('shared-footer');
       if (!el) return;
       el.outerHTML = html;
+      // Scripts inside innerHTML are not executed by the browser,
+      // so we set the obfuscated email href here after injection.
+      var emailLink = document.getElementById('footer-email-link');
+      if (emailLink) emailLink.href = 'mailto:' + 'roy' + '@' + 'therapywithroy.co.uk';
       initCookieBanner();
     })
     .catch(function(err) { console.warn('Footer failed to load:', err); });
