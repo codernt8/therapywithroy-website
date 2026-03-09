@@ -61,7 +61,20 @@
     @media (max-width: 768px) {
       nav { padding: 1rem 1.5rem; flex-wrap: wrap; }
       .menu-toggle { display: block; }
-      .nav-links { display: none; flex-direction: column; width: 100%; padding: 1.5rem 0; gap: 1.5rem; text-align: center; background: rgba(253,252,250,0.98); position: absolute; top: 100%; left: 0; border-bottom: 1px solid rgba(122,158,159,0.15); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 1.5rem 0;
+        gap: 1.5rem;
+        text-align: center;
+        background: rgba(253,252,250,0.98);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        border-bottom: 1px solid rgba(122,158,159,0.15);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      }
       .nav-links.active { display: flex; }
       .nav-cta { display: inline-block; }
       .blog-grid { padding: 2rem 1.2rem 4rem; }
@@ -88,6 +101,19 @@
   </div>
 
   <div class="blog-grid">
+
+    <a href="will-ai-take-my-job.html" class="blog-card">
+      <img src="images/will-ai-take-my-job.png" alt="A young man sitting outside a glass office building, looking thoughtfully into the middle distance" class="blog-card-img" />
+      <div class="blog-card-body">
+        <p class="blog-card-cat">Career &amp; Workplace</p>
+        <h2 class="blog-card-title">&ldquo;Will AI Take My Job?&rdquo; How to Cope When the Future Feels Uncertain</h2>
+        <p class="blog-card-excerpt">More than one in four UK workers fear their job could be replaced by AI. If you&rsquo;re carrying that anxiety quietly, here&rsquo;s what it really costs you and what actually helps.</p>
+        <div class="blog-card-footer">
+          <img src="/roy pic.jpg" alt="Roy Lam" class="blog-card-author-img" />
+          <span class="blog-card-meta">Roy Lam &bull; 9 March 2026 &bull; 6 min read</span>
+        </div>
+      </div>
+    </a>
 
     <a href="burnout-recognising-the-signs.html" class="blog-card">
       <img src="images/burnout-group.png" alt="A group of professionals looking tired and overwhelmed, representing the widespread impact of workplace burnout" class="blog-card-img" />
@@ -141,11 +167,20 @@
       if(menuBtn && navLinksList) {
         menuBtn.addEventListener('click', function() {
           navLinksList.classList.toggle('active');
-          if(navLinksList.classList.contains('active')) { menuBtn.innerHTML = '&times;'; menuBtn.style.fontSize = '2.2rem'; }
-          else { menuBtn.innerHTML = '&#9776;'; menuBtn.style.fontSize = '1.8rem'; }
+          if(navLinksList.classList.contains('active')) {
+            menuBtn.innerHTML = '&times;';
+            menuBtn.style.fontSize = '2.2rem';
+          } else {
+            menuBtn.innerHTML = '&#9776;';
+            menuBtn.style.fontSize = '1.8rem';
+          }
         });
         navLinksList.querySelectorAll('a').forEach(function(link) {
-          link.addEventListener('click', function() { navLinksList.classList.remove('active'); menuBtn.innerHTML = '&#9776;'; menuBtn.style.fontSize = '1.8rem'; });
+          link.addEventListener('click', function() {
+            navLinksList.classList.remove('active');
+            menuBtn.innerHTML = '&#9776;';
+            menuBtn.style.fontSize = '1.8rem';
+          });
         });
       }
     });
