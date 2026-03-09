@@ -86,7 +86,7 @@
     <p>The data controller for this website and therapy practice is:</p>
     <ul>
       <li><strong>Name:</strong> Roy Lam (Ka Yiu Lam), trading as Therapy with Roy</li>
-      <li><strong>Email:</strong> <a href="mailto:roy@therapywithroy.co.uk">roy@therapywithroy.co.uk</a></li>
+      <li><strong>Email:</strong> <a id="pp-email-1" href="#">roy@therapywithroy.co.uk</a></li>
       <li><strong>Phone / WhatsApp:</strong> 07824 426000</li>
       <li><strong>Website:</strong> <a href="https://therapywithroy.co.uk">therapywithroy.co.uk</a></li>
       <li><strong>ICO Registration Number:</strong> ZC100652</li>
@@ -179,9 +179,9 @@
       <li><strong>Restriction:</strong> You may ask me to restrict how I process your data in certain circumstances.</li>
       <li><strong>Portability:</strong> You may request your data in a portable, machine-readable format where applicable.</li>
       <li><strong>Objection:</strong> You may object to processing based on legitimate interests.</li>
-      <li><strong>Withdraw consent:</strong> Where processing is based on your consent &mdash; including consent to session recording &mdash; you may withdraw that consent at any time by contacting me at <a href="mailto:roy@therapywithroy.co.uk">roy@therapywithroy.co.uk</a>. Withdrawal will not affect the lawfulness of any processing carried out before withdrawal, and will never affect your access to therapy.</li>
+      <li><strong>Withdraw consent:</strong> Where processing is based on your consent &mdash; including consent to session recording &mdash; you may withdraw that consent at any time by contacting me at <a id="pp-email-2" href="#">roy@therapywithroy.co.uk</a>. Withdrawal will not affect the lawfulness of any processing carried out before withdrawal, and will never affect your access to therapy.</li>
     </ul>
-    <p>To exercise any of these rights, please contact me at <a href="mailto:roy@therapywithroy.co.uk">roy@therapywithroy.co.uk</a>. I will respond within one calendar month.</p>
+    <p>To exercise any of these rights, please contact me at <a id="pp-email-3" href="#">roy@therapywithroy.co.uk</a>. I will respond within one calendar month.</p>
 
     <h2>11. Cookies</h2>
     <p>This website uses two types of cookies:</p>
@@ -192,7 +192,7 @@
     <p>You can withdraw consent for analytics cookies at any time by clearing your browser cookies and declining again on your next visit.</p>
 
     <h2>12. Complaints</h2>
-    <p>If you have a concern about how I handle your personal data, please contact me first at <a href="mailto:roy@therapywithroy.co.uk">roy@therapywithroy.co.uk</a> so I can try to resolve it.</p>
+    <p>If you have a concern about how I handle your personal data, please contact me first at <a id="pp-email-4" href="#">roy@therapywithroy.co.uk</a> so I can try to resolve it.</p>
     <p>If you remain dissatisfied, you have the right to lodge a complaint with the <strong>Information Commissioner&rsquo;s Office (ICO)</strong>:</p>
     <ul>
       <li>Website: <a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a></li>
@@ -205,6 +205,18 @@
 
   <div id="shared-footer"></div>
   <script src="/footer-loader.js"></script>
+
+  <script>
+    // Obfuscate all email links on this page
+    document.addEventListener('DOMContentLoaded', function() {
+      var u = 'roy', d = 'therapywithroy.co.uk';
+      var mailto = 'mailto:' + u + '@' + d;
+      ['pp-email-1','pp-email-2','pp-email-3','pp-email-4'].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) el.href = mailto;
+      });
+    });
+  </script>
 
 </body>
 </html>
