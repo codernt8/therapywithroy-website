@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Online Therapy UK | Individuals, Couples &amp; LGBT+ | Roy Lam MBACP</title>
-    <meta name="description" content="Online therapy with Roy Lam, MBACP registered counsellor. Support for anxiety, depression, relationships, identity and life transitions. UK &amp; international. Book a free consultation.">
+  <title>Online Therapy UK | Therapy with Roy | Roy Lam MBACP</title>
+  <meta name="description" content="Online therapy with Roy Lam, MBACP registered counsellor. Support for anxiety, depression, relationships, identity and life transitions. UK-based, available worldwide. Book a free consultation.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij4KICA8Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSIzMiIgZmlsbD0iIzRhNmU2ZiIvPgogIDxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjI4IiBmaWxsPSJub25lIiBzdHJva2U9IiM3YTllOWYiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIwLjUiLz4KICA8dGV4dCB4PSIzMiIgeT0iNDQiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIzNCIgZm9udC13ZWlnaHQ9IjQwMCIgCiAgICAgICAgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2Y3ZjRlZiI+UjwvdGV4dD4KPC9zdmc+"/>
   <link rel="shortcut icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij4KICA8Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSIzMiIgZmlsbD0iIzRhNmU2ZiIvPgogIDxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjI4IiBmaWxsPSJub25lIiBzdHJva2U9IiM3YTllOWYiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIwLjUiLz4KICA8dGV4dCB4PSIzMiIgeT0iNDQiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIzNCIgZm9udC13ZWlnaHQ9IjQwMCIgCiAgICAgICAgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2Y3ZjRlZiI+UjwvdGV4dD4KPC9zdmc+"/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
@@ -34,26 +34,86 @@
     .hero-eyebrow { font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sage-light); margin-bottom: 1.5rem; font-weight: 400; }
     .hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 300; color: #fff; line-height: 1.2; margin-bottom: 1.5rem; }
     .hero-title em { font-style: italic; color: var(--sage-light); }
-    .hero-subtitle { font-size: 1.05rem; color: rgba(255,255,255,0.8); max-width: 540px; margin: 0 auto 2.5rem; font-weight: 300; line-height: 1.8; }
+    .hero-subtitle { font-size: 1.05rem; color: rgba(255,255,255,0.8); max-width: 540px; margin: 0 auto 2rem; font-weight: 300; line-height: 1.8; }
+    .hero-approach { display: flex; align-items: center; justify-content: center; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 2rem; }
+
+    /* Approach tag tooltip system */
+    .hero-approach-tag {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.9);
+      font-size: 0.78rem;
+      padding: 0.3rem 0.85rem;
+      border-radius: 2rem;
+      letter-spacing: 0.04em;
+      position: relative;
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .hero-approach-tag:hover,
+    .hero-approach-tag.active {
+      background: rgba(255,255,255,0.22);
+      border-color: rgba(255,255,255,0.55);
+    }
+    .tag-tooltip {
+      display: none;
+      position: absolute;
+      bottom: calc(100% + 10px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(30,50,50,0.96);
+      color: rgba(255,255,255,0.92);
+      font-size: 0.78rem;
+      line-height: 1.55;
+      padding: 0.65rem 0.9rem;
+      border-radius: 8px;
+      width: 220px;
+      text-align: left;
+      z-index: 50;
+      pointer-events: none;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+      letter-spacing: 0;
+    }
+    .tag-tooltip::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 6px solid transparent;
+      border-top-color: rgba(30,50,50,0.96);
+    }
+    .hero-approach-tag.active .tag-tooltip,
+    .hero-approach-tag:hover .tag-tooltip {
+      display: block;
+    }
+    /* On small screens keep tooltip within viewport */
+    @media (max-width: 480px) {
+      .tag-tooltip {
+        width: 180px;
+        font-size: 0.75rem;
+      }
+    }
+
     .hero-badges { display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
     .hero-badge { font-size: 0.78rem; color: rgba(255,255,255,0.7); letter-spacing: 0.06em; display: flex; align-items: center; gap: 0.4rem; }
-    .hero-badge::before { content: '✦'; color: var(--accent); font-size: 0.6rem; }
+    .hero-badge::before { content: '\2726'; color: var(--accent); font-size: 0.6rem; }
     .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .btn-primary { background: var(--accent); color: #fff; padding: 0.9rem 2.2rem; border-radius: 3rem; text-decoration: none; font-size: 0.88rem; font-weight: 500; letter-spacing: 0.04em; transition: all 0.25s; display: inline-block; }
+    .btn-primary { background: var(--accent); color: #fff; padding: 0.9rem 2.2rem; border-radius: 3rem; text-decoration: none; font-size: 0.88rem; font-weight: 500; letter-spacing: 0.04em; transition: all 0.25s; display: inline-block; cursor: pointer; border: none; }
     .btn-primary:hover { background: #b8924a; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
     .btn-secondary { border: 1px solid rgba(255,255,255,0.4); color: rgba(255,255,255,0.9); padding: 0.9rem 2.2rem; border-radius: 3rem; text-decoration: none; font-size: 0.88rem; font-weight: 400; letter-spacing: 0.04em; transition: all 0.25s; display: inline-block; }
     .btn-secondary:hover { border-color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.08); }
 
-    section { padding: 5rem 2rem; }
+    section { padding: 3.5rem 2rem; }
     .container { max-width: 1100px; margin: 0 auto; }
     .section-label { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sage); margin-bottom: 0.8rem; font-weight: 500; }
     .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; color: var(--text-dark); line-height: 1.25; margin-bottom: 1.5rem; }
 
     #who { background: var(--cream); }
-    .who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; margin-top: 3rem; }
+    .who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; margin-top: 2rem; }
     .who-text p { color: var(--text-mid); margin-bottom: 1.2rem; font-size: 1.02rem; }
-    .issues-grid { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.5rem; }
-    .issue-item { }
+    .issues-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.2rem; }
     .who-visual { border-radius: 2px; position: relative; overflow: hidden; }
     .who-visual img { width: 100%; height: auto; display: block; }
     .who-visual-inner { position: absolute; inset: 0; z-index: 1; text-align: center; padding: 2rem; background: rgba(44,74,78,0.55); display: flex; flex-direction: column; align-items: center; justify-content: center; }
@@ -76,16 +136,15 @@
     .approach-tag { background: var(--cream); border: 1px solid var(--sage-light); color: var(--sage-dark); font-size: 0.8rem; padding: 0.35rem 0.9rem; border-radius: 2rem; letter-spacing: 0.04em; }
 
     #how { background: var(--cream); }
-    .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3.5rem; }
-    .step { text-align: center; padding: 2.5rem 1.5rem; background: var(--warm-white); border-radius: 2px; position: relative; }
+    .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2.5rem; }
+    .step { text-align: center; padding: 2rem 1.5rem; background: var(--warm-white); border-radius: 2px; }
     .step-number { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 300; color: var(--sage-light); line-height: 1; margin-bottom: 1rem; }
     .step h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--text-dark); margin-bottom: 0.8rem; }
     .step p { font-size: 0.9rem; color: var(--text-mid); line-height: 1.7; }
-    .step-connector { position: absolute; right: -1rem; top: 50%; transform: translateY(-50%); color: var(--sage-light); font-size: 1.2rem; }
 
     #services { background: var(--warm-white); }
-    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3.5rem; }
-    .service-card { border: 1px solid rgba(122,158,159,0.2); padding: 2.5rem 2rem; border-radius: 2px; transition: all 0.25s; }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2.5rem; }
+    .service-card { border: 1px solid rgba(122,158,159,0.2); padding: 2rem 1.75rem; border-radius: 2px; transition: all 0.25s; }
     .service-card:hover { border-color: var(--sage); box-shadow: 0 8px 32px rgba(74,110,111,0.08); }
     .service-card.featured { background: var(--sage-dark); border-color: var(--sage-dark); }
     .service-card.featured .service-name,
@@ -99,13 +158,13 @@
     .service-duration { font-size: 0.82rem; color: var(--text-light); margin-bottom: 1.5rem; }
     .service-features { list-style: none; margin-bottom: 2rem; }
     .service-features li { font-size: 0.88rem; color: var(--text-mid); padding: 0.4rem 0; border-bottom: 1px solid rgba(122,158,159,0.1); display: flex; align-items: center; gap: 0.5rem; }
-    .service-features li::before { content: '✓'; color: var(--sage); font-size: 0.75rem; }
-    .btn-book { display: block; text-align: center; padding: 0.8rem; border: 1px solid var(--sage); color: var(--sage-dark); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.06em; border-radius: 2rem; transition: all 0.2s; }
+    .service-features li::before { content: '\2713'; color: var(--sage); font-size: 0.75rem; }
+    .btn-book { display: block; text-align: center; padding: 0.8rem; border: 1px solid var(--sage); color: var(--sage-dark); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.06em; border-radius: 2rem; transition: all 0.2s; cursor: pointer; background: none; width: 100%; font-family: 'Inter', sans-serif; }
     .btn-book:hover { background: var(--sage-dark); color: white; border-color: var(--sage-dark); }
     .service-card.featured .btn-book { background: var(--accent); border-color: var(--accent); color: white; }
     .service-card.featured .btn-book:hover { background: #b8924a; border-color: #b8924a; }
 
-    #testimonials { background: linear-gradient(135deg, #2c4a4e 0%, #4a7a7e 100%); padding: 5rem 2rem; }
+    #testimonials { background: linear-gradient(135deg, #2c4a4e 0%, #4a7a7e 100%); padding: 3.5rem 2rem; }
     #testimonials .section-label { color: var(--sage-light); }
     #testimonials .section-title { color: white; }
     .testimonials-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 3rem; }
@@ -123,7 +182,10 @@
     .booking-detail-value { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; color: var(--text-dark); }
     .booking-detail-label { font-size: 0.75rem; color: var(--text-light); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 0.2rem; }
 
-    /* Shared footer styles */
+    .contact-row { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem; }
+    .btn-contact { display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.7rem 1.5rem; border-radius: 3rem; font-size: 0.86rem; font-weight: 500; text-decoration: none; transition: all 0.2s; letter-spacing: 0.02em; background: transparent; color: var(--sage-dark); border: 1px solid var(--sage); }
+    .btn-contact:hover { background: var(--sage-dark); color: white; border-color: var(--sage-dark); }
+
     footer { background: var(--text-dark); color: rgba(255,255,255,0.6); padding: 3rem 2rem; text-align: center; }
     .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 300; color: white; margin-bottom: 0.8rem; }
     .footer-tagline { font-size: 0.82rem; font-style: italic; color: rgba(255,255,255,0.45); margin-bottom: 1.5rem; }
@@ -134,23 +196,30 @@
     .footer-links a:hover { color: white; }
     .footer-legal { font-size: 0.75rem; color: rgba(255,255,255,0.3); line-height: 1.8; }
 
+    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(20,40,40,0.75); z-index: 1000; align-items: center; justify-content: center; padding: 1rem; }
+    .modal-overlay.active { display: flex; }
+    .modal-box { background: #fff; border-radius: 6px; width: 100%; max-width: 860px; max-height: 92vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.35); }
+    .modal-header { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.5rem; background: var(--sage-dark); color: #fff; flex-shrink: 0; }
+    .modal-header h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 1.2rem; margin: 0; color: #fff; }
+    .modal-close { background: none; border: none; color: #fff; font-size: 1.6rem; cursor: pointer; line-height: 1; padding: 0 0.25rem; opacity: 0.85; transition: opacity 0.2s; }
+    .modal-close:hover { opacity: 1; }
+    .modal-body { flex: 1; overflow-y: auto; padding: 0; }
+    .modal-body iframe { display: block; width: 100%; height: 780px; border: none; }
+    body.modal-open { overflow: hidden; }
+
+    #cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; background: var(--text-dark); color: rgba(255,255,255,0.85); padding: 1.25rem 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; z-index: 2000; font-size: 0.85rem; flex-wrap: wrap; box-shadow: 0 -4px 20px rgba(0,0,0,0.2); }
+    #cookie-banner p { margin: 0; flex: 1; min-width: 200px; line-height: 1.5; }
+    #cookie-banner a { color: var(--sage-light); }
+    .cookie-btns { display: flex; gap: 0.75rem; flex-shrink: 0; }
+    .cookie-accept { background: var(--sage-dark); color: #fff; border: none; padding: 0.55rem 1.25rem; border-radius: 3px; cursor: pointer; font-size: 0.85rem; font-family: 'Inter', sans-serif; font-weight: 500; transition: opacity 0.2s; }
+    .cookie-accept:hover { opacity: 0.85; }
+    .cookie-decline { background: transparent; color: rgba(255,255,255,0.6); border: 1px solid rgba(255,255,255,0.3); padding: 0.55rem 1.25rem; border-radius: 3px; cursor: pointer; font-size: 0.85rem; font-family: 'Inter', sans-serif; transition: opacity 0.2s; }
+    .cookie-decline:hover { opacity: 0.75; }
+
     @media (max-width: 768px) {
       nav { padding: 1rem 1.5rem; flex-wrap: wrap; }
       .menu-toggle { display: block; }
-      .nav-links { 
-        display: none; 
-        flex-direction: column; 
-        width: 100%; 
-        padding: 1.5rem 0; 
-        gap: 1.5rem; 
-        text-align: center; 
-        background: rgba(253,252,250,0.98);
-        position: absolute;
-        top: 100%;
-        left: 0;
-        border-bottom: 1px solid rgba(122,158,159,0.15);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-      }
+      .nav-links { display: none; flex-direction: column; width: 100%; padding: 1.5rem 0; gap: 1.5rem; text-align: center; background: rgba(253,252,250,0.98); position: absolute; top: 100%; left: 0; border-bottom: 1px solid rgba(122,158,159,0.15); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
       .nav-links.active { display: flex; }
       .nav-cta { display: inline-block; }
       .who-grid, .about-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -159,143 +228,33 @@
       .about-sidebar { position: static; }
       .issues-grid { grid-template-columns: 1fr; }
     }
-
-    /* ── Booking Modal ── */
-    .modal-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(20,40,40,0.75);
-      z-index: 1000;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
-    }
-    .modal-overlay.active { display: flex; }
-    .modal-box {
-      background: #fff;
-      border-radius: 6px;
-      width: 100%;
-      max-width: 860px;
-      max-height: 92vh;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
-    }
-    .modal-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 1.5rem;
-      background: var(--sage-dark);
-      color: #fff;
-      flex-shrink: 0;
-    }
-    .modal-header h3 {
-      font-family: var(--font-serif);
-      font-weight: 400;
-      font-size: 1.2rem;
-      margin: 0;
-      color: #fff;
-    }
-    .modal-close {
-      background: none;
-      border: none;
-      color: #fff;
-      font-size: 1.6rem;
-      cursor: pointer;
-      line-height: 1;
-      padding: 0 0.25rem;
-      opacity: 0.85;
-      transition: opacity 0.2s;
-    }
-    .modal-close:hover { opacity: 1; }
-    .modal-body {
-      flex: 1;
-      overflow-y: auto;
-      padding: 0;
-    }
-    .modal-body iframe {
-      display: block;
-      width: 100%;
-      height: 780px;
-      border: none;
-    }
-    body.modal-open { overflow: hidden; }
-
-    /* ── Cookie Banner ── */
-    #cookie-banner {
-      position: fixed;
-      bottom: 0; left: 0; right: 0;
-      background: var(--text-dark);
-      color: rgba(255,255,255,0.85);
-      padding: 1.25rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1.5rem;
-      z-index: 2000;
-      font-size: 0.85rem;
-      flex-wrap: wrap;
-      box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
-    }
-    #cookie-banner p { margin: 0; flex: 1; min-width: 200px; line-height: 1.5; }
-    #cookie-banner a { color: var(--sage-light); }
-    .cookie-btns { display: flex; gap: 0.75rem; flex-shrink: 0; }
-    .cookie-accept {
-      background: var(--sage-dark);
-      color: #fff;
-      border: none;
-      padding: 0.55rem 1.25rem;
-      border-radius: 3px;
-      cursor: pointer;
-      font-size: 0.85rem;
-      font-family: 'Inter', sans-serif;
-      font-weight: 500;
-      transition: opacity 0.2s;
-    }
-    .cookie-accept:hover { opacity: 0.85; }
-    .cookie-decline {
-      background: transparent;
-      color: rgba(255,255,255,0.6);
-      border: 1px solid rgba(255,255,255,0.3);
-      padding: 0.55rem 1.25rem;
-      border-radius: 3px;
-      cursor: pointer;
-      font-size: 0.85rem;
-      font-family: 'Inter', sans-serif;
-      transition: opacity 0.2s;
-    }
-    .cookie-decline:hover { opacity: 0.75; }
-
   </style>
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Roy Lam",
-      "alternateName": "Ka Yiu Lam",
-      "jobTitle": "Online Therapist & Counsellor",
-      "description": "MBACP registered online therapist specialising in anxiety, depression, relationships, identity and life transitions.",
-      "url": "https://therapywithroy.co.uk",
-      "telephone": "07824426000",
-      "email": "roy@therapywithroy.co.uk",
-      "hasCredential": {
-        "@type": "EducationalOccupationalCredential",
-        "credentialCategory": "Professional Membership",
-        "recognizedBy": {"@type": "Organization", "name": "British Association for Counselling and Psychotherapy (BACP)", "url": "https://www.bacp.co.uk"}
-      },
-      "knowsAbout": ["Cognitive Behavioural Therapy","Emotion-Focused Therapy","Bowen Family Systems Theory","Anxiety","Depression","Relationship Therapy","LGBT Identity","Cultural Identity"],
-      "offers": [
-        {"@type": "Offer", "name": "Free Initial Consultation", "price": "0", "priceCurrency": "GBP"},
-        {"@type": "Offer", "name": "Individual Therapy", "price": "80", "priceCurrency": "GBP"},
-        {"@type": "Offer", "name": "Couples Therapy", "price": "120", "priceCurrency": "GBP"}
-      ]
-    }
-    </script>
-  </head>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Roy Lam",
+    "alternateName": "Ka Yiu Lam",
+    "jobTitle": "Online Therapist & Counsellor",
+    "description": "MBACP registered online therapist specialising in anxiety, depression, relationships, identity and life transitions. UK-based, available worldwide.",
+    "url": "https://therapywithroy.co.uk",
+    "telephone": "07824426000",
+    "email": "roy@therapywithroy.co.uk",
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "Professional Membership",
+      "recognizedBy": {"@type": "Organization", "name": "British Association for Counselling and Psychotherapy (BACP)", "url": "https://www.bacp.co.uk"}
+    },
+    "knowsAbout": ["Cognitive Behavioural Therapy","Emotion-Focused Therapy","Bowen Family Systems Theory","Anxiety","Depression","Burnout","Relationship Therapy","Career Counselling","Job Displacement","AI Anxiety","Midlife Career Transitions","Life Transitions","LGBT Identity","Cultural Identity","Expat Relocation"],
+    "offers": [
+      {"@type": "Offer", "name": "Free Initial Consultation", "price": "0", "priceCurrency": "GBP"},
+      {"@type": "Offer", "name": "Individual Therapy", "price": "80", "priceCurrency": "GBP"},
+      {"@type": "Offer", "name": "Couples Therapy", "price": "120", "priceCurrency": "GBP"}
+    ]
+  }
+  </script>
+</head>
 <body>
 
   <nav>
@@ -308,24 +267,45 @@
       <li><a href="#testimonials">Testimonials</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="blog/">Blog</a></li>
-      <li><a href="#book" class="nav-cta">Book Now</a></li>
+      <li><a href="#" class="nav-cta" id="navBookBtn">Book Now</a></li>
     </ul>
   </nav>
 
   <section id="hero">
     <div class="hero-content">
-      <p class="hero-eyebrow">Online Counselling &amp; Therapy &mdash; UK &amp; International</p>
+      <p class="hero-eyebrow">Online Counselling &amp; Therapy &middot; UK-based, available worldwide</p>
       <h1 class="hero-title">Supporting you through<br/><em>life&rsquo;s significant challenges</em></h1>
-      <p class="hero-subtitle">A confidential, non-judgemental space to reflect, reconnect with yourself, and build the resilience to move forward.</p>
+      <p class="hero-subtitle">A confidential, non-judgemental space to reflect, reconnect with yourself and build the resilience to move forward.</p>
+      <div class="hero-approach">
+        <span class="hero-approach-tag" role="button" aria-expanded="false" tabindex="0">
+          CBT
+          <span class="tag-tooltip">A structured, evidence-based approach that explores how thoughts, feelings and behaviours are connected, and how changing unhelpful patterns can improve wellbeing.</span>
+        </span>
+        <span class="hero-approach-tag" role="button" aria-expanded="false" tabindex="0">
+          Emotion-Focused Therapy
+          <span class="tag-tooltip">Helps you identify, understand and transform difficult emotions, building greater emotional awareness and resilience in relationships and daily life.</span>
+        </span>
+        <span class="hero-approach-tag" role="button" aria-expanded="false" tabindex="0">
+          Bowen Family Systems
+          <span class="tag-tooltip">Explores how family relationships and patterns across generations shape who we are, helping you understand yourself in the context of those closest to you.</span>
+        </span>
+        <span class="hero-approach-tag" role="button" aria-expanded="false" tabindex="0">
+          Integrative
+          <span class="tag-tooltip">Draws on multiple therapeutic approaches tailored to your individual needs, rather than following a single fixed method.</span>
+        </span>
+        <span class="hero-approach-tag" role="button" aria-expanded="false" tabindex="0">
+          Person-Centred
+          <span class="tag-tooltip">Places you at the heart of the process, built on empathy, acceptance and the belief that you have the inner capacity to grow and heal.</span>
+        </span>
+      </div>
       <div class="hero-badges">
         <span class="hero-badge">MBACP Registered Member</span>
-        <span class="hero-badge">Integrative Approach</span>
         <span class="hero-badge">Online Sessions</span>
         <span class="hero-badge">Individuals &amp; Couples</span>
-            <span class="hero-badge">English &amp; Cantonese</span>
+        <span class="hero-badge">English &amp; Cantonese</span>
       </div>
       <div class="hero-btns">
-        <a href="#book" class="btn-primary">Book a Free 30-Min Consultation</a>
+        <button class="btn-primary" data-modal="free">Book a Free 15&ndash;30 Min Consultation</button>
         <a href="#about" class="btn-secondary">Meet Roy</a>
       </div>
     </div>
@@ -337,18 +317,22 @@
       <div class="who-grid">
         <div class="who-text">
           <h2 class="section-title">You don&rsquo;t have to navigate this alone</h2>
-          <p>Whether you&rsquo;re feeling overwhelmed by anxiety, struggling in your relationships, questioning your identity, or simply feeling stuck — reaching out is a courageous first step.</p>
-          <p>I work with adults online, both individuals and couples, across the UK and internationally. Many of my clients are navigating high-pressure professional lives alongside deeply personal challenges. It's something I understand from over 30 years working in HR across various demanding industries.</p>
+          <p>Whether you&rsquo;re feeling overwhelmed by anxiety, struggling in your relationships, questioning your identity, or simply feeling stuck: reaching out is a courageous first step.</p>
+          <p>I work with adults (18+) online, both individuals and couples, across the UK and internationally. Many of my clients are navigating high-pressure professional lives alongside deeply personal challenges. I understand this from over 30 years working in Human Resources across banking, aviation, luxury retail and hospitality.</p>
           <div class="issues-grid">
             <div class="issue-item approach-tag">Anxiety &amp; stress</div>
             <div class="issue-item approach-tag">Depression</div>
-            <div class="issue-item approach-tag">LGBT+ identity</div>
-            <div class="issue-item approach-tag">Cultural identity</div>
-            <div class="issue-item approach-tag">Career &amp; workplace</div>
+            <div class="issue-item approach-tag">Burnout</div>
             <div class="issue-item approach-tag">Relationship challenges</div>
+            <div class="issue-item approach-tag">Career &amp; workplace</div>
+            <div class="issue-item approach-tag">Job displacement &amp; AI anxiety</div>
+            <div class="issue-item approach-tag">Midlife career transitions</div>
+            <div class="issue-item approach-tag">Life transitions</div>
             <div class="issue-item approach-tag">Family challenges</div>
             <div class="issue-item approach-tag">Self-esteem &amp; confidence</div>
-            <div class="issue-item approach-tag">Life transitions</div>
+            <div class="issue-item approach-tag">LGBT+ identity</div>
+            <div class="issue-item approach-tag">Cultural identity</div>
+            <div class="issue-item approach-tag">Expat &amp; relocation</div>
             <div class="issue-item approach-tag">Motivation</div>
           </div>
         </div>
@@ -356,7 +340,7 @@
           <img src="micke-lindstrom-I3GuNBeDerI-unsplash.jpg" alt="Calm landscape representing a peaceful therapeutic space" style="width:100%;height:100%;object-fit:cover;" />
           <div class="who-visual-inner">
             <p class="who-visual-quote">&ldquo;Without good mental health, it is very difficult<br>to thrive in life.&rdquo;</p>
-            <p class="who-visual-attr">&mdash; Roy Lam</p>
+            <p class="who-visual-attr">Roy Lam</p>
           </div>
         </div>
       </div>
@@ -380,18 +364,17 @@
             <div class="credential-tag"><span class="dot"></span> MSocSc Counselling (2017)</div>
             <div class="credential-tag"><span class="dot"></span> MBA (2000)</div>
             <div class="credential-tag"><span class="dot"></span> BSocSc (1993)</div>
-            <div class="credential-tag"><span class="dot"></span> 30+ Years HR Leadership Experience</div>
-            <div class="credential-tag"><span class="dot"></span> Online Sessions &mdash; UK &amp; International</div>
-                <div class="credential-tag"><span class="dot"></span> Sessions available in English &amp; Cantonese</div>
+            <div class="credential-tag"><span class="dot"></span> 30+ Years Human Resources Leadership</div>
+            <div class="credential-tag"><span class="dot"></span> Sessions available in English &amp; Cantonese</div>
           </div>
         </div>
         <div class="about-content">
           <h2 class="section-title">A therapist who understands the weight of professional life</h2>
-          <p>Before becoming a full-time counsellor, I spent over 30 years in senior Human Resources roles across banking, aviation, luxury retail, and hospitality. I saw every day how people were expected to keep performing — to stay composed, capable, and driven — even while carrying enormous personal burdens.</p>
+          <p>Before becoming a full-time counsellor, I spent over 30 years in senior Human Resources roles across banking, aviation, luxury retail and hospitality. I saw every day how people were expected to keep performing, to stay composed, capable and driven, even while carrying enormous personal burdens.</p>
           <p>That experience taught me something important: without genuine attention to mental health, it is very difficult to truly thrive in life. It&rsquo;s what led me to retrain as a therapist.</p>
-          <p>I graduated with a Master in Social Sciences (Counselling) from the University of Hong Kong in 2017, and went on to volunteer as a counsellor working with clients facing family difficulties, relationship challenges, LGBT-related concerns, depression, anxiety, and career development issues.</p>
+          <p>I graduated with a Master in Social Sciences (Counselling) from the University of Hong Kong in 2017, and went on to volunteer as a counsellor working with clients facing family difficulties, relationship challenges, LGBT-related concerns, depression, anxiety and career development issues.</p>
           <p>Originally from Hong Kong, I relocated to the UK in 2021 and now work with clients online across the UK and internationally. I have a particular understanding of the cultural pressures that many East Asian and immigrant communities face, particularly the tension between family expectations and personal identity. I offer sessions in both English and Cantonese.</p>
-          <p>My approach is integrative and tailored to each individual. I draw on Cognitive Behavioural Therapy (CBT), Emotion-Focused Therapy, and Bowen&rsquo;s Family Systems Theory, combining evidence-based techniques with a warm, genuinely non-judgemental presence.</p>
+          <p>My approach is integrative and tailored to each individual. I draw on Cognitive Behavioural Therapy (CBT), Emotion-Focused Therapy and Bowen&rsquo;s Family Systems Theory, combining evidence-based techniques with a warm, genuinely non-judgemental presence.</p>
           <p style="font-style: italic; color: var(--sage-dark);">&ldquo;I look forward to providing my support to you and helping you reflect, connect and grow.&rdquo;</p>
           <div class="approach-tags">
             <span class="approach-tag">CBT</span>
@@ -413,19 +396,17 @@
         <div class="step">
           <div class="step-number">01</div>
           <h3>Free Consultation</h3>
-          <p>Book a free 30-minute call. We&rsquo;ll talk about what&rsquo;s brought you here and whether we&rsquo;re a good fit — no commitment required.</p>
-          <span class="step-connector">&rarr;</span>
+          <p>Book a free 15&ndash;30 minute call. We&rsquo;ll talk about what&rsquo;s brought you here and whether we&rsquo;re a good fit. No commitment required.</p>
         </div>
         <div class="step">
           <div class="step-number">02</div>
           <h3>Begin Sessions</h3>
-          <p>We meet online via Google Meet at a time that suits you, Monday to Friday, 9am to 7pm. Sessions are 50 minutes, at your own pace.</p>
-          <span class="step-connector">&rarr;</span>
+          <p>We meet online via Google Meet, Monday to Friday, 9am&ndash;7pm GMT. Sessions are 50 minutes, at your own pace.</p>
         </div>
         <div class="step">
           <div class="step-number">03</div>
           <h3>Reflect &amp; Grow</h3>
-          <p>Over time, acquire greater self-awareness, emotional resilience, and the tools to handle whatever life brings — with me alongside you.</p>
+          <p>Over time, build greater self-awareness, emotional resilience and the tools to handle whatever life brings, with me alongside you every step of the way.</p>
         </div>
       </div>
     </div>
@@ -437,16 +418,16 @@
       <h2 class="section-title">Transparent, straightforward pricing</h2>
       <div class="services-grid">
         <div class="service-card">
-          <h3 class="service-name">Free Consultation</h3>
+          <h3 class="service-name">Initial Consultation</h3>
           <p class="service-price">Free</p>
-          <p class="service-duration">30 minutes &bull; Online via Google Meet</p>
+          <p class="service-duration">15&ndash;30 minutes &bull; Online via Google Meet</p>
           <ul class="service-features">
             <li>No obligation or commitment</li>
             <li>Discuss what&rsquo;s brought you here</li>
             <li>Ask questions about how I work</li>
             <li>Decide together if we&rsquo;re a good fit</li>
           </ul>
-          <a href="#book" class="btn-book">Book Free Call</a>
+          <button class="btn-book" data-modal="free">Book Now</button>
         </div>
         <div class="service-card featured">
           <h3 class="service-name">Individual Therapy</h3>
@@ -456,9 +437,9 @@
             <li>Weekly or fortnightly sessions</li>
             <li>Tailored integrative approach</li>
             <li>Confidential &amp; non-judgemental</li>
-            <li>Available Mon&ndash;Fri, 9am&ndash;7pm</li>
+            <li>Available Mon&ndash;Fri, 9am&ndash;7pm GMT</li>
           </ul>
-          <a href="#book" class="btn-book">Book Now</a>
+          <button class="btn-book" data-modal="individual">Book Now</button>
         </div>
         <div class="service-card">
           <h3 class="service-name">Couples Therapy</h3>
@@ -468,12 +449,12 @@
             <li>For partners facing difficulties</li>
             <li>Communication &amp; conflict support</li>
             <li>Integrative, tailored approach</li>
-            <li>Available Mon&ndash;Fri, 9am&ndash;7pm</li>
+            <li>Available Mon&ndash;Fri, 9am&ndash;7pm GMT</li>
           </ul>
-          <a href="#book" class="btn-book">Book Now</a>
+          <button class="btn-book" data-modal="couples">Book Now</button>
         </div>
       </div>
-      <p style="text-align:center; margin-top:1.5rem; font-size:0.82rem; color:var(--text-light);">Payment is taken at the time of booking. You may reschedule or cancel with at least 48 hours' notice for a full refund. Cancellations made within 48 hours of your appointment are non-refundable.</p>
+      <p style="text-align:center; margin-top:1.5rem; font-size:0.82rem; color:var(--text-light);">Payment is taken at the time of booking. You may reschedule or cancel with at least 48 hours&rsquo; notice for a full refund. Cancellations made within 48 hours of your appointment are non-refundable.</p>
     </div>
   </section>
 
@@ -487,7 +468,7 @@
           <p class="testimonial-source">Verified client testimonial</p>
         </div>
         <div class="testimonial">
-          <p class="testimonial-quote">Thanks to our sessions I have found a way to cope better with events that are out of my control. He always listens, offers very helpful advice, and reminds me that there is a light at the end of the tunnel — which gives me strength and hope.</p>
+          <p class="testimonial-quote">Thanks to our sessions I have found a way to cope better with events that are out of my control. He always listens, offers very helpful advice, and reminds me that there is a light at the end of the tunnel. His support gives me real strength and hope.</p>
           <p class="testimonial-source">Verified client testimonial</p>
         </div>
         <div class="testimonial">
@@ -495,64 +476,56 @@
           <p class="testimonial-source">Verified client testimonial</p>
         </div>
         <div class="testimonial">
-          <p class="testimonial-quote">I was hesitant about therapy because of previous experiences, but I have never been more grateful — Roy has been a great match for me.</p>
+          <p class="testimonial-quote">I was hesitant about therapy because of previous experiences, but I have never been more grateful. Roy has been a great match for me.</p>
           <p class="testimonial-source">Verified client testimonial</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="faq" style="background: var(--warm-white); padding: 5rem 0;">
+  <section id="faq" style="background: var(--warm-white); padding: 3.5rem 0;">
     <div style="max-width: 760px; margin: 0 auto; padding: 0 2rem;">
       <h2 class="section-title" style="margin-bottom: 0.5rem;">Have a question?</h2>
       <p style="color: var(--text-mid); font-size: 1rem; margin-bottom: 0;">Here are some of the things people ask before getting started.</p>
       <div style="margin-top: 2.5rem;">
-      <div style="text-align: right; margin-bottom: 1rem;">
-        <button id="faq-toggle" onclick="
-          const details = document.querySelectorAll('#faq details');
-          const anyOpen = Array.from(details).some(d => d.open);
-          details.forEach(d => d.open = !anyOpen);
-          this.textContent = anyOpen ? 'Expand all' : 'Collapse all';
-        " style="background: none; border: 1px solid var(--sage-light); color: var(--sage-dark); font-size: 0.8rem; letter-spacing: 0.06em; padding: 0.4rem 1rem; border-radius: 2rem; cursor: pointer; transition: all 0.2s;"
-        onmouseover="this.style.background='var(--sage-dark)'; this.style.color='white';"
-        onmouseout="this.style.background='none'; this.style.color='var(--sage-dark)';">Expand all</button>
-      </div>
-
+        <div style="text-align: right; margin-bottom: 1rem;">
+          <button id="faq-toggle" onclick="
+            const details = document.querySelectorAll('#faq details');
+            const anyOpen = Array.from(details).some(d => d.open);
+            details.forEach(d => d.open = !anyOpen);
+            this.textContent = anyOpen ? 'Expand all' : 'Collapse all';
+          " style="background: none; border: 1px solid var(--sage-light); color: var(--sage-dark); font-size: 0.8rem; letter-spacing: 0.06em; padding: 0.4rem 1rem; border-radius: 2rem; cursor: pointer; transition: all 0.2s;"
+          onmouseover="this.style.background='var(--sage-dark)'; this.style.color='white';"
+          onmouseout="this.style.background='none'; this.style.color='var(--sage-dark)';">Expand all</button>
+        </div>
         <details style="border-bottom: 1px solid rgba(122,158,159,0.2); padding: 1.2rem 0;">
           <summary style="font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:400; color:var(--text-dark); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">How does online therapy work? <span style="color:var(--sage); font-size:1.6rem; font-weight:200; line-height:1;">+</span></summary>
           <p style="margin-top:0.8rem; color:var(--text-mid); font-size:0.97rem; line-height:1.8;">Sessions take place via Google Meet, a free, easy-to-use video platform. You'll receive a link before each session. All you need is a private space, a stable internet connection, and a device with a camera and microphone. Many clients find online therapy just as effective as in-person, with the added benefit of attending from the comfort of their own home.</p>
         </details>
-
         <details style="border-bottom: 1px solid rgba(122,158,159,0.2); padding: 1.2rem 0;">
           <summary style="font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:400; color:var(--text-dark); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">What happens in the free consultation? <span style="color:var(--sage); font-size:1.6rem; font-weight:200; line-height:1;">+</span></summary>
-          <p style="margin-top:0.8rem; color:var(--text-mid); font-size:0.97rem; line-height:1.8;">The free 30-minute consultation is an informal, no-obligation conversation. We'll talk about what's brought you here, what you're hoping to get from therapy, and I'll answer any questions you have about how I work. It's also a chance for you to get a feel for whether we're the right fit — there's no pressure to proceed.</p>
+          <p style="margin-top:0.8rem; color:var(--text-mid); font-size:0.97rem; line-height:1.8;">The free consultation is an informal, no-obligation conversation lasting 15&ndash;30 minutes. We'll talk about what's brought you here, what you're hoping to get from therapy, and I'll answer any questions you have about how I work. It's also a chance for you to get a feel for whether we're the right fit. There's no pressure to proceed.</p>
         </details>
-
         <details style="border-bottom: 1px solid rgba(122,158,159,0.2); padding: 1.2rem 0;">
           <summary style="font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:400; color:var(--text-dark); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">How many sessions will I need? <span style="color:var(--sage); font-size:1.6rem; font-weight:200; line-height:1;">+</span></summary>
-          <p style="margin-top:0.8rem; color:var(--text-mid); font-size:0.97rem; line-height:1.8;">Every person is different, and there's no fixed number of sessions. Some people find that a focused course of 6–12 sessions is enough to address a specific issue; others prefer longer-term support. We'll review how things are going together and you're free to end or pause at any time. There's no minimum commitment.</p>
+          <p style="margin-top:0.8rem; color:var(--text-mid); font-size:0.97rem; line-height:1.8;">Every person is different, and there's no fixed number of sessions. Some people find that a focused course of 6&ndash;12 sessions is enough to address a specific issue; others prefer longer-term support. We'll review how things are going together and you're free to end or pause at any time. There's no minimum commitment.</p>
         </details>
-
         <details style="border-bottom: 1px solid rgba(122,158,159,0.2); padding: 1.2rem 0;">
           <summary style="font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:400; color:var(--text-dark); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">Is everything I share confidential? <span style="color:var(--sage); font-size:1.6rem; font-weight:200; line-height:1;">+</span></summary>
-          <p style="margin-top:0.8rem; color:var(--text-mid); font-size:0.97rem; line-height:1.8;">Yes. Everything you share is treated with the strictest confidence. The only exceptions are rare situations where there is a serious risk of harm to yourself or others — in those cases, I have a professional duty to act. I'll explain the full boundaries of confidentiality before we begin working together.</p>
+          <p style="margin-top:0.8rem; color:var(--text-mid); font-size:0.97rem; line-height:1.8;">Yes. Everything you share is treated with the strictest confidence. The only exceptions are rare situations where there is a serious risk of harm to yourself or others. In those cases, I have a professional duty to act. I'll explain the full bounds of confidentiality before we begin working together.</p>
         </details>
-
         <details style="border-bottom: 1px solid rgba(122,158,159,0.2); padding: 1.2rem 0;">
           <summary style="font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:400; color:var(--text-dark); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">What is your cancellation policy? <span style="color:var(--sage); font-size:1.6rem; font-weight:200; line-height:1;">+</span></summary>
-          <p style="margin-top:0.8rem; color:var(--text-mid); font-size:0.97rem; line-height:1.8;">Payment is taken at the time of booking. If you need to reschedule or cancel, please give at least 48 hours' notice and you'll receive a full refund. Cancellations made within 48 hours of your appointment are non-refundable. This policy reflects the value of the time we've set aside together.</p>
+          <p style="margin-top:0.8rem; color:var(--text-mid); font-size:0.97rem; line-height:1.8;">Payment is taken at the time of booking. If you need to reschedule or cancel, please give at least 48 hours&rsquo; notice and you'll receive a full refund. Cancellations made within 48 hours of your appointment are non-refundable. This policy reflects the value of the time we've set aside together.</p>
         </details>
-
         <details style="border-bottom: 1px solid rgba(122,158,159,0.2); padding: 1.2rem 0;">
           <summary style="font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:400; color:var(--text-dark); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">Do you work with clients outside the UK? <span style="color:var(--sage); font-size:1.6rem; font-weight:200; line-height:1;">+</span></summary>
-          <p style="margin-top:0.8rem; color:var(--text-mid); font-size:0.97rem; line-height:1.8;">Yes, I work with clients across the UK and internationally. Sessions are conducted entirely online, so location is no barrier. All fees are charged in GBP. If you're in a different time zone, we'll find a session time that works for both of us within my available hours (Monday to Friday, 9am–7pm UK time).</p>
+          <p style="margin-top:0.8rem; color:var(--text-mid); font-size:0.97rem; line-height:1.8;">Yes, I work with clients across the UK and internationally. Sessions are conducted entirely online, so location is no barrier. All fees are charged in GBP. All sessions run Monday to Friday, 9am&ndash;7pm GMT, so please factor this in when booking from a different time zone.</p>
         </details>
-
         <details style="padding: 1.2rem 0;">
           <summary style="font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:400; color:var(--text-dark); cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;">Are you a registered therapist? <span style="color:var(--sage); font-size:1.6rem; font-weight:200; line-height:1;">+</span></summary>
           <p style="margin-top:0.8rem; color:var(--text-mid); font-size:0.97rem; line-height:1.8;">Yes. I am a registered member of the British Association for Counselling and Psychotherapy (BACP), membership number 397064. I hold a Master of Social Sciences in Counselling from the University of Hong Kong (2017) and practise in accordance with the BACP Ethical Framework for the Counselling Professions.</p>
         </details>
-
       </div>
     </div>
   </section>
@@ -562,7 +535,7 @@
       <div class="book-inner">
         <p class="section-label">Book an Appointment</p>
         <h2 class="section-title">Ready to take the first step?</h2>
-        <p>Start with a free 30-minute consultation: a relaxed, no-obligation conversation to see if we&rsquo;re the right fit for each other.</p>
+        <p>Start with a free 15&ndash;30 minute consultation: a relaxed, no-obligation conversation to see if we&rsquo;re the right fit for each other.</p>
         <div class="booking-details">
           <div class="booking-detail">
             <div class="booking-detail-value">Mon &ndash; Fri</div>
@@ -570,7 +543,7 @@
           </div>
           <div class="booking-detail">
             <div class="booking-detail-value">9am &ndash; 7pm</div>
-            <div class="booking-detail-label">Hours (UK time)</div>
+            <div class="booking-detail-label">Hours (GMT)</div>
           </div>
           <div class="booking-detail">
             <div class="booking-detail-value">Online</div>
@@ -581,93 +554,212 @@
             <div class="booking-detail-label">Per session</div>
           </div>
         </div>
-        <div style="text-align:center; padding: 2rem 0 1rem;">
-          <p style="font-size:1.05rem; color:var(--text-light); margin-bottom:2rem; max-width:520px; margin-left:auto; margin-right:auto;">Choose a time that suits you. Sessions are available Monday to Friday, 9am – 7pm UK time.</p>
-          <a href="#book" class="btn-primary" style="font-size:1.05rem; padding: 1rem 2.5rem;">View Available Times</a>
+        <div style="text-align:center; padding: 2rem 0 0.5rem;">
+          <p style="font-size:1.05rem; color:var(--text-light); margin-bottom:2rem; max-width:520px; margin-left:auto; margin-right:auto;">Sessions are available Monday to Friday, 9am&ndash;7pm GMT.</p>
+          <button class="btn-primary" data-modal="free" style="font-size:1.05rem; padding: 1rem 2.5rem;">Book a Free Consultation</button>
         </div>
-        <p style="margin-top:1.5rem; font-size:0.85rem; color:var(--text-light);">
-          Prefer to reach out first? Message Roy on <a href="https://wa.me/447824426000" style="color:var(--sage-dark);" target="_blank" rel="noopener">WhatsApp</a> or email <a href="mailto:roy@therapywithroy.co.uk" style="color:var(--sage-dark);">roy@therapywithroy.co.uk</a>
-        </p>
+        <p style="font-size:0.82rem; color:var(--text-light); margin: 1rem 0 0.5rem;">Prefer to get in touch first?</p>
+        <div class="contact-row">
+          <a href="https://wa.me/447824426000" target="_blank" rel="noopener" class="btn-contact">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+          <a id="email-btn" href="#" class="btn-contact">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            Email Roy
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
   <div id="shared-footer"></div>
 
-  <!-- Booking Modal -->
-  <div class="modal-overlay" id="bookingModal" role="dialog" aria-modal="true" aria-label="Book a session">
+  <!-- Booking Modals -->
+  <div class="modal-overlay" id="modalFree" role="dialog" aria-modal="true" aria-label="Book a free consultation">
     <div class="modal-box">
       <div class="modal-header">
-        <h3>Book a Session with Roy Lam</h3>
-        <button class="modal-close" id="modalClose" aria-label="Close booking">&times;</button>
+        <h3>Book a Free Consultation</h3>
+        <button class="modal-close" aria-label="Close">&times;</button>
       </div>
       <div class="modal-body">
-        <script src="https://embed.acuityscheduling.com/js/embed.js" type="text/javascript"></script>
-        <iframe src="https://app.acuityscheduling.com/schedule.php?owner=38582431"
-          title="Schedule Appointment with Roy Lam"></iframe>
+        <iframe src="https://app.acuityscheduling.com/schedule.php?owner=38582431&appointmentType=89898149" title="Book a free consultation with Roy Lam"></iframe>
       </div>
     </div>
   </div>
 
-  <script>
-    const modal = document.getElementById('bookingModal');
-    const closeBtn = document.getElementById('modalClose');
+  <div class="modal-overlay" id="modalIndividual" role="dialog" aria-modal="true" aria-label="Book individual therapy">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3>Book Individual Therapy (&pound;80)</h3>
+        <button class="modal-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <iframe src="https://app.acuityscheduling.com/schedule.php?owner=38582431&appointmentType=89898191" title="Book individual therapy with Roy Lam"></iframe>
+      </div>
+    </div>
+  </div>
 
-    function openModal(e) {
-      if (e) e.preventDefault();
-      modal.classList.add('active');
+  <div class="modal-overlay" id="modalCouples" role="dialog" aria-modal="true" aria-label="Book couples therapy">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3>Book Couples Therapy (&pound;120)</h3>
+        <button class="modal-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <iframe src="https://app.acuityscheduling.com/schedule.php?owner=38582431&appointmentType=89898269" title="Book couples therapy with Roy Lam"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div id="cookie-banner" role="region" aria-label="Cookie consent">
+    <p>This website uses analytics cookies to understand how visitors use the site. No personal data is collected without your consent. <a href="privacy-policy.html">Learn more</a>.</p>
+    <div class="cookie-btns">
+      <button class="cookie-decline" id="cookie-decline">Decline</button>
+      <button class="cookie-accept" id="cookie-accept">Accept Analytics</button>
+    </div>
+  </div>
+
+  <script>
+    // Modal system
+    var modals = {
+      free: document.getElementById('modalFree'),
+      individual: document.getElementById('modalIndividual'),
+      couples: document.getElementById('modalCouples')
+    };
+
+    function openModal(type) {
+      var m = modals[type];
+      if (!m) return;
+      m.classList.add('active');
       document.body.classList.add('modal-open');
       if (typeof window.gtag === 'function') {
-        window.gtag('event', 'booking_modal_opened', {
-          'event_category': 'engagement',
-          'event_label': 'Book Now clicked'
-        });
+        window.gtag('event', 'booking_modal_opened', { event_category: 'engagement', event_label: type });
       }
     }
-    function closeModal() {
-      modal.classList.remove('active');
+    function closeModal(m) {
+      m.classList.remove('active');
       document.body.classList.remove('modal-open');
     }
 
-    modal.addEventListener('click', function(e) {
-      if (e.target === modal) closeModal();
+    // Open buttons
+    document.querySelectorAll('[data-modal]').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        openModal(this.getAttribute('data-modal'));
+      });
     });
-    closeBtn.addEventListener('click', closeModal);
+    document.getElementById('navBookBtn').addEventListener('click', function(e) {
+      e.preventDefault();
+      openModal('free');
+    });
 
+    // Close buttons
+    document.querySelectorAll('.modal-close').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        closeModal(this.closest('.modal-overlay'));
+      });
+    });
+    document.querySelectorAll('.modal-overlay').forEach(function(m) {
+      m.addEventListener('click', function(e) {
+        if (e.target === m) closeModal(m);
+      });
+    });
     document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') closeModal();
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay.active').forEach(closeModal);
+      }
     });
 
-    document.querySelectorAll('a[href="#book"], .btn-primary, .btn-book').forEach(function(el) {
-      el.addEventListener('click', openModal);
-    });
-  </script>
-
-  <!-- Mobile Menu Script -->
-  <script>
+    // Obfuscated email button
     document.addEventListener('DOMContentLoaded', function() {
-      const menuBtn = document.getElementById('mobile-menu-btn');
-      const navLinksList = document.getElementById('nav-links');
-      if(menuBtn && navLinksList) {
+      var u = 'roy', d = 'therapywithroy.co.uk';
+      var btn = document.getElementById('email-btn');
+      if (btn) btn.href = 'mailto:' + u + '@' + d;
+    });
+
+    // Mobile nav
+    document.addEventListener('DOMContentLoaded', function() {
+      var menuBtn = document.getElementById('mobile-menu-btn');
+      var navList = document.getElementById('nav-links');
+      if (menuBtn && navList) {
         menuBtn.addEventListener('click', function() {
-          navLinksList.classList.toggle('active');
-          if(navLinksList.classList.contains('active')) {
-            menuBtn.innerHTML = '&times;';
-            menuBtn.style.fontSize = '2.2rem';
-          } else {
-            menuBtn.innerHTML = '&#9776;';
-            menuBtn.style.fontSize = '1.8rem';
-          }
+          navList.classList.toggle('active');
+          menuBtn.innerHTML = navList.classList.contains('active') ? '&times;' : '&#9776;';
+          menuBtn.style.fontSize = navList.classList.contains('active') ? '2.2rem' : '1.8rem';
         });
-        navLinksList.querySelectorAll('a').forEach(function(link) {
+        navList.querySelectorAll('a').forEach(function(link) {
           link.addEventListener('click', function() {
-            navLinksList.classList.remove('active');
+            navList.classList.remove('active');
             menuBtn.innerHTML = '&#9776;';
             menuBtn.style.fontSize = '1.8rem';
           });
         });
       }
     });
+
+    // Approach tag tap-to-toggle tooltips
+    document.addEventListener('DOMContentLoaded', function() {
+      var tags = document.querySelectorAll('.hero-approach-tag');
+
+      tags.forEach(function(tag) {
+        tag.addEventListener('click', function(e) {
+          e.stopPropagation();
+          var isActive = tag.classList.contains('active');
+          tags.forEach(function(t) {
+            t.classList.remove('active');
+            t.setAttribute('aria-expanded', 'false');
+          });
+          if (!isActive) {
+            tag.classList.add('active');
+            tag.setAttribute('aria-expanded', 'true');
+          }
+        });
+        tag.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            tag.click();
+          }
+        });
+      });
+
+      document.addEventListener('click', function() {
+        tags.forEach(function(t) {
+          t.classList.remove('active');
+          t.setAttribute('aria-expanded', 'false');
+        });
+      });
+    });
+  </script>
+
+  <script>
+    (function() {
+      var GA_ID = 'G-EZDPQG16PQ';
+      function loadGA() {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', GA_ID, { 'anonymize_ip': true });
+      }
+      function hideBanner() {
+        var b = document.getElementById('cookie-banner');
+        if (b) b.style.display = 'none';
+      }
+      var consent = localStorage.getItem('cookie-consent');
+      if (consent === 'accepted') { loadGA(); hideBanner(); }
+      else if (consent === 'declined') { hideBanner(); }
+      document.addEventListener('DOMContentLoaded', function() {
+        var a = document.getElementById('cookie-accept');
+        var d = document.getElementById('cookie-decline');
+        if (a) a.addEventListener('click', function() { localStorage.setItem('cookie-consent','accepted'); loadGA(); hideBanner(); });
+        if (d) d.addEventListener('click', function() { localStorage.setItem('cookie-consent','declined'); hideBanner(); });
+      });
+    })();
   </script>
 
   <script src="/footer-loader.js"></script>
