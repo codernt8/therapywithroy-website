@@ -19,7 +19,24 @@
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', sans-serif; color: var(--text-dark); background: var(--warm-white); font-size: 16px; line-height: 1.7; }
 
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 4rem; background: rgba(253,252,250,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(122,158,159,0.15); }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 4rem;
+      background: rgba(253,252,250,0.95);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(122,158,159,0.15);
+      /* Prevent nav from scrolling away on iOS Safari */
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+    }
     .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--text-dark); text-decoration: none; letter-spacing: 0.02em; }
     .nav-links { display: flex; align-items: center; gap: 2.5rem; list-style: none; }
     .nav-links a { text-decoration: none; color: var(--text-mid); font-size: 0.85rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
@@ -213,9 +230,35 @@
     .cookie-decline:hover { opacity: 0.75; }
 
     @media (max-width: 1147px) {
-      nav { padding: 1rem 1.5rem; }
+      nav {
+        padding: 1rem 1.5rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        /* Force GPU layer for iOS Safari sticky fix */
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        will-change: transform;
+      }
       .menu-toggle { display: block; }
-      .nav-links { display: none; flex-direction: column; width: 100%; padding: 1.5rem 0; gap: 1.5rem; text-align: center; background: rgba(253,252,250,0.98); position: absolute; top: 100%; left: 0; border-bottom: 1px solid rgba(122,158,159,0.15); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 1.5rem 0;
+        gap: 1.5rem;
+        text-align: center;
+        background: rgba(253,252,250,0.98);
+        /* Use fixed positioning so the dropdown doesn't shift the nav */
+        position: fixed;
+        top: 57px;
+        left: 0;
+        right: 0;
+        border-bottom: 1px solid rgba(122,158,159,0.15);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        z-index: 99;
+      }
       .nav-links.active { display: flex; }
       .who-grid, .about-grid { grid-template-columns: 1fr; gap: 2rem; }
       .steps-grid, .services-grid { grid-template-columns: 1fr; }
