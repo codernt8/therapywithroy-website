@@ -6,7 +6,7 @@
   <title>Online Therapy UK | Therapy with Roy | Roy Lam MBACP</title>
   <meta name="description" content="Online therapy with Roy Lam, MBACP registered counsellor. Support for anxiety, depression, relationships, identity and life transitions. UK-based, available worldwide. Book a free consultation.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij4KICA8Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSIzMiIgZmlsbD0iIzRhNmU2ZiIvPgogIDxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjI4IiBmaWxsPSJub25lIiBzdHJva2U9IiM3YTllOWYiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIwLjUiLz4KICA8dGV4dCB4PSIzMiIgeT0iNDQiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIzNCIgZm9udC13ZWlnaHQ9IjQwMCIgCiAgICAgICAgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2Y3ZjRlZiI+UjwvdGV4dD4KPC9zdmc+"/>
-  <link rel="shortcut icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij4KICA8Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSIzMiIgZmlsbD0iIzRhNmU2ZiIvPgogIDxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjI4IiBmaWxsPSJub25lIiBzdHJva2U9IiM3YTllOWYiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIwLjUiLz4KICA8dGV4dCB4PSIzMiIgeT0iNDQiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIzNCIgZm9udC13ZWlnaHQ9IjQwMCIgCiAgICAgICAgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2Y3ZjRlZiI+UjwvdGV4dD4KPC9zdmc+"/>
+  <link rel="shortcut icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij4KICA8Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSIzMiIgZmlsbD0iIzRhNmU2ZiIvPgogIDxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjI4IiBmaWxsPSJub25lIiBzdHJva2U9IiM3YTllOWYiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIwLjUiLz4KICA8dGV4dCB4PSIzMiIgeT0iNDQiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIzNCIgZm9udC13ZWlnaHQ9IjQwMCIgCiAgICAgICAgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2Y3ZjRlZiI+UjwvdGV4dD0KPC9zdmc+"/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -24,8 +24,9 @@
     .nav-links { display: flex; align-items: center; gap: 2.5rem; list-style: none; }
     .nav-links a { text-decoration: none; color: var(--text-mid); font-size: 0.85rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
     .nav-links a:hover { color: var(--sage-dark); }
-    .nav-cta { background: var(--sage-dark) !important; color: white !important; padding: 0.6rem 1.4rem; border-radius: 2rem; font-size: 0.82rem !important; transition: background 0.2s !important; }
+    .nav-cta { background: var(--sage-dark); color: white !important; padding: 0.6rem 1.4rem; border-radius: 2rem; font-size: 0.82rem !important; transition: background 0.2s; text-decoration: none; white-space: nowrap; }
     .nav-cta:hover { background: var(--sage) !important; }
+    .nav-right { display: flex; align-items: center; gap: 1.5rem; }
     .menu-toggle { display: none; background: none; border: none; font-size: 1.8rem; color: var(--text-dark); cursor: pointer; line-height: 1; padding: 0.2rem; }
 
     #hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #2c4a4e 0%, #4a7a7e 40%, #7aacac 70%, #b2cece 100%); position: relative; overflow: hidden; text-align: center; padding: 6rem 2rem 4rem; }
@@ -37,7 +38,6 @@
     .hero-subtitle { font-size: 1.05rem; color: rgba(255,255,255,0.8); max-width: 540px; margin: 0 auto 2rem; font-weight: 300; line-height: 1.8; }
     .hero-approach { display: flex; align-items: center; justify-content: center; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 2rem; }
 
-    /* Approach tag tooltip system */
     .hero-approach-tag {
       background: rgba(255,255,255,0.12);
       border: 1px solid rgba(255,255,255,0.25);
@@ -89,10 +89,7 @@
       display: block;
     }
     @media (max-width: 480px) {
-      .tag-tooltip {
-        width: 180px;
-        font-size: 0.75rem;
-      }
+      .tag-tooltip { width: 180px; font-size: 0.75rem; }
     }
 
     .hero-badges { display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
@@ -215,12 +212,11 @@
     .cookie-decline { background: transparent; color: rgba(255,255,255,0.6); border: 1px solid rgba(255,255,255,0.3); padding: 0.55rem 1.25rem; border-radius: 3px; cursor: pointer; font-size: 0.85rem; font-family: 'Inter', sans-serif; transition: opacity 0.2s; }
     .cookie-decline:hover { opacity: 0.75; }
 
-    @media (max-width: 1024px) {
-      nav { padding: 1rem 1.5rem; flex-wrap: wrap; }
+    @media (max-width: 1147px) {
+      nav { padding: 1rem 1.5rem; }
       .menu-toggle { display: block; }
       .nav-links { display: none; flex-direction: column; width: 100%; padding: 1.5rem 0; gap: 1.5rem; text-align: center; background: rgba(253,252,250,0.98); position: absolute; top: 100%; left: 0; border-bottom: 1px solid rgba(122,158,159,0.15); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
       .nav-links.active { display: flex; }
-      .nav-cta { display: inline-block; }
       .who-grid, .about-grid { grid-template-columns: 1fr; gap: 2rem; }
       .steps-grid, .services-grid { grid-template-columns: 1fr; }
       .testimonials-grid { grid-template-columns: 1fr; }
@@ -258,16 +254,18 @@
 
   <nav>
     <a href="#hero" class="nav-logo">therapy with roy</a>
-    <button class="menu-toggle" aria-label="Toggle menu" id="mobile-menu-btn">&#9776;</button>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#who">Who I Help</a></li>
-      <li><a href="#about">About Roy</a></li>
-      <li><a href="#services">Services &amp; Fees</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="blog/">Blog</a></li>
-      <li><a href="#" class="nav-cta" id="navBookBtn">Book Now</a></li>
-    </ul>
+    <div class="nav-right">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#who">Who I Help</a></li>
+        <li><a href="#about">About Roy</a></li>
+        <li><a href="#services">Services &amp; Fees</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="blog/">Blog</a></li>
+      </ul>
+      <a href="#" class="nav-cta" id="navBookBtn">Book Now</a>
+      <button class="menu-toggle" aria-label="Toggle menu" id="mobile-menu-btn">&#9776;</button>
+    </div>
   </nav>
 
   <section id="hero">
@@ -620,7 +618,6 @@
   </div>
 
   <script>
-    // Modal system
     var modals = {
       free: document.getElementById('modalFree'),
       individual: document.getElementById('modalIndividual'),
@@ -641,7 +638,6 @@
       document.body.classList.remove('modal-open');
     }
 
-    // Open buttons
     document.querySelectorAll('[data-modal]').forEach(function(btn) {
       btn.addEventListener('click', function(e) {
         e.preventDefault();
@@ -653,7 +649,6 @@
       openModal('free');
     });
 
-    // Close buttons
     document.querySelectorAll('.modal-close').forEach(function(btn) {
       btn.addEventListener('click', function() {
         closeModal(this.closest('.modal-overlay'));
@@ -670,14 +665,12 @@
       }
     });
 
-    // Obfuscated email button
     document.addEventListener('DOMContentLoaded', function() {
       var u = 'roy', d = 'therapywithroy.co.uk';
       var btn = document.getElementById('email-btn');
       if (btn) btn.href = 'mailto:' + u + '@' + d;
     });
 
-    // Mobile nav
     document.addEventListener('DOMContentLoaded', function() {
       var menuBtn = document.getElementById('mobile-menu-btn');
       var navList = document.getElementById('nav-links');
@@ -697,10 +690,8 @@
       }
     });
 
-    // Approach tag tap-to-toggle tooltips
     document.addEventListener('DOMContentLoaded', function() {
       var tags = document.querySelectorAll('.hero-approach-tag');
-
       tags.forEach(function(tag) {
         tag.addEventListener('click', function(e) {
           e.stopPropagation();
@@ -721,7 +712,6 @@
           }
         });
       });
-
       document.addEventListener('click', function() {
         tags.forEach(function(t) {
           t.classList.remove('active');
