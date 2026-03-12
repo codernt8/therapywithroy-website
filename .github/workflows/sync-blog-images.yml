@@ -1,0 +1,49 @@
+name: Sync blog images to drafts and main
+
+on:
+  push:
+    branches:
+      - staging
+    paths:
+      - 'blog/images/**'
+
+jobs:
+  sync-images:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout full repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Get changed image files
+        id: changed
+        run: |
+          FILES=$(git diff --name-only HEAD~1 HEAD -- 'blog/images/**' | tr '\n' ' ')
+          echo "files=$FILES" >> $GITHUB_OUTPUT
+
+      - name: Sync to drafts
+        if: steps.changed.outputs.files != ''
+        run: |
+          git fetch origin drafts
+          git checkout drafts
+          git checkout staging -- ${{ steps.changed.outputs.files }}
+          git add ${{ steps.changed.outputs.files }}
+          git diff --staged --quiet || git commit -m "Sync blog images from staging"
+          git push origin drafts
+
+      - name: Sync to main
+        if: steps.changed.outputs.files != ''
+        run: |
+          git fetch origin main
+          git checkout main
+          git checkout staging -- ${{ steps.changed.outputs.files }}
+          git add ${{ steps.changed.outputs.files }}
+          git diff --staged --quiet || git commit -m "Sync blog images from staging"
+          git push origin main
