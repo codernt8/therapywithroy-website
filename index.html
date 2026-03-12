@@ -144,6 +144,8 @@
     .about-video-col { position: sticky; top: 6rem; }
     .about-video-wrap {
       width: 100%;
+      /* Cap height to align with photo column: 3/4 ratio photo ≈ same visual weight */
+      max-height: 420px;
       aspect-ratio: 9/16;
       border-radius: 2px;
       overflow: hidden;
@@ -192,19 +194,13 @@
       fill: white;
       margin-left: 3px; /* optical centre for play triangle */
     }
-    .play-label {
-      margin-top: 0.75rem;
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.85);
-    }
     .about-video-caption {
       padding: 0.85rem 0 0;
       font-size: 0.78rem;
       color: var(--text-light);
       letter-spacing: 0.06em;
       text-transform: uppercase;
+      text-align: center;
     }
 
     #how { background: var(--cream); }
@@ -300,7 +296,7 @@
       .about-sidebar { position: static; }
       .about-video-col { position: static; }
       /* Constrain portrait video width on mobile */
-      .about-video-wrap { max-width: 280px; margin: 0 auto; }
+      .about-video-wrap { max-width: 280px; max-height: none; margin: 0 auto; }
       .steps-grid, .services-grid { grid-template-columns: 1fr; }
       .testimonials-grid { grid-template-columns: 1fr; }
       .issues-grid { grid-template-columns: 1fr; }
@@ -458,7 +454,6 @@
               <div class="play-btn-circle">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polygon points="5,3 19,12 5,21"/></svg>
               </div>
-              <span class="play-label">Watch intro</span>
             </div>
           </div>
           <p class="about-video-caption">A short introduction from Roy</p>
