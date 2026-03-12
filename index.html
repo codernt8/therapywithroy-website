@@ -28,38 +28,14 @@
     .nav-cta:hover { background: var(--sage) !important; }
     .menu-toggle { display: none; background: none; border: none; font-size: 1.8rem; color: var(--text-dark); cursor: pointer; line-height: 1; padding: 0.2rem; }
 
-    /* ── Hero: 2/3 text | 1/3 photo ── */
-    #hero {
-      min-height: 100vh;
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      background: linear-gradient(135deg, #2c4a4e 0%, #4a7a7e 40%, #7aacac 70%, #b2cece 100%);
-      position: relative;
-      overflow: hidden;
-      padding-top: 5rem; /* nav offset */
-    }
-    #hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at 40% 50%, rgba(201,169,110,0.12) 0%, transparent 60%);
-      pointer-events: none;
-      z-index: 1;
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 4rem 3rem 4rem 4rem;
-      text-align: left;
-    }
+    #hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #2c4a4e 0%, #4a7a7e 40%, #7aacac 70%, #b2cece 100%); position: relative; overflow: hidden; text-align: center; padding: 6rem 2rem 4rem; }
+    #hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 60% 40%, rgba(201,169,110,0.12) 0%, transparent 60%); }
+    .hero-content { position: relative; z-index: 1; max-width: 780px; }
     .hero-eyebrow { font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sage-light); margin-bottom: 1.5rem; font-weight: 400; }
-    .hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 4.5vw, 4.2rem); font-weight: 300; color: #fff; line-height: 1.2; margin-bottom: 1.5rem; }
+    .hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 300; color: #fff; line-height: 1.2; margin-bottom: 1.5rem; }
     .hero-title em { font-style: italic; color: var(--sage-light); }
-    .hero-subtitle { font-size: 1.05rem; color: rgba(255,255,255,0.8); max-width: 520px; margin-bottom: 2rem; font-weight: 300; line-height: 1.8; }
-    .hero-approach { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 2rem; }
+    .hero-subtitle { font-size: 1.05rem; color: rgba(255,255,255,0.8); max-width: 540px; margin: 0 auto 2rem; font-weight: 300; line-height: 1.8; }
+    .hero-approach { display: flex; align-items: center; justify-content: center; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 2rem; }
 
     .hero-approach-tag {
       background: rgba(255,255,255,0.12);
@@ -108,34 +84,24 @@
       border-top-color: rgba(30,50,50,0.96);
     }
     .hero-approach-tag.active .tag-tooltip,
-    .hero-approach-tag:hover .tag-tooltip { display: block; }
-    @media (max-width: 480px) { .tag-tooltip { width: 180px; font-size: 0.75rem; } }
+    .hero-approach-tag:hover .tag-tooltip {
+      display: block;
+    }
+    @media (max-width: 480px) {
+      .tag-tooltip {
+        width: 180px;
+        font-size: 0.75rem;
+      }
+    }
 
-    .hero-badges { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+    .hero-badges { display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
     .hero-badge { font-size: 0.78rem; color: rgba(255,255,255,0.7); letter-spacing: 0.06em; display: flex; align-items: center; gap: 0.4rem; }
     .hero-badge::before { content: '\2726'; color: var(--accent); font-size: 0.6rem; }
-    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
     .btn-primary { background: var(--accent); color: #fff; padding: 0.9rem 2.2rem; border-radius: 3rem; text-decoration: none; font-size: 0.88rem; font-weight: 500; letter-spacing: 0.04em; transition: all 0.25s; display: inline-block; cursor: pointer; border: none; }
     .btn-primary:hover { background: #b8924a; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
     .btn-secondary { border: 1px solid rgba(255,255,255,0.4); color: rgba(255,255,255,0.9); padding: 0.9rem 2.2rem; border-radius: 3rem; text-decoration: none; font-size: 0.88rem; font-weight: 400; letter-spacing: 0.04em; transition: all 0.25s; display: inline-block; }
     .btn-secondary:hover { border-color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.08); }
-
-    /* Roy photo panel — fills full height of hero */
-    .hero-photo-panel {
-      position: relative;
-      z-index: 2;
-      overflow: hidden;
-    }
-    .hero-photo-panel img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-      /* subtle left-edge fade to blend with gradient */
-      mask-image: linear-gradient(to right, transparent 0%, black 12%);
-      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 12%);
-    }
 
     section { padding: 3.5rem 2rem; }
     .container { max-width: 1100px; margin: 0 auto; }
@@ -152,68 +118,17 @@
     .who-visual-quote { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-style: italic; font-weight: 300; line-height: 1.5; color: white; }
     .who-visual-attr { margin-top: 1rem; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.7); }
 
-    /* ── About section: 2-column layout ── */
     #about { background: var(--warm-white); }
-    .about-grid {
-      display: grid;
-      grid-template-columns: 320px 1fr;
-      gap: 4rem;
-      align-items: start;
-      margin-top: 3rem;
-    }
-
-    /* Left column: video on top, credentials below */
+    .about-grid { display: grid; grid-template-columns: 2fr 3fr; gap: 5rem; align-items: start; margin-top: 3rem; }
     .about-sidebar { position: sticky; top: 6rem; }
-    .about-video-wrap {
-      width: 100%;
-      aspect-ratio: 9/16;
-      border-radius: 2px;
-      overflow: hidden;
-      position: relative;
-      background: var(--text-dark);
-      box-shadow: 0 8px 32px rgba(44,62,62,0.15);
-      max-height: 480px;
-    }
-    .about-video-wrap video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .video-play-overlay {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(44,74,78,0.4);
-      cursor: pointer;
-      transition: opacity 0.3s;
-      z-index: 2;
-    }
-    .video-play-overlay.hidden { opacity: 0; pointer-events: none; }
-    .play-btn-circle {
-      width: 68px;
-      height: 68px;
-      border-radius: 50%;
-      background: var(--accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.3);
-      transition: transform 0.2s, background 0.2s;
-    }
-    .video-play-overlay:hover .play-btn-circle { transform: scale(1.08); background: #b8924a; }
-    .play-btn-circle svg { width: 24px; height: 24px; fill: white; margin-left: 4px; }
-
+    .about-photo-wrap { width: 100%; aspect-ratio: 3/4; border-radius: 2px; overflow: hidden; }
+    .about-photo-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
     .about-photo-caption { padding: 1rem 0 0; }
     .about-photo-name { color: var(--text-dark); font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; }
     .about-photo-title { color: var(--text-light); font-size: 0.78rem; letter-spacing: 0.08em; margin-top: 0.2rem; }
     .credential-tags { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1.5rem; }
     .credential-tag { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.82rem; color: var(--text-mid); }
     .credential-tag .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--sage); flex-shrink: 0; margin-top: 0.35rem; }
-
-    /* Right column: bio text */
     .about-content p { color: var(--text-mid); margin-bottom: 1.3rem; font-size: 1.02rem; line-height: 1.8; }
     .approach-tags { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 1.5rem; }
     .approach-tag { background: var(--cream); border: 1px solid var(--sage-light); color: var(--sage-dark); font-size: 0.8rem; padding: 0.35rem 0.9rem; border-radius: 2rem; letter-spacing: 0.04em; }
@@ -264,6 +179,7 @@
     .booking-detail { text-align: center; }
     .booking-detail-value { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; color: var(--text-dark); }
     .booking-detail-label { font-size: 0.75rem; color: var(--text-light); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 0.2rem; }
+
     .contact-row { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem; }
     .btn-contact { display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.7rem 1.5rem; border-radius: 3rem; font-size: 0.86rem; font-weight: 500; text-decoration: none; transition: all 0.2s; letter-spacing: 0.02em; background: transparent; color: var(--sage-dark); border: 1px solid var(--sage); }
     .btn-contact:hover { background: var(--sage-dark); color: white; border-color: var(--sage-dark); }
@@ -298,26 +214,16 @@
     .cookie-decline { background: transparent; color: rgba(255,255,255,0.6); border: 1px solid rgba(255,255,255,0.3); padding: 0.55rem 1.25rem; border-radius: 3px; cursor: pointer; font-size: 0.85rem; font-family: 'Inter', sans-serif; transition: opacity 0.2s; }
     .cookie-decline:hover { opacity: 0.75; }
 
-    @media (max-width: 900px) {
-      #hero { grid-template-columns: 1fr; padding-top: 5rem; }
-      .hero-photo-panel { display: none; }
-      .hero-content { padding: 3rem 2rem; text-align: center; align-items: center; }
-      .hero-approach { justify-content: center; }
-      .hero-badges { justify-content: center; }
-      .hero-btns { justify-content: center; }
-    }
     @media (max-width: 768px) {
       nav { padding: 1rem 1.5rem; flex-wrap: wrap; }
       .menu-toggle { display: block; }
       .nav-links { display: none; flex-direction: column; width: 100%; padding: 1.5rem 0; gap: 1.5rem; text-align: center; background: rgba(253,252,250,0.98); position: absolute; top: 100%; left: 0; border-bottom: 1px solid rgba(122,158,159,0.15); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
       .nav-links.active { display: flex; }
       .nav-cta { display: inline-block; }
-      .who-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .about-sidebar { position: static; }
-      .about-video-wrap { max-height: none; max-width: 320px; margin: 0 auto; }
+      .who-grid, .about-grid { grid-template-columns: 1fr; gap: 2rem; }
       .steps-grid, .services-grid { grid-template-columns: 1fr; }
       .testimonials-grid { grid-template-columns: 1fr; }
+      .about-sidebar { position: static; }
       .issues-grid { grid-template-columns: 1fr; }
     }
   </style>
@@ -363,7 +269,6 @@
     </ul>
   </nav>
 
-  <!-- ── HERO: 2/3 content | 1/3 Roy photo ── -->
   <section id="hero">
     <div class="hero-content">
       <p class="hero-eyebrow">Online Counselling &amp; Therapy &middot; UK-based, available worldwide</p>
@@ -401,11 +306,6 @@
         <button class="btn-primary" data-modal="free">Book a Free 15&ndash;30 Min Consultation</button>
         <a href="#about" class="btn-secondary">Meet Roy</a>
       </div>
-    </div>
-
-    <!-- Roy photo: fills right 1/3 of hero, edge-to-edge -->
-    <div class="hero-photo-panel">
-      <img src="roy pic.jpg" alt="Roy Lam, MBACP registered online therapist" />
     </div>
   </section>
 
@@ -445,39 +345,27 @@
     </div>
   </section>
 
-  <!-- ── ABOUT: left = video + credentials | right = bio ── -->
   <section id="about">
     <div class="container">
       <p class="section-label">About Roy</p>
       <div class="about-grid">
-
-        <!-- Left column: intro video + name/credentials -->
         <div class="about-sidebar">
-          <div class="about-video-wrap" id="videoWrap">
-            <video id="royIntroVideo" preload="metadata" playsinline>
-              <source src="roy-intro-video.mp4" type="video/mp4">
-            </video>
-            <div class="video-play-overlay" id="videoOverlay" role="button" aria-label="Play Roy's introduction video" tabindex="0">
-              <div class="play-btn-circle">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polygon points="5,3 19,12 5,21"/></svg>
-              </div>
-            </div>
+          <div class="about-photo-wrap">
+            <img src="roy pic.jpg" alt="Roy Lam, MBACP registered online therapist" />
           </div>
           <div class="about-photo-caption">
             <div class="about-photo-name">Roy Lam</div>
             <div class="about-photo-title">MBACP Registered Member</div>
           </div>
           <div class="credential-tags">
-            <div class="credential-tag"><span class="dot"></span>MBACP Registered Member (No. 397064)</div>
-            <div class="credential-tag"><span class="dot"></span>MSocSc Counselling (2017)</div>
-            <div class="credential-tag"><span class="dot"></span>MBA (2000)</div>
-            <div class="credential-tag"><span class="dot"></span>BSocSc (1993)</div>
-            <div class="credential-tag"><span class="dot"></span>30+ Years Human Resources Leadership</div>
-            <div class="credential-tag"><span class="dot"></span>Sessions available in English &amp; Cantonese</div>
+            <div class="credential-tag"><span class="dot"></span> MBACP Registered Member (No. 397064)</div>
+            <div class="credential-tag"><span class="dot"></span> MSocSc Counselling (2017)</div>
+            <div class="credential-tag"><span class="dot"></span> MBA (2000)</div>
+            <div class="credential-tag"><span class="dot"></span> BSocSc (1993)</div>
+            <div class="credential-tag"><span class="dot"></span> 30+ Years Human Resources Leadership</div>
+            <div class="credential-tag"><span class="dot"></span> Sessions available in English &amp; Cantonese</div>
           </div>
         </div>
-
-        <!-- Right column: bio -->
         <div class="about-content">
           <h2 class="section-title">A therapist who understands the weight of professional life</h2>
           <p>Before becoming a full-time counsellor, I spent over 30 years in senior Human Resources roles across banking, aviation, luxury retail and hospitality. I saw every day how people were expected to keep performing, to stay composed, capable and driven, even while carrying enormous personal burdens.</p>
@@ -494,7 +382,6 @@
             <span class="approach-tag">Person-Centred</span>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -689,20 +576,37 @@
   <!-- Booking Modals -->
   <div class="modal-overlay" id="modalFree" role="dialog" aria-modal="true" aria-label="Book a free consultation">
     <div class="modal-box">
-      <div class="modal-header"><h3>Book a Free Consultation</h3><button class="modal-close" aria-label="Close">&times;</button></div>
-      <div class="modal-body"><iframe src="https://app.acuityscheduling.com/schedule.php?owner=38582431&appointmentType=89898149" title="Book a free consultation with Roy Lam"></iframe></div>
+      <div class="modal-header">
+        <h3>Book a Free Consultation</h3>
+        <button class="modal-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <iframe src="https://app.acuityscheduling.com/schedule.php?owner=38582431&appointmentType=89898149" title="Book a free consultation with Roy Lam"></iframe>
+      </div>
     </div>
   </div>
+
   <div class="modal-overlay" id="modalIndividual" role="dialog" aria-modal="true" aria-label="Book individual therapy">
     <div class="modal-box">
-      <div class="modal-header"><h3>Book Individual Therapy (&pound;80)</h3><button class="modal-close" aria-label="Close">&times;</button></div>
-      <div class="modal-body"><iframe src="https://app.acuityscheduling.com/schedule.php?owner=38582431&appointmentType=89898191" title="Book individual therapy with Roy Lam"></iframe></div>
+      <div class="modal-header">
+        <h3>Book Individual Therapy (&pound;80)</h3>
+        <button class="modal-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <iframe src="https://app.acuityscheduling.com/schedule.php?owner=38582431&appointmentType=89898191" title="Book individual therapy with Roy Lam"></iframe>
+      </div>
     </div>
   </div>
+
   <div class="modal-overlay" id="modalCouples" role="dialog" aria-modal="true" aria-label="Book couples therapy">
     <div class="modal-box">
-      <div class="modal-header"><h3>Book Couples Therapy (&pound;120)</h3><button class="modal-close" aria-label="Close">&times;</button></div>
-      <div class="modal-body"><iframe src="https://app.acuityscheduling.com/schedule.php?owner=38582431&appointmentType=89898269" title="Book couples therapy with Roy Lam"></iframe></div>
+      <div class="modal-header">
+        <h3>Book Couples Therapy (&pound;120)</h3>
+        <button class="modal-close" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <iframe src="https://app.acuityscheduling.com/schedule.php?owner=38582431&appointmentType=89898269" title="Book couples therapy with Roy Lam"></iframe>
+      </div>
     </div>
   </div>
 
@@ -715,14 +619,52 @@
   </div>
 
   <script>
-    var modals = { free: document.getElementById('modalFree'), individual: document.getElementById('modalIndividual'), couples: document.getElementById('modalCouples') };
-    function openModal(type) { var m = modals[type]; if (!m) return; m.classList.add('active'); document.body.classList.add('modal-open'); if (typeof window.gtag === 'function') { window.gtag('event', 'booking_modal_opened', { event_category: 'engagement', event_label: type }); } }
-    function closeModal(m) { m.classList.remove('active'); document.body.classList.remove('modal-open'); }
-    document.querySelectorAll('[data-modal]').forEach(function(btn) { btn.addEventListener('click', function(e) { e.preventDefault(); openModal(this.getAttribute('data-modal')); }); });
-    document.getElementById('navBookBtn').addEventListener('click', function(e) { e.preventDefault(); openModal('free'); });
-    document.querySelectorAll('.modal-close').forEach(function(btn) { btn.addEventListener('click', function() { closeModal(this.closest('.modal-overlay')); }); });
-    document.querySelectorAll('.modal-overlay').forEach(function(m) { m.addEventListener('click', function(e) { if (e.target === m) closeModal(m); }); });
-    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') { document.querySelectorAll('.modal-overlay.active').forEach(closeModal); } });
+    var modals = {
+      free: document.getElementById('modalFree'),
+      individual: document.getElementById('modalIndividual'),
+      couples: document.getElementById('modalCouples')
+    };
+
+    function openModal(type) {
+      var m = modals[type];
+      if (!m) return;
+      m.classList.add('active');
+      document.body.classList.add('modal-open');
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'booking_modal_opened', { event_category: 'engagement', event_label: type });
+      }
+    }
+    function closeModal(m) {
+      m.classList.remove('active');
+      document.body.classList.remove('modal-open');
+    }
+
+    document.querySelectorAll('[data-modal]').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        openModal(this.getAttribute('data-modal'));
+      });
+    });
+    document.getElementById('navBookBtn').addEventListener('click', function(e) {
+      e.preventDefault();
+      openModal('free');
+    });
+
+    document.querySelectorAll('.modal-close').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        closeModal(this.closest('.modal-overlay'));
+      });
+    });
+    document.querySelectorAll('.modal-overlay').forEach(function(m) {
+      m.addEventListener('click', function(e) {
+        if (e.target === m) closeModal(m);
+      });
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay.active').forEach(closeModal);
+      }
+    });
 
     document.addEventListener('DOMContentLoaded', function() {
       var u = 'roy', d = 'therapywithroy.co.uk';
@@ -739,32 +681,46 @@
           menuBtn.innerHTML = navList.classList.contains('active') ? '&times;' : '&#9776;';
           menuBtn.style.fontSize = navList.classList.contains('active') ? '2.2rem' : '1.8rem';
         });
-        navList.querySelectorAll('a').forEach(function(link) { link.addEventListener('click', function() { navList.classList.remove('active'); menuBtn.innerHTML = '&#9776;'; menuBtn.style.fontSize = '1.8rem'; }); });
+        navList.querySelectorAll('a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            navList.classList.remove('active');
+            menuBtn.innerHTML = '&#9776;';
+            menuBtn.style.fontSize = '1.8rem';
+          });
+        });
       }
     });
 
     document.addEventListener('DOMContentLoaded', function() {
       var tags = document.querySelectorAll('.hero-approach-tag');
+
       tags.forEach(function(tag) {
         tag.addEventListener('click', function(e) {
           e.stopPropagation();
           var isActive = tag.classList.contains('active');
-          tags.forEach(function(t) { t.classList.remove('active'); t.setAttribute('aria-expanded', 'false'); });
-          if (!isActive) { tag.classList.add('active'); tag.setAttribute('aria-expanded', 'true'); }
+          tags.forEach(function(t) {
+            t.classList.remove('active');
+            t.setAttribute('aria-expanded', 'false');
+          });
+          if (!isActive) {
+            tag.classList.add('active');
+            tag.setAttribute('aria-expanded', 'true');
+          }
         });
-        tag.addEventListener('keydown', function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); tag.click(); } });
+        tag.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            tag.click();
+          }
+        });
       });
-      document.addEventListener('click', function() { tags.forEach(function(t) { t.classList.remove('active'); t.setAttribute('aria-expanded', 'false'); }); });
-    });
 
-    document.addEventListener('DOMContentLoaded', function() {
-      var video = document.getElementById('royIntroVideo');
-      var overlay = document.getElementById('videoOverlay');
-      if (!video || !overlay) return;
-      function playVideo() { video.play(); overlay.classList.add('hidden'); }
-      overlay.addEventListener('click', playVideo);
-      overlay.addEventListener('keydown', function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); playVideo(); } });
-      video.addEventListener('ended', function() { overlay.classList.remove('hidden'); video.currentTime = 0; });
+      document.addEventListener('click', function() {
+        tags.forEach(function(t) {
+          t.classList.remove('active');
+          t.setAttribute('aria-expanded', 'false');
+        });
+      });
     });
   </script>
 
@@ -772,7 +728,8 @@
     (function() {
       var GA_ID = 'G-EZDPQG16PQ';
       function loadGA() {
-        var s = document.createElement('script'); s.async = true;
+        var s = document.createElement('script');
+        s.async = true;
         s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
         document.head.appendChild(s);
         window.dataLayer = window.dataLayer || [];
@@ -781,7 +738,10 @@
         gtag('js', new Date());
         gtag('config', GA_ID, { 'anonymize_ip': true });
       }
-      function hideBanner() { var b = document.getElementById('cookie-banner'); if (b) b.style.display = 'none'; }
+      function hideBanner() {
+        var b = document.getElementById('cookie-banner');
+        if (b) b.style.display = 'none';
+      }
       var consent = localStorage.getItem('cookie-consent');
       if (consent === 'accepted') { loadGA(); hideBanner(); }
       else if (consent === 'declined') { hideBanner(); }
