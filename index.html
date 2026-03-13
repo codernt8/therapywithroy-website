@@ -226,6 +226,57 @@
       .about-sidebar { position: static; }
       .issues-grid { grid-template-columns: 1fr; }
     }
+
+    /* ── Video Introduction Section ─────────────────────── */
+    #intro-video { background: var(--cream); }
+    .video-intro-grid {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 4rem;
+      align-items: center;
+      margin-top: 2.5rem;
+    }
+    .video-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 380px;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(44,74,78,0.15);
+      background: var(--text-dark);
+    }
+    .video-wrap video {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .video-intro-text .section-title { margin-bottom: 1rem; }
+    .video-intro-text p {
+      color: var(--text-mid);
+      font-size: 1.02rem;
+      line-height: 1.8;
+      margin-bottom: 1.2rem;
+    }
+    .video-placeholder-note {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      border: 1px dashed var(--sage-light);
+      padding: 0.35rem 0.85rem;
+      border-radius: 2rem;
+    }
+    @media (max-width: 768px) {
+      .video-intro-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .video-wrap {
+        max-width: 100%;
+      }
+    }
   </style>
 
   <script type="application/ld+json">
@@ -381,6 +432,32 @@
             <span class="approach-tag">Integrative</span>
             <span class="approach-tag">Person-Centred</span>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="intro-video">
+    <div class="container">
+      <p class="section-label">Meet Roy</p>
+      <div class="video-intro-grid">
+        <div class="video-wrap">
+          <video
+            src="roy-intro-video.mp4"
+            controls
+            preload="metadata"
+            playsinline
+            aria-label="Introductory video from Roy Lam"
+          >
+            Your browser does not support the video element.
+          </video>
+        </div>
+        <div class="video-intro-text">
+          <h2 class="section-title">Hear directly<br/><em>from Roy</em></h2>
+          <p>Sometimes the best way to know if a therapist is the right fit is simply to hear them speak. In this short video, Roy introduces himself, explains how he works, and shares what you can expect from your first session.</p>
+          <p>There&rsquo;s no pressure and no commitment. If what you hear resonates, the next step is a free 15&ndash;30 minute consultation at a time that suits you.</p>
+          <button class="btn-primary" data-modal="free" style="margin-top:0.5rem;">Book a Free Consultation</button>
+          <br/><span class="video-placeholder-note">Video placeholder &mdash; final version coming soon</span>
         </div>
       </div>
     </div>
