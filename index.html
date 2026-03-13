@@ -37,7 +37,7 @@
       -webkit-transform: translateZ(0);
       transform: translateZ(0);
     }
-    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--text-dark); text-decoration: none; letter-spacing: 0.02em; }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--text-dark); text-decoration: none; letter-spacing: 0.02em; white-space: nowrap; }
     .nav-links { display: flex; align-items: center; gap: 2.5rem; list-style: none; }
     .nav-links a { text-decoration: none; color: var(--text-mid); font-size: 0.85rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
     .nav-links a:hover { color: var(--sage-dark); }
@@ -232,9 +232,9 @@
     .cookie-decline { background: transparent; color: rgba(255,255,255,0.6); border: 1px solid rgba(255,255,255,0.3); padding: 0.55rem 1.25rem; border-radius: 3px; cursor: pointer; font-size: 0.85rem; font-family: 'Inter', sans-serif; transition: opacity 0.2s; }
     .cookie-decline:hover { opacity: 0.75; }
 
-    @media (max-width: 1050px) {
-      nav { padding: 1rem 2.5rem; }
-      .nav-links { gap: 1.2rem; }
+    @media (max-width: 900px) {
+      nav { padding: 1rem 2rem; }
+      .nav-links { gap: 0.9rem; }
     }
         @media (max-width: 768px) {
       nav {
