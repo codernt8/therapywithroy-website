@@ -6,7 +6,7 @@
   <title>Online Therapy UK | Therapy with Roy | Roy Lam MBACP</title>
   <meta name="description" content="Online therapy with Roy Lam, MBACP registered counsellor. Support for anxiety, depression, relationships, identity and life transitions. UK-based, available worldwide. Book a free consultation.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij4KICA8Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSIzMiIgZmlsbD0iIzRhNmU2ZiIvPgogIDxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjI4IiBmaWxsPSJub25lIiBzdHJva2U9IiM3YTllOWYiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIwLjUiLz4KICA8dGV4dCB4PSIzMiIgeT0iNDQiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIzNCIgZm9udC13ZWlnaHQ9IjQwMCIgCiAgICAgICAgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2Y3ZjRlZiI+UjwvdGV4dD4KPC9zdmc+"/>
-  <link rel="shortcut icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij4KICA8Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSIzMiIgZmlsbD0iIzRhNmU2ZiIvPgogIDxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjI4IiBmaWxsPSJub25lIiBzdHJva2U9IiM3YTllOWYiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIwLjUiLz4KICA8dGV4dCB4PSIzMiIgeT0iNDQiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIzNCIgZm9udC13ZWlnaHQ9IjQwMCIgCiAgICAgICAgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2Y3ZjRlZiI+UjwvdGV4dD0KPC9zdmc+"/>
+  <link rel="shortcut icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij4KICA8Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSIzMiIgZmlsbD0iIzRhNmU2ZiIvPgogIDxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjI4IiBmaWxsPSJub25lIiBzdHJva2U9IiM3YTllOWYiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIwLjUiLz4KICA8dGV4dCB4PSIzMiIgeT0iNDQiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCBzZXJpZiIgZm9udC1zaXplPSIzNCIgZm9udC13ZWlnaHQ9IjQwMCIgCiAgICAgICAgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2Y3ZjRlZiI+UjwvdGV4dD4KPC9zdmc+"/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -37,7 +37,7 @@
       -webkit-transform: translateZ(0);
       transform: translateZ(0);
     }
-    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--text-dark); text-decoration: none; letter-spacing: 0.02em; }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--text-dark); text-decoration: none; letter-spacing: 0.02em; white-space: nowrap; }
     .nav-links { display: flex; align-items: center; gap: 2.5rem; list-style: none; }
     .nav-links a { text-decoration: none; color: var(--text-mid); font-size: 0.85rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
     .nav-links a:hover { color: var(--sage-dark); }
@@ -106,7 +106,10 @@
       display: block;
     }
     @media (max-width: 480px) {
-      .tag-tooltip { width: 180px; font-size: 0.75rem; }
+      .tag-tooltip {
+        width: 180px;
+        font-size: 0.75rem;
+      }
     }
 
     .hero-badges { display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
@@ -229,7 +232,11 @@
     .cookie-decline { background: transparent; color: rgba(255,255,255,0.6); border: 1px solid rgba(255,255,255,0.3); padding: 0.55rem 1.25rem; border-radius: 3px; cursor: pointer; font-size: 0.85rem; font-family: 'Inter', sans-serif; transition: opacity 0.2s; }
     .cookie-decline:hover { opacity: 0.75; }
 
-    @media (max-width: 1147px) {
+    @media (max-width: 900px) {
+      nav { padding: 1rem 2rem; }
+      .nav-links { gap: 0.9rem; }
+    }
+    @media (max-width: 768px) {
       nav {
         padding: 1rem 1.5rem;
         position: fixed;
@@ -265,6 +272,52 @@
       .testimonials-grid { grid-template-columns: 1fr; }
       .about-sidebar { position: static; }
       .issues-grid { grid-template-columns: 1fr; }
+    }
+
+    /* -- Video Introduction Section -------------------------------- */
+    #intro-video { background: var(--cream); }
+    .video-intro-grid {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 4rem;
+      align-items: center;
+      margin-top: 2.5rem;
+    }
+    .video-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 380px;
+      /* Fixed height crops the tall 9:16 video to a natural head-and-shoulders frame */
+      height: 520px;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(44,74,78,0.15);
+      background: var(--text-dark);
+    }
+    .video-wrap video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      /* Show from the top of the frame down, cropping empty headroom */
+      object-fit: cover;
+      object-position: center top;
+    }
+    .video-intro-text .section-title { margin-bottom: 1rem; }
+    .video-intro-text p {
+      color: var(--text-mid);
+      font-size: 1.02rem;
+      line-height: 1.8;
+      margin-bottom: 1.2rem;
+    }
+    @media (max-width: 768px) {
+      .video-intro-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .video-wrap {
+        max-width: 100%;
+        height: 420px;
+      }
     }
   </style>
 
@@ -423,6 +476,29 @@
             <span class="approach-tag">Integrative</span>
             <span class="approach-tag">Person-Centred</span>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="intro-video">
+    <div class="container">
+      <p class="section-label">Meet Roy</p>
+      <div class="video-intro-grid">
+        <div class="video-wrap">
+          <video
+            src="roy-intro-video.mp4"
+            controls
+            preload="metadata"
+            playsinline
+            aria-label="Introductory video from Roy Lam"
+          >
+            Your browser does not support the video element.
+          </video>
+        </div>
+        <div class="video-intro-text">
+          <h2 class="section-title">A word from Roy</h2>
+          <p>Watch my short video to learn more about me and how I work.</p>
         </div>
       </div>
     </div>
@@ -735,6 +811,7 @@
 
     document.addEventListener('DOMContentLoaded', function() {
       var tags = document.querySelectorAll('.hero-approach-tag');
+
       tags.forEach(function(tag) {
         tag.addEventListener('click', function(e) {
           e.stopPropagation();
@@ -755,6 +832,7 @@
           }
         });
       });
+
       document.addEventListener('click', function() {
         tags.forEach(function(t) {
           t.classList.remove('active');
