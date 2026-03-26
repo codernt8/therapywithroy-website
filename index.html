@@ -295,6 +295,10 @@
     .video-wrap video {
       display: block;
       width: 100%;
+      /* Crop to 3:4 aspect ratio and shift frame down ~39% to remove headroom */
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      object-position: center 39%;
       height: auto;
     }
     .video-intro-text .section-title { margin-bottom: 1rem; }
