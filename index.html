@@ -858,7 +858,7 @@
       }
       function hideBanner() {
         var b = document.getElementById('cookie-banner');
-        if (b) b.style.display = 'none';
+        if (b && b.parentNode) b.parentNode.removeChild(b);
       }
       var consent = localStorage.getItem('cookie-consent');
       if (consent === 'accepted') { loadGA(); hideBanner(); }
