@@ -33,6 +33,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://therapywithroy.co.uk/blog/coming-out-later-in-life</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://therapywithroy.co.uk/blog/couples-therapy</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -59,6 +65,12 @@
   <url>
     <loc>https://therapywithroy.co.uk/blog/lgbtq-mental-health</loc>
     <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://therapywithroy.co.uk/blog/loneliness-and-mental-health</loc>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
