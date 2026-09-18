@@ -181,3 +181,18 @@ Update this file as part of the publish step whenever a new post goes live.
 - **mentalhealth-uk.org** (Mental Health UK) — used in: you-are-not-lazy-you-are-depleted
 - **westsussexmind.org** — used in: why-you-cant-stop-doomscrolling
 - **gov.uk** — used in: why-you-cant-stop-doomscrolling
+- **commonslibrary.parliament.uk** — used in: starting-university-students-and-parents
+- **youngminds.org.uk** — used in: starting-university-students-and-parents
+- **sheffield.ac.uk** — used in: starting-university-students-and-parents
+
+---
+
+## starting-university-students-and-parents
+
+| URL | Anchor Text |
+|-----|-------------|
+| https://commonslibrary.parliament.uk/research-briefings/cbp-8593/ | House of Commons Library briefing on student mental health |
+| https://www.mind.org.uk/information-support/tips-for-everyday-living/student-life/support-and-treatment/ | Mind's guidance for students |
+| https://www.youngminds.org.uk/parent/parents-a-z-mental-health-guide/mental-health-at-university/ | Young Minds' guidance for parents |
+| https://www.nhs.uk/mental-health/children-and-young-adults/help-for-teenagers-young-adults-and-students/student-mental-health-counselling/ | NHS's guide to student mental health support |
+| https://sheffield.ac.uk/news/university-counselling-effective-reducing-students-distress-research-finds | SCORE consortium study |
