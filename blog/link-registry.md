@@ -173,17 +173,19 @@ Update this file as part of the publish step whenever a new post goes live.
 
 ## Domains Used (for quick reference)
 
-- **mind.org.uk** — used in: why-talking-to-friends-isnt-enough, you-are-not-lazy-you-are-depleted
+- **mind.org.uk** — used in: why-talking-to-friends-isnt-enough, you-are-not-lazy-you-are-depleted, code-switching-microaggressions-and-mental-health
 - **bacp.co.uk** — used in: why-talking-to-friends-isnt-enough, you-are-not-lazy-you-are-depleted
 - **nhs.uk** — used in: why-talking-to-friends-isnt-enough, you-are-not-lazy-you-are-depleted
 - **england.nhs.uk** — used in: you-are-not-lazy-you-are-depleted
-- **mentalhealth.org.uk** (Mental Health Foundation) — used in: why-you-cant-stop-doomscrolling
+- **mentalhealth.org.uk** (Mental Health Foundation) — used in: why-you-cant-stop-doomscrolling, code-switching-microaggressions-and-mental-health
 - **mentalhealth-uk.org** (Mental Health UK) — used in: you-are-not-lazy-you-are-depleted
 - **westsussexmind.org** — used in: why-you-cant-stop-doomscrolling
 - **gov.uk** — used in: why-you-cant-stop-doomscrolling
 - **commonslibrary.parliament.uk** — used in: starting-university-students-and-parents
 - **youngminds.org.uk** — used in: starting-university-students-and-parents
 - **sheffield.ac.uk** — used in: starting-university-students-and-parents
+- **blackhistorymonth.org.uk** (Black History Month UK) — used in: code-switching-microaggressions-and-mental-health
+- **baatn.org.uk** (Black, African and Asian Therapy Network) — used in: code-switching-microaggressions-and-mental-health
 
 ---
 
@@ -196,3 +198,12 @@ Update this file as part of the publish step whenever a new post goes live.
 | https://www.youngminds.org.uk/parent/parents-a-z-mental-health-guide/mental-health-at-university/ | Young Minds' guidance for parents |
 | https://www.nhs.uk/mental-health/children-and-young-adults/help-for-teenagers-young-adults-and-students/student-mental-health-counselling/ | NHS's guide to student mental health support |
 | https://sheffield.ac.uk/news/university-counselling-effective-reducing-students-distress-research-finds | SCORE consortium study |
+
+## code-switching-microaggressions-and-mental-health
+
+| URL | Anchor Text |
+|-----|-------------|
+| https://www.blackhistorymonth.org.uk/article/section/bhm-intros/black-history-month-2026-honouring-our-communities/ | Honouring Our Communities |
+| https://www.mind.org.uk/information-support/tips-for-everyday-living/racism-and-mental-health/ | Mind describes microaggressions |
+| https://www.mentalhealth.org.uk/explore-mental-health/blogs/racism-and-mental-health | Mental Health Foundation |
+| https://www.baatn.org.uk/ | Black, African and Asian Therapy Network (BAATN) |
