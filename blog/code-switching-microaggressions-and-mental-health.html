@@ -124,6 +124,9 @@
     .blog-pullquote p { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-style: italic; font-weight: 300; color: white !important; margin: 0; line-height: 1.6; }
     .blog-pullquote p::before { content: '\201C'; color: var(--accent); }
     .blog-pullquote p::after { content: '\201D'; color: var(--accent); }
+    .blog-inline-cta { border-left: 3px solid var(--accent); background: var(--cream); padding: 1.2rem 1.5rem; margin: 2rem 0; border-radius: 0 2px 2px 0; }
+    .blog-inline-cta p { margin: 0; color: var(--text-mid); font-size: 0.97rem; }
+    .blog-inline-cta a { color: #4a6e6f; font-weight: 500; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
     .blog-cta { background: var(--cream); border: 1px solid rgba(122,158,159,0.25); border-radius: 2px; padding: 2.5rem; margin: 3rem 0; text-align: center; }
     .blog-cta h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; color: var(--text-dark); margin-bottom: 0.8rem; }
     .blog-cta p { color: var(--text-mid); font-size: 0.97rem; margin-bottom: 1.5rem; }
@@ -216,6 +219,10 @@
 
     <p>Often it isn&rsquo;t even a conscious choice. It is something learned early, sometimes from parents who did the same thing to get on, and it can become so automatic that you only notice it when you&rsquo;re finally somewhere you don&rsquo;t need it.</p>
 
+    <div class="blog-inline-cta">
+      <p>If this sounds familiar, you don&rsquo;t have to work it out alone. I offer online sessions across the UK and internationally, in English and Cantonese, and a free initial consultation is a relaxed first step. <a href="#" class="inline-book">Book a free consultation &rarr;</a></p>
+    </div>
+
     <h2>Microaggressions: Small Moments, Real Weight</h2>
 
     <p>Alongside code-switching sit microaggressions. <a href="https://www.mind.org.uk/information-support/tips-for-everyday-living/racism-and-mental-health/" class="outbound" target="_blank" rel="noopener noreferrer">Mind describes microaggressions</a> as &ldquo;the most common form of covert, interpersonal racism&rdquo;, and notes that they can be very subtle: implying someone doesn&rsquo;t belong, making assumptions based on race, or dismissing their experience of racism when they raise it.</p>
@@ -297,6 +304,7 @@
     function openModal(e) { if (e) e.preventDefault(); modal.classList.add('active'); document.body.classList.add('modal-open'); }
     function closeModal() { modal.classList.remove('active'); document.body.classList.remove('modal-open'); }
     document.getElementById('ctaBookBtn').addEventListener('click', openModal);
+    document.querySelectorAll('.inline-book').forEach(function(el) { el.addEventListener('click', openModal); });
     document.getElementById('navBookBtn').addEventListener('click', openModal);
     modal.addEventListener('click', function(e) { if (e.target === modal) closeModal(); });
     closeBtn.addEventListener('click', closeModal);
