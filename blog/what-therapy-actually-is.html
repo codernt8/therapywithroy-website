@@ -79,6 +79,9 @@
     .blog-pullquote p { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-style: italic; font-weight: 300; color: white !important; margin: 0; line-height: 1.6; }
     .blog-pullquote p::before { content: '\201C'; color: var(--accent); }
     .blog-pullquote p::after { content: '\201D'; color: var(--accent); }
+    .blog-inline-cta { border-left: 3px solid var(--accent); background: var(--cream); padding: 1.2rem 1.5rem; margin: 2rem 0; border-radius: 0 2px 2px 0; }
+    .blog-inline-cta p { margin: 0; color: var(--text-mid); font-size: 0.97rem; }
+    .blog-inline-cta a { color: #4a6e6f; font-weight: 500; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
     .blog-cta { background: var(--cream); border: 1px solid rgba(122,158,159,0.25); border-radius: 2px; padding: 2.5rem; margin: 3rem 0; text-align: center; }
     .blog-cta h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; color: var(--text-dark); margin-bottom: 0.8rem; }
     .blog-cta p { color: var(--text-mid); font-size: 0.97rem; margin-bottom: 1.5rem; }
@@ -210,6 +213,10 @@
       <p>The insights that come from therapy tend to be more durable because they are yours. A therapist who simply handed you the answers would be doing you a disservice.</p>
     </div>
 
+    <div class="blog-inline-cta">
+      <p>If you are still weighing it up, that is completely fine. A free initial consultation is a chance to ask questions and get a feel for how therapy works, with no commitment. I offer online sessions across the UK and internationally. <a href="#" class="inline-book">Book a free consultation &rarr;</a></p>
+    </div>
+
     <h2>Myth Three: You Have to Talk About Your Childhood</h2>
 
     <p>This idea comes from a particular tradition in therapy, the psychoanalytic one, and it has shaped the popular image of therapy far beyond its actual reach. The image of someone lying on a couch recounting their earliest memories while a silent figure takes notes is not what most therapy looks like in 2026.</p>
@@ -279,6 +286,7 @@
     function openModal(e) { if (e) e.preventDefault(); modal.classList.add('active'); document.body.classList.add('modal-open'); }
     function closeModal() { modal.classList.remove('active'); document.body.classList.remove('modal-open'); }
     document.getElementById('ctaBookBtn').addEventListener('click', openModal);
+    document.querySelectorAll('.inline-book').forEach(function(el) { el.addEventListener('click', openModal); });
     document.getElementById('navBookBtn').addEventListener('click', openModal);
     modal.addEventListener('click', function(e) { if (e.target === modal) closeModal(); });
     closeBtn.addEventListener('click', closeModal);
