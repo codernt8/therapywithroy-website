@@ -16,7 +16,7 @@ faqs = [
     ("What is your cancellation policy?",
      "Payment is taken at the time of booking. If you need to reschedule or cancel, please give at least 48 hours’ notice and you'll receive a full refund. Cancellations made within 48 hours of your appointment are non-refundable. This policy reflects the value of the time we've set aside together."),
     ("Do you work with clients outside the UK?",
-     "Yes, I work with clients across the UK and internationally. Sessions are conducted entirely online, so location is no barrier. All fees are charged in GBP. All sessions run Monday to Friday, 9am–7pm GMT, so please factor this in when booking from a different time zone."),
+     "Yes, I work with clients across the UK and internationally. Sessions are conducted entirely online, so location is no barrier. All fees are charged in GBP. All sessions run Monday to Friday, 9am–7pm London time, so please factor this in when booking from a different time zone. For clients in Hong Kong, that is 4pm–2am during British Summer Time and 5pm–3am for the rest of the year."),
     ("Are you a registered therapist?",
      "Yes. I am a registered member of the British Association for Counselling and Psychotherapy (BACP), membership number 397064. I hold a Master of Social Sciences in Counselling from the University of Hong Kong (2017) and practise in accordance with the BACP Ethical Framework for the Counselling Professions."),
 ]
