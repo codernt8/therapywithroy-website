@@ -80,7 +80,9 @@ def add_og_tags(path, is_index=False):
         return False
 
     title = get(r'<title>(.*?)</title>', t, "Therapy with Roy")
+    title = title.replace('"', "&quot;")
     desc = get(r'<meta name="description" content="(.*?)">', t, "")
+    desc = desc.replace('"', "&quot;")
     canonical = get(r'<link rel="canonical" href="(.*?)"\s*/>', t) or (SITE + "/blog/")
 
     if is_index:
