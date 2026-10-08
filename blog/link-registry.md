@@ -207,3 +207,14 @@ Update this file as part of the publish step whenever a new post goes live.
 | https://www.mind.org.uk/information-support/tips-for-everyday-living/racism-and-mental-health/ | Mind describes microaggressions |
 | https://www.mentalhealth.org.uk/explore-mental-health/blogs/racism-and-mental-health | Mental Health Foundation |
 | https://www.baatn.org.uk/ | Black, African and Asian Therapy Network (BAATN) |
+
+---
+
+## signed-off-with-stress-what-helps
+
+| URL | Anchor Text |
+|-----|-------------|
+| https://www.gov.uk/government/news/new-plan-for-britains-first-workplace-health-system | Workplace Health System |
+| https://www.nhs.uk/tests-and-treatments/talking-therapies/ | NHS talking therapies |
+| https://www.mind.org.uk/information-support/tips-for-everyday-living/how-to-be-mentally-healthy-at-work/returning-to-work/ | Mind's guidance on returning to work |
+| https://www.acas.org.uk/returning-to-work-after-absence | Acas guidance |
