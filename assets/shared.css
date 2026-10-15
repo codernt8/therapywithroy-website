@@ -1,0 +1,74 @@
+/* Shared styles for the home page and the service pages: FAQ component, nav dropdown,
+   linked topic tags, "How I Can Help" cards and in-card links.
+   Relies on the CSS variables defined on each page (:root). */
+
+/* ---------- Nav dropdown ("How I Can Help") ---------- */
+.has-sub { position: relative; }
+.sub-toggle { background: none; border: none; padding: 0; font: inherit; cursor: pointer; color: var(--text-mid); font-size: 0.85rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; display: inline-flex; align-items: center; gap: 0.35rem; }
+.sub-toggle:hover, .has-sub.open .sub-toggle, .sub-toggle.current { color: var(--sage-dark); }
+.sub-toggle .caret { font-size: 0.7em; transition: transform 0.2s; display: inline-block; }
+.has-sub.open .sub-toggle .caret { transform: rotate(180deg); }
+.sub { display: none; position: absolute; top: 100%; left: -1rem; padding-top: 1rem; min-width: 300px; z-index: 110; }
+.sub-inner { background: #fff; border: 1px solid rgba(122,158,159,0.2); box-shadow: 0 8px 32px rgba(74,110,111,0.12); padding: 0.5rem; border-radius: 2px; }
+.nav-links .sub a { display: block; padding: 0.7rem 1rem; text-transform: none; letter-spacing: 0.02em; font-size: 0.95rem; color: var(--text-dark); }
+.nav-links .sub a small { display: block; color: var(--text-light); font-size: 0.78rem; letter-spacing: 0; }
+.nav-links .sub a:hover, .nav-links .sub a:focus-visible { background: var(--cream); color: var(--text-dark); }
+.nav-links .sub a[aria-current="page"] { background: var(--cream); }
+html:not(.js) .has-sub:hover .sub, .has-sub.open .sub { display: block; }
+.sub-toggle:focus-visible, .nav-links a:focus-visible { outline: 2px solid var(--sage); outline-offset: 3px; }
+
+@media (max-width: 1180px) {
+  /* Inside the hamburger menu the two pages are listed as an indented group. */
+  .has-sub { width: 100%; }
+  .sub-toggle { pointer-events: none; }
+  .sub-toggle .caret { display: none; }
+  .sub { display: block; position: static; min-width: 0; padding: 0.4rem 0 0; }
+  .sub-inner { background: none; border: none; box-shadow: none; padding: 0 0 0 1rem; border-left: 2px solid var(--sage-light); margin: 0 auto; max-width: 280px; text-align: left; }
+  .nav-links .sub a { padding: 0.5rem 0.75rem; }
+}
+
+/* ---------- Linked topic tags (home "Who I Help") ---------- */
+a.approach-tag { text-decoration: none; background: #fff; border-color: var(--sage); font-weight: 500; transition: background 0.2s, color 0.2s; }
+a.approach-tag::after { content: ' \2192'; font-size: 0.85em; }
+a.approach-tag:hover { background: var(--sage-dark); color: #fff; border-color: var(--sage-dark); }
+a.approach-tag:focus-visible { outline: 2px solid var(--sage-dark); outline-offset: 2px; }
+
+/* ---------- "How I Can Help" cards (home) ---------- */
+.help-intro { color: var(--text-mid); max-width: 620px; font-size: 1.02rem; }
+.help-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2.5rem; }
+.help-card { border: 1px solid rgba(122,158,159,0.2); padding: 2rem 1.75rem; border-radius: 2px; display: flex; flex-direction: column; gap: 0.8rem; background: var(--warm-white); transition: border-color 0.25s, box-shadow 0.25s; }
+.help-card:hover { border-color: var(--sage); box-shadow: 0 8px 32px rgba(74,110,111,0.08); }
+.help-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 400; color: var(--text-dark); }
+.help-card p { font-size: 0.92rem; color: var(--text-mid); line-height: 1.7; flex: 1; }
+.help-card .card-link { font-size: 0.85rem; letter-spacing: 0.06em; color: var(--sage-dark); text-decoration: none; font-weight: 500; background: none; border: none; padding: 0; cursor: pointer; text-align: left; font-family: 'Inter', sans-serif; }
+.help-card .card-link:hover { text-decoration: underline; }
+.help-card.featured { background: var(--sage-dark); border-color: var(--sage-dark); }
+.help-card.featured h3, .help-card.featured p { color: #fff; }
+.help-card.featured .card-link { color: var(--accent); }
+@media (max-width: 768px) { .help-grid { grid-template-columns: 1fr; } }
+
+/* ---------- Link under a fee card ---------- */
+.service-card-link { display: block; text-align: center; margin-top: 0.9rem; font-size: 0.82rem; letter-spacing: 0.04em; color: var(--sage-dark); text-decoration: none; }
+.service-card-link:hover { text-decoration: underline; }
+.service-card.featured .service-card-link { color: var(--sage-light); }
+
+/* ---------- FAQ (one component, used on the home page and both service pages) ---------- */
+.faq-section { background: var(--warm-white); padding: 3.5rem 0; }
+.faq-inner { max-width: 760px; margin: 0 auto; padding: 0 2rem; }
+.faq-section .section-title { margin-bottom: 0.5rem; }
+.faq-intro { color: var(--text-mid); font-size: 1rem; margin-bottom: 0; }
+.faq-body { margin-top: 2.5rem; }
+.faq-controls { text-align: right; margin-bottom: 1rem; }
+.faq-toggle { background: none; border: 1px solid var(--sage-light); color: var(--sage-dark); font-family: 'Inter', sans-serif; font-size: 0.8rem; letter-spacing: 0.06em; padding: 0.4rem 1rem; border-radius: 2rem; cursor: pointer; transition: background 0.2s, color 0.2s; }
+.faq-toggle:hover { background: var(--sage-dark); color: #fff; }
+.faq-toggle:focus-visible { outline: 2px solid var(--sage-dark); outline-offset: 2px; }
+.faq-item { border-bottom: 1px solid rgba(122,158,159,0.2); padding: 1.2rem 0; }
+.faq-item:last-child { border-bottom: none; }
+.faq-item summary { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 400; color: var(--text-dark); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary:focus-visible { outline: 2px solid var(--sage-dark); outline-offset: 4px; border-radius: 2px; }
+.faq-icon { color: var(--sage); font-size: 1.6rem; font-weight: 200; line-height: 1; display: inline-block; flex-shrink: 0; transition: transform 0.3s ease; }
+.faq-item[open]:not(.is-closing) .faq-icon { transform: rotate(45deg); }
+.faq-a { overflow: hidden; }
+.faq-a-inner p { margin-top: 0.8rem; color: var(--text-mid); font-size: 0.97rem; line-height: 1.8; }
+@media (prefers-reduced-motion: reduce) { .faq-icon { transition: none; } }

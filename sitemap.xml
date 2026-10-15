@@ -11,6 +11,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://therapywithroy.co.uk/online-couples-therapy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://therapywithroy.co.uk/online-anxiety-depression-therapy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://therapywithroy.co.uk/privacy-policy.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

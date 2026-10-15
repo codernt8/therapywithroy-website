@@ -4,22 +4,11 @@ from urllib.parse import quote
 SITE = "https://therapywithroy.co.uk"
 
 # ---------- 1. FAQPage schema + canonical + OG/Twitter tags on the homepage ----------
-faqs = [
-    ("How does online therapy work?",
-     "Sessions take place via Google Meet, a free, easy-to-use video platform. You'll receive a link before each session. All you need is a private space, a stable internet connection, and a device with a camera and microphone. Many clients find online therapy just as effective as in-person, with the added benefit of attending from the comfort of their own home."),
-    ("What happens in the free consultation?",
-     "The free consultation is an informal, no-obligation conversation lasting 15–30 minutes. We'll talk about what's brought you here, what you're hoping to get from therapy, and I'll answer any questions you have about how I work. It's also a chance for you to get a feel for whether we're the right fit. There's no pressure to proceed."),
-    ("How many sessions will I need?",
-     "Every person is different, and there's no fixed number of sessions. Some people find that a focused course of 6–12 sessions is enough to address a specific issue; others prefer longer-term support. We'll review how things are going together and you're free to end or pause at any time. There's no minimum commitment."),
-    ("Is everything I share confidential?",
-     "Yes. Everything you share is treated with the strictest confidence. The only exceptions are rare situations where there is a serious risk of harm to yourself or others. In those cases, I have a professional duty to act. I'll explain the full bounds of confidentiality before we begin working together."),
-    ("What is your cancellation policy?",
-     "Payment is taken at the time of booking. If you need to reschedule or cancel, please give at least 48 hours’ notice and you'll receive a full refund. Cancellations made within 48 hours of your appointment are non-refundable. This policy reflects the value of the time we've set aside together."),
-    ("Do you work with clients outside the UK?",
-     "Yes, I work with clients across the UK and internationally. Sessions are conducted entirely online, so location is no barrier. All fees are charged in GBP. All sessions run Monday to Friday, 9am–7pm London time, so please factor this in when booking from a different time zone. For clients in Hong Kong, that is 4pm–2am during British Summer Time and 5pm–3am for the rest of the year."),
-    ("Are you a registered therapist?",
-     "Yes. I am a registered member of the British Association for Counselling and Psychotherapy (BACP), membership number 397064. I hold a Master of Social Sciences in Counselling from the University of Hong Kong (2017) and practise in accordance with the BACP Ethical Framework for the Counselling Professions."),
-]
+# The FAQ lives in tools/content/faq.json (also used by tools/build_pages.py), so the wording is kept in one place.
+import html
+with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "content", "faq.json"), encoding="utf-8") as f:
+    _faq = json.load(f)
+faqs = [(html.unescape(i["q"]), html.unescape(i["a"])) for i in _faq["items"]]
 faq_schema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -131,6 +120,9 @@ for c in changed:
 
 # ---------- 3. robots.txt + sitemap.xml ----------
 urls = [(SITE + "/", None, "weekly", "1.0"), (SITE + "/blog/", None, "weekly", "0.8")]
+for page in ["online-couples-therapy", "online-anxiety-depression-therapy"]:
+    if os.path.exists(page + ".html"):
+        urls.append((SITE + "/" + page, None, "monthly", "0.9"))
 for page, prio in [("privacy-policy.html", "0.3"), ("client-agreement.html", "0.3")]:
     if os.path.exists(page):
         urls.append((SITE + "/" + page, None, "yearly", prio))
