@@ -1,0 +1,83 @@
+{
+  "slug": "online-cultural-identity-family-therapy",
+  "title": "Online Cultural Identity & Family Therapy UK | Therapy with Roy | Roy Lam MBACP",
+  "description": "Online therapy for cultural identity, family expectations and life abroad with Roy Lam, MBACP. English and Cantonese. UK-based, available worldwide. Sessions £80.",
+  "crumb": "Cultural identity &amp; family",
+  "featured_fee": "individual",
+  "hero": {
+    "eyebrow": "Online therapy for cultural identity &amp; family &middot; UK-based, available worldwide",
+    "h1": "Online therapy for<br/><em>cultural identity and family</em>",
+    "subtitle": "A confidential, non-judgemental space to make sense of the pull between family expectations, the culture you carry and the life you are building, in English or Cantonese.",
+    "badges": [
+      "MBACP Registered Member",
+      "Originally from Hong Kong",
+      "English &amp; Cantonese",
+      "&pound;80 per session"
+    ]
+  },
+  "problem": {
+    "id": "between",
+    "label": "Between two worlds",
+    "title": "Carrying more than one set of expectations",
+    "paragraphs": [
+      "Many people move between cultures, languages and sets of expectations: a duty to family that sits alongside your own hopes, one version of yourself at home and another at work, or a life in a new country that feels both freeing and lonely. It can be hard to explain this to people who have not lived it.",
+      "Here you do not have to translate yourself. You can speak in English or Cantonese, take your time, and sort out what you want to keep, what you want to change, and how you might hold both."
+    ],
+    "tags": [
+      "Cultural identity",
+      "Family expectations",
+      "Family challenges",
+      "Expat &amp; relocation",
+      "Belonging &amp; loneliness",
+      "Patterns across generations",
+      "Microaggressions &amp; code-switching"
+    ],
+    "quote": "&ldquo;I look forward to providing my support to you and helping you reflect, connect and grow.&rdquo;"
+  },
+  "steps": [
+    {
+      "title": "Free Consultation",
+      "text": "Book a free 15&ndash;30 minute call. We&rsquo;ll talk about what&rsquo;s brought you here and whether we&rsquo;re a good fit. No commitment required."
+    },
+    {
+      "title": "Begin Sessions",
+      "text": "We meet online via Google Meet, Monday to Friday, 9am&ndash;7pm London time, in English or Cantonese. Sessions are 50 minutes, at your own pace."
+    },
+    {
+      "title": "Reflect &amp; Grow",
+      "text": "Over time, understand how family and culture have shaped you, and work out what you want to carry forward and what you want to do differently."
+    }
+  ],
+  "approach": {
+    "title": "Understanding where you come from",
+    "paragraphs": [
+      "Originally from Hong Kong, I moved to the UK in 2021, so I know something of what it takes to build a life between two places. I have a particular understanding of the cultural pressures many East Asian and immigrant communities face, particularly the tension between family expectations and personal identity.",
+      "Bowen&rsquo;s Family Systems Theory is one of the approaches I draw on, alongside Cognitive Behavioural Therapy (CBT) and Emotion-Focused Therapy. It looks at how family relationships and patterns across generations shape who we are, which can help when family expectations are at the heart of what you are facing.",
+      "I offer sessions in both English and Cantonese. I am a registered member of the BACP (No. 397064) with a Master of Social Sciences in Counselling from the University of Hong Kong."
+    ]
+  },
+  "reading": {
+    "slugs": [
+      "cultural-identity-family-expectations",
+      "moving-abroad-expat-mental-health",
+      "code-switching-microaggressions-and-mental-health",
+      "family-estrangement-and-mental-health"
+    ],
+    "featured": "cultural-identity-family-expectations",
+    "featured_image": {
+      "src": "/assets/img/cultural-identity-card.webp",
+      "width": 800,
+      "height": 446
+    }
+  },
+  "book": {
+    "title": "Ready to talk?",
+    "price_value": "&pound;80",
+    "price_label": "Per session",
+    "samaritans": false
+  },
+  "also": [
+    "online-lgbt-therapy",
+    "online-couples-therapy"
+  ]
+}

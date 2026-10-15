@@ -74,8 +74,10 @@
     "title": "Ready to take the first step together?",
     "price_value": "&pound;120",
     "price_label": "Per couples session",
-    "also_label": "Anxiety &amp; depression support",
-    "also_href": "/online-anxiety-depression-therapy",
     "samaritans": false
-  }
+  },
+  "also": [
+    "online-anxiety-depression-therapy",
+    "online-cultural-identity-family-therapy"
+  ]
 }

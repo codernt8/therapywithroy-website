@@ -1,0 +1,83 @@
+{
+  "slug": "online-work-stress-career-therapy",
+  "title": "Online Work Stress & Career Therapy UK | Therapy with Roy | Roy Lam MBACP",
+  "description": "Online therapy for work stress, burnout and career change with Roy Lam, MBACP, with 30+ years in HR leadership. English and Cantonese. Sessions £80. Free consultation.",
+  "crumb": "Work stress &amp; career",
+  "featured_fee": "individual",
+  "hero": {
+    "eyebrow": "Online therapy for work stress &amp; career &middot; UK-based, available worldwide",
+    "h1": "Online therapy for<br/><em>work stress and burnout</em>",
+    "subtitle": "A confidential, non-judgemental space to step back from the pressure of work, make sense of where you are and think clearly about what comes next.",
+    "badges": [
+      "MBACP Registered Member",
+      "30+ Years Human Resources Leadership",
+      "English &amp; Cantonese",
+      "&pound;80 per session"
+    ]
+  },
+  "problem": {
+    "id": "work",
+    "label": "Work, stress and change",
+    "title": "When work is taking more than it gives",
+    "paragraphs": [
+      "Work can wear you down quietly. You may be the person who always copes, still delivering on the outside while feeling flat, wired or exhausted underneath. Or the ground may have shifted: a restructure, a role changing faster than you can keep up, or a worry about what AI could mean for your job.",
+      "Pressure at work can follow you home, into your sleep, your relationships and the way you see yourself. This is a place to put it all down without worrying how it looks, and to work out what you want to do about it."
+    ],
+    "tags": [
+      "Work stress",
+      "Burnout",
+      "Career &amp; workplace",
+      "Job displacement &amp; AI anxiety",
+      "Midlife career transitions",
+      "Feeling stuck at work",
+      "Redundancy &amp; restructuring"
+    ],
+    "quote": "&ldquo;Without good mental health, it is very difficult<br/>to thrive in life.&rdquo;"
+  },
+  "steps": [
+    {
+      "title": "Free Consultation",
+      "text": "Book a free 15&ndash;30 minute call. We&rsquo;ll talk about what&rsquo;s brought you here and whether we&rsquo;re a good fit. No commitment required."
+    },
+    {
+      "title": "Begin Sessions",
+      "text": "We meet online via Google Meet, Monday to Friday, 9am&ndash;7pm London time, so sessions can be planned around a working day. Sessions are 50 minutes, and you set the pace."
+    },
+    {
+      "title": "Reflect &amp; Grow",
+      "text": "Over time, understand what work has been costing you, find your footing again and make clearer decisions about your next steps, with me alongside you."
+    }
+  ],
+  "approach": {
+    "title": "A therapist who knows the workplace from the inside",
+    "paragraphs": [
+      "I spent over 30 years in senior Human Resources roles across banking, aviation, luxury retail and hospitality, so I know how organisations work and how much people are asked to carry within them. I am not here to judge how you cope, only to help you understand it.",
+      "My approach is integrative. I draw on Cognitive Behavioural Therapy (CBT), Emotion-Focused Therapy and Bowen&rsquo;s Family Systems Theory, so we can look at the habits and thoughts that keep stress going, the feelings underneath, and the patterns you may have learned from family and past workplaces.",
+      "I am a registered member of the BACP (No. 397064) with a Master of Social Sciences in Counselling from the University of Hong Kong, and I offer sessions in English and Cantonese."
+    ]
+  },
+  "reading": {
+    "slugs": [
+      "will-ai-take-my-job",
+      "signed-off-with-stress-what-helps",
+      "burnout-recognising-the-signs",
+      "you-are-not-lazy-you-are-depleted"
+    ],
+    "featured": "will-ai-take-my-job",
+    "featured_image": {
+      "src": "/assets/img/will-ai-card.webp",
+      "width": 800,
+      "height": 446
+    }
+  },
+  "book": {
+    "title": "Ready to talk it through?",
+    "price_value": "&pound;80",
+    "price_label": "Per session",
+    "samaritans": true
+  },
+  "also": [
+    "online-anxiety-depression-therapy",
+    "online-cultural-identity-family-therapy"
+  ]
+}

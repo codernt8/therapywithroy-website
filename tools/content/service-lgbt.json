@@ -1,0 +1,84 @@
+{
+  "slug": "online-lgbt-therapy",
+  "title": "Online LGBT+ Therapy UK | Therapy with Roy | Roy Lam MBACP",
+  "description": "Online therapy for LGBT+ adults with Roy Lam, MBACP: identity, coming out, relationships and family. UK-based, available worldwide. Sessions £80. Free consultation.",
+  "crumb": "LGBT+ therapy",
+  "featured_fee": "individual",
+  "hero": {
+    "eyebrow": "Online LGBT+ therapy &middot; UK-based, available worldwide",
+    "h1": "Online <em>LGBT+ therapy</em>",
+    "subtitle": "A confidential, non-judgemental space to explore your identity, your relationships and your place in your family and community, at your own pace.",
+    "badges": [
+      "MBACP Registered Member",
+      "Confidential &amp; non-judgemental",
+      "English &amp; Cantonese",
+      "&pound;80 per session"
+    ]
+  },
+  "problem": {
+    "id": "identity",
+    "label": "Identity and belonging",
+    "title": "Being fully yourself, at your own pace",
+    "paragraphs": [
+      "Whether you are questioning, coming out, or have known who you are for years, the pressure does not always ease just because you have a name for it. There can be the fear of how family, friends or colleagues will react, the weight of keeping parts of your life private, or a sense of grief for time that felt out of reach.",
+      "You do not need to have it all worked out, and you do not need to explain yourself in order to start. This is a place to think out loud, to be heard without judgement, and to decide what you share, with whom, and when."
+    ],
+    "tags": [
+      "LGBT+ identity",
+      "Coming out",
+      "Coming out later in life",
+      "Family acceptance",
+      "Relationships",
+      "Anxiety &amp; low mood",
+      "Self-esteem &amp; confidence",
+      "Cultural &amp; family expectations"
+    ],
+    "quote": "&ldquo;I look forward to providing my support to you and helping you reflect, connect and grow.&rdquo;"
+  },
+  "steps": [
+    {
+      "title": "Free Consultation",
+      "text": "Book a free 15&ndash;30 minute call. We&rsquo;ll talk about what&rsquo;s brought you here and whether we&rsquo;re a good fit. No commitment required."
+    },
+    {
+      "title": "Begin Sessions",
+      "text": "We meet online via Google Meet, Monday to Friday, 9am&ndash;7pm London time, from wherever you feel comfortable and private. Sessions are 50 minutes, and you set the pace."
+    },
+    {
+      "title": "Reflect &amp; Grow",
+      "text": "Over time, build self-acceptance, think through what you want from your relationships and your family, and find your own way forward."
+    }
+  ],
+  "approach": {
+    "title": "Respect for your story",
+    "paragraphs": [
+      "After my Master in Social Sciences (Counselling) at the University of Hong Kong in 2017, I volunteered as a counsellor working with clients facing LGBT-related concerns, family difficulties, relationship challenges, depression and anxiety.",
+      "I work in an integrative way, drawing on Cognitive Behavioural Therapy (CBT), Emotion-Focused Therapy and Bowen&rsquo;s Family Systems Theory, always with a warm, genuinely non-judgemental presence. Your pace, your words and your choices lead the work.",
+      "Originally from Hong Kong, I moved to the UK in 2021, and I understand how identity can sit alongside cultural and family expectations. I am a registered member of the BACP (No. 397064) and offer sessions in English and Cantonese."
+    ]
+  },
+  "reading": {
+    "slugs": [
+      "lgbtq-mental-health",
+      "coming-out-later-in-life",
+      "grief-doesnt-follow-a-timeline-lgbtq",
+      "cultural-identity-family-expectations"
+    ],
+    "featured": "lgbtq-mental-health",
+    "featured_image": {
+      "src": "/assets/img/lgbtq-mental-health-card.webp",
+      "width": 800,
+      "height": 446
+    }
+  },
+  "book": {
+    "title": "Ready to begin?",
+    "price_value": "&pound;80",
+    "price_label": "Per session",
+    "samaritans": false
+  },
+  "also": [
+    "online-cultural-identity-family-therapy",
+    "online-couples-therapy"
+  ]
+}

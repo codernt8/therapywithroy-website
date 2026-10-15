@@ -120,9 +120,10 @@ for c in changed:
 
 # ---------- 3. robots.txt + sitemap.xml ----------
 urls = [(SITE + "/", None, "weekly", "1.0"), (SITE + "/blog/", None, "weekly", "0.8")]
-for page in ["online-couples-therapy", "online-anxiety-depression-therapy"]:
-    if os.path.exists(page + ".html"):
-        urls.append((SITE + "/" + page, None, "monthly", "0.9"))
+with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "content", "services.json"), encoding="utf-8") as f:
+    for service in json.load(f):
+        if os.path.exists(service["slug"] + ".html"):
+            urls.append((SITE + "/" + service["slug"], None, "monthly", "0.9"))
 for page, prio in [("privacy-policy.html", "0.3"), ("client-agreement.html", "0.3")]:
     if os.path.exists(page):
         urls.append((SITE + "/" + page, None, "yearly", prio))
