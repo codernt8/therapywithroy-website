@@ -1,8 +1,8 @@
 /* Shared styles for the home page and the service pages: FAQ component, nav dropdown,
-   linked topic tags, "How I Can Help" cards and in-card links.
+   linked topic tags, "Specialisms" cards and in-card links.
    Relies on the CSS variables defined on each page (:root). */
 
-/* ---------- Nav dropdown ("How I Can Help") ---------- */
+/* ---------- Nav dropdown ("Specialisms") ---------- */
 .has-sub { position: relative; }
 .sub-toggle { background: none; border: none; padding: 0; font: inherit; cursor: pointer; color: var(--text-mid); font-size: 0.85rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; display: inline-flex; align-items: center; gap: 0.35rem; }
 .sub-toggle:hover, .has-sub.open .sub-toggle, .sub-toggle.current { color: var(--sage-dark); }
@@ -33,7 +33,7 @@ a.approach-tag::after { content: ' \2192'; font-size: 0.85em; }
 a.approach-tag:hover { background: var(--sage-dark); color: #fff; border-color: var(--sage-dark); }
 a.approach-tag:focus-visible { outline: 2px solid var(--sage-dark); outline-offset: 2px; }
 
-/* ---------- "How I Can Help" cards (home) ---------- */
+/* ---------- "Specialisms" cards (home) ---------- */
 .help-intro { color: var(--text-mid); max-width: 620px; font-size: 1.02rem; }
 .help-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2.5rem; }
 .help-card { border: 1px solid rgba(122,158,159,0.2); padding: 2rem 1.75rem; border-radius: 2px; display: flex; flex-direction: column; gap: 0.8rem; background: var(--warm-white); transition: border-color 0.25s, box-shadow 0.25s; }
