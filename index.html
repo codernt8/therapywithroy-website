@@ -64,6 +64,8 @@
     .hero-eyebrow { font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sage-light); margin-bottom: 1.5rem; font-weight: 400; }
     .hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 300; color: #fff; line-height: 1.2; margin-bottom: 1.5rem; }
     .hero-title em { font-style: italic; color: var(--sage-light); }
+    /* The eyebrow line sits inside the H1 so the heading carries the offer; it keeps its own look. */
+    .hero-title .hero-eyebrow { display: block; font-family: 'Inter', sans-serif; line-height: 1.7; }
     .hero-subtitle { font-size: 1.05rem; color: rgba(255,255,255,0.8); max-width: 540px; margin: 0 auto 2rem; font-weight: 300; line-height: 1.8; }
     .hero-approach { display: flex; align-items: center; justify-content: center; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 2rem; }
 
@@ -590,8 +592,7 @@
 
   <section id="hero">
     <div class="hero-content">
-      <p class="hero-eyebrow">Online Counselling &amp; Therapy &middot; UK-based, available worldwide</p>
-      <h1 class="hero-title">Supporting you through<br/><em>life&rsquo;s significant challenges</em></h1>
+      <h1 class="hero-title"><span class="hero-eyebrow">Online Counselling &amp; Therapy &middot; UK-based, available worldwide</span> Supporting you through<br/><em>life&rsquo;s significant challenges</em></h1>
       <p class="hero-subtitle">A confidential, non-judgemental space to reflect, reconnect with yourself and build the resilience to move forward.</p>
       <div class="hero-approach">
         <span class="hero-approach-tag" role="button" aria-expanded="false" tabindex="0">
