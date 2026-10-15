@@ -9,7 +9,9 @@ What it does (all output is plain static HTML, committed to the repo):
      <!-- FAQ:START --> and <!-- FAQ:END --> markers in index.html and both service pages.
   3. Stamps the FAQPage JSON-LD in index.html (between <!-- FAQ-JSONLD:START/END -->).
   4. Stamps the three Acuity booking modals (tools/templates/modals.html) between the
-     <!-- MODALS:START --> and <!-- MODALS:END --> markers in the same three pages.
+     <!-- MODALS:START --> and <!-- MODALS:END --> markers in the same pages.
+  5. Stamps the Specialisms nav dropdown (NAV-SUB), the home page cards (HELP-GRID) and the
+     footer links (SPECIALISM-LINKS) from tools/content/services.json, the one list of service pages.
 
 Edit the FAQ in tools/content/faq.json only. The "Further reading" lists are slugs in the
 service-*.json files; the cap of MAX_READING_POSTS is enforced here.
@@ -23,7 +25,7 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://therapywithroy.co.uk"
 MAX_READING_POSTS = 4
-SERVICE_CONTENT = ["service-couples.json", "service-anxiety.json"]
+SERVICE_CONTENT = ["service-couples.json", "service-anxiety.json", "service-work.json", "service-lgbt.json", "service-cultural.json"]
 
 
 def read(path):
@@ -84,6 +86,48 @@ def stamp(text, name, block, path):
     if not pat.search(text):
         sys.exit(f"{path}: markers for {name} not found")
     return pat.sub(lambda m: m.group(1) + block + "\n" + m.group(2), text, count=1)
+
+
+# ---------- Specialisms (nav dropdown, home cards, footer links) ----------
+def nav_sub(services, current=None):
+    links = []
+    for s in services:
+        cur = ' aria-current="page"' if s["slug"] == current else ""
+        links.append(f'            <a href="/{s["slug"]}"{cur}>{s["nav"]}<small>{s["nav_small"]}</small></a>')
+    return ('          <div class="sub" id="help-menu"><div class="sub-inner">\n'
+            + "\n".join(links) + "\n          </div></div>")
+
+
+def help_grid(services):
+    cards = []
+    for s in services:
+        cards.append(
+            '        <div class="help-card">\n'
+            f'          <h3>{s["card_title"]}</h3>\n'
+            f'          <p>{s["card_text"]}</p>\n'
+            f'          <a class="card-link" href="/{s["slug"]}">{s["card_link"]} &rarr;</a>\n'
+            '        </div>')
+    cards.append(
+        '        <div class="help-card featured">\n'
+        '          <h3>Not sure where to start?</h3>\n'
+        '          <p>Book a free 15&ndash;30 minute consultation and we can talk through what is bringing you here, with no obligation.</p>\n'
+        '          <button type="button" class="card-link" data-modal="free">Book a free consultation &rarr;</button>\n'
+        '        </div>')
+    return '      <div class="help-grid">\n' + "\n".join(cards) + "\n      </div>"
+
+
+def footer_links(services):
+    return "\n".join(f'    <li><a href="/{s["slug"]}">{s["footer"]}</a></li>' for s in services)
+
+
+def also_links(slugs, services):
+    by_slug = {s["slug"]: s for s in services}
+    out = []
+    for slug in slugs:
+        if slug not in by_slug:
+            sys.exit(f"Unknown service page in also list: {slug}")
+        out.append(f'<a href="/{slug}">{by_slug[slug]["nav"]} &rarr;</a>')
+    return "".join(out)
 
 
 # ---------- Blog cards (read from blog/index.html) ----------
@@ -168,7 +212,7 @@ def fee_cards(featured):
 
 
 # ---------- Service pages ----------
-def build_service_page(cfg, template, favicon, cards, faq, modals):
+def build_service_page(cfg, template, favicon, cards, faq, modals, services):
     esc = lambda s: html.escape(s, quote=True)
     url = f'{SITE}/{cfg["slug"]}'
     crumb_plain = html.unescape(cfg["crumb"])
@@ -191,8 +235,6 @@ def build_service_page(cfg, template, favicon, cards, faq, modals):
         "og_image": SITE + "/roy%20pic.jpg",
         "favicon": favicon,
         "breadcrumb_jsonld": breadcrumb,
-        "couples_current": ' aria-current="page"' if cfg["slug"] == "online-couples-therapy" else "",
-        "anxiety_current": ' aria-current="page"' if cfg["slug"] == "online-anxiety-depression-therapy" else "",
         "crumb": cfg["crumb"],
         "hero_eyebrow": h["eyebrow"],
         "hero_h1": h["h1"],
@@ -215,8 +257,7 @@ def build_service_page(cfg, template, favicon, cards, faq, modals):
         "book_title": book["title"],
         "book_price": book["price_value"],
         "book_price_label": book["price_label"],
-        "also_href": book["also_href"],
-        "also_label": book["also_label"],
+        "also_links": also_links(cfg["also"], services),
         "book_support_note": (
             '        <p class="support-note">If you are in immediate distress, please contact the '
             '<a href="https://www.samaritans.org">Samaritans on 116 123</a>.</p>'
@@ -230,6 +271,7 @@ def build_service_page(cfg, template, favicon, cards, faq, modals):
         sys.exit(f"Unfilled placeholders in {cfg['slug']}: {left}")
     page = stamp(page, "FAQ", faq_section(faq), cfg["slug"])
     page = stamp(page, "MODALS", modals.rstrip("\n"), cfg["slug"])
+    page = stamp(page, "NAV-SUB", nav_sub(services, cfg["slug"]), cfg["slug"])
     return page
 
 
@@ -243,20 +285,33 @@ def main():
         sys.exit("Could not find the two favicon links in index.html")
     favicon = "\n".join(favicon_lines)
     cards = blog_cards()
+    services = load_json("tools/content/services.json")
 
+    built = []
     for name in SERVICE_CONTENT:
         cfg = load_json("tools/content/" + name)
-        write(cfg["slug"] + ".html", build_service_page(cfg, template, favicon, cards, faq, modals))
+        built.append(cfg["slug"])
+        write(cfg["slug"] + ".html", build_service_page(cfg, template, favicon, cards, faq, modals, services))
         print("wrote", cfg["slug"] + ".html")
+    if built != [s["slug"] for s in services]:
+        sys.exit("tools/content/services.json and SERVICE_CONTENT must list the same pages in the same order")
 
     new_index = stamp(index, "FAQ", faq_section(faq), "index.html")
     new_index = stamp(new_index, "FAQ-JSONLD", faq_jsonld(faq), "index.html")
     new_index = stamp(new_index, "MODALS", modals.rstrip("\n"), "index.html")
+    new_index = stamp(new_index, "NAV-SUB", nav_sub(services), "index.html")
+    new_index = stamp(new_index, "HELP-GRID", help_grid(services), "index.html")
     if new_index != index:
         write("index.html", new_index)
         print("updated index.html (FAQ, FAQ JSON-LD, modals)")
     else:
         print("index.html already up to date")
+
+    footer = read("footer.html")
+    new_footer = stamp(footer, "SPECIALISM-LINKS", footer_links(services), "footer.html")
+    if new_footer != footer:
+        write("footer.html", new_footer)
+        print("updated footer.html (specialism links)")
 
 
 if __name__ == "__main__":
