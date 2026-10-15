@@ -18,11 +18,9 @@ html:not(.js) .has-sub:hover .sub, .has-sub.open .sub { display: block; }
 .sub-toggle:focus-visible, .nav-links a:focus-visible { outline: 2px solid var(--sage); outline-offset: 3px; }
 
 @media (max-width: 1180px) {
-  /* Inside the hamburger menu the two pages are listed as an indented group. */
+  /* Inside the hamburger menu Specialisms collapses; tapping it lists the pages as an indented group. */
   .has-sub { width: 100%; }
-  .sub-toggle { pointer-events: none; }
-  .sub-toggle .caret { display: none; }
-  .sub { display: block; position: static; min-width: 0; padding: 0.4rem 0 0; }
+  .sub { position: static; min-width: 0; padding: 0.4rem 0 0; }
   .sub-inner { background: none; border: none; box-shadow: none; padding: 0 0 0 1rem; border-left: 2px solid var(--sage-light); margin: 0 auto; max-width: 280px; text-align: left; }
   .nav-links .sub a { padding: 0.5rem 0.75rem; }
 }

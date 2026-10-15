@@ -25,7 +25,7 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://therapywithroy.co.uk"
 MAX_READING_POSTS = 4
-SERVICE_CONTENT = ["service-couples.json", "service-anxiety.json", "service-work.json", "service-lgbt.json", "service-cultural.json"]
+SERVICE_CONTENT = ["service-couples.json", "service-anxiety.json", "service-work.json", "service-lgbtq.json", "service-cultural.json"]
 
 
 def read(path):
