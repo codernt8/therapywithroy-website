@@ -863,14 +863,6 @@
   </div>
 <!-- MODALS:END -->
 
-  <div id="cookie-banner" role="region" aria-label="Cookie consent">
-    <p>This website uses analytics cookies to understand how visitors use the site. No personal data is collected without your consent. <a href="privacy-policy.html">Learn more</a>.</p>
-    <div class="cookie-btns">
-      <button class="cookie-decline" id="cookie-decline">Decline</button>
-      <button class="cookie-accept" id="cookie-accept">Accept Analytics</button>
-    </div>
-  </div>
-
   <script src="/assets/site.js"></script>
 
   <script>
@@ -905,36 +897,6 @@
         });
       });
     });
-  </script>
-
-  <script>
-    (function() {
-      var GA_ID = 'G-EZDPQG16PQ';
-      function loadGA() {
-        var s = document.createElement('script');
-        s.async = true;
-        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
-        document.head.appendChild(s);
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){ dataLayer.push(arguments); }
-        window.gtag = gtag;
-        gtag('js', new Date());
-        gtag('config', GA_ID, { 'anonymize_ip': true });
-      }
-      function hideBanner() {
-        var b = document.getElementById('cookie-banner');
-        if (b && b.parentNode) b.parentNode.removeChild(b);
-      }
-      var consent = localStorage.getItem('cookie-consent');
-      if (consent === 'accepted') { loadGA(); hideBanner(); }
-      else if (consent === 'declined') { hideBanner(); }
-      document.addEventListener('DOMContentLoaded', function() {
-        var a = document.getElementById('cookie-accept');
-        var d = document.getElementById('cookie-decline');
-        if (a) a.addEventListener('click', function() { localStorage.setItem('cookie-consent','accepted'); loadGA(); hideBanner(); });
-        if (d) d.addEventListener('click', function() { localStorage.setItem('cookie-consent','declined'); hideBanner(); });
-      });
-    })();
   </script>
 
   <script src="/footer-loader.js"></script>
