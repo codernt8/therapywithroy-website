@@ -218,3 +218,13 @@ Update this file as part of the publish step whenever a new post goes live.
 | https://www.nhs.uk/tests-and-treatments/talking-therapies/ | NHS talking therapies |
 | https://www.mind.org.uk/information-support/tips-for-everyday-living/how-to-be-mentally-healthy-at-work/returning-to-work/ | Mind's guidance on returning to work |
 | https://www.acas.org.uk/returning-to-work-after-absence | Acas guidance |
+
+---
+
+## menopause-and-mental-health
+
+| URL | Anchor Text |
+|-----|-------------|
+| https://www.nhs.uk/conditions/menopause-and-perimenopause/symptoms/ | NHS lists |
+| https://commonslibrary.parliament.uk/research-briefings/cbp-10349/ | House of Commons Library briefing on World Menopause Day |
+| https://www.nhs.uk/conditions/menopause-and-perimenopause/treatment/ | NHS treatment guidance |
