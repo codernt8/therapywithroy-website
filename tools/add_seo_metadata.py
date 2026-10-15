@@ -118,6 +118,138 @@ print(f"Updated {len(changed)} blog files:")
 for c in changed:
     print(" -", c)
 
+# ---------- 2b. Post schema (BlogPosting upgrade, BreadcrumbList) and blog index schema ----------
+from urllib.parse import unquote
+
+ROY_ID = SITE + "/#roy"
+LD_RE = re.compile(r'(  <script type="application/ld\+json">\n)(.*?)(\n  </script>\n)', re.S)
+
+
+def post_info(path):
+    """Everything the schema needs from a post, read from the post itself."""
+    with open(path, encoding="utf-8") as f:
+        t = f.read()
+    canonical = get(r'<link rel="canonical" href="([^"]*)"\s*/>', t)
+    hero = get(r'<img src="([^"]*)"[^>]*class="blog-hero-img"', t)
+    image = SITE + "/blog/" + quote(unquote(hero)) if hero else SITE + "/roy-lam-online-therapist.jpg"
+    bp = None
+    for m in LD_RE.finditer(t):
+        try:
+            d = json.loads(m.group(2))
+        except Exception:
+            continue
+        if d.get("@type") == "BlogPosting":
+            bp = d
+            break
+    return t, canonical, image, bp
+
+
+def add_post_schema(path):
+    t, canonical, image, bp = post_info(path)
+    if not bp or not canonical:
+        return False
+    orig = t
+    published = bp.get("datePublished")
+
+    # BlogPosting: the fields Google and AI search look for
+    bp.setdefault("dateModified", published)
+    bp.setdefault("image", [image])
+    bp.setdefault("mainEntityOfPage", {"@type": "WebPage", "@id": canonical})
+    bp.setdefault("inLanguage", "en-GB")
+    if isinstance(bp.get("author"), dict):
+        bp["author"].setdefault("@id", ROY_ID)
+    ordered = {k: bp[k] for k in ["@context", "@type", "headline", "description", "image", "author", "publisher",
+                                  "datePublished", "dateModified", "mainEntityOfPage", "url", "inLanguage", "keywords"] if k in bp}
+    ordered.update({k: v for k, v in bp.items() if k not in ordered})
+    block = "  <script type=\"application/ld+json\">\n" + json.dumps(ordered, indent=2, ensure_ascii=False) + "\n  </script>\n"
+
+    m = None
+    for cand in LD_RE.finditer(t):
+        try:
+            if json.loads(cand.group(2)).get("@type") == "BlogPosting":
+                m = cand
+                break
+        except Exception:
+            pass
+    t = t[:m.start()] + block + t[m.end():]
+
+    # BreadcrumbList (the breadcrumb already shows on the page)
+    if '"@type": "BreadcrumbList"' not in t:
+        crumbs = {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
+                {"@type": "ListItem", "position": 2, "name": "Blog", "item": SITE + "/blog/"},
+                {"@type": "ListItem", "position": 3, "name": bp["headline"], "item": canonical},
+            ],
+        }
+        crumb_block = "  <script type=\"application/ld+json\">\n" + json.dumps(crumbs, indent=2, ensure_ascii=False) + "\n  </script>\n"
+        end = t.index(block) + len(block)
+        t = t[:end] + crumb_block + t[end:]
+
+    # Open Graph article times
+    if 'property="article:published_time"' not in t and published:
+        og_image = re.search(r'  <meta property="og:image" content="[^"]*" />\n', t)
+        if og_image:
+            extra = (f'  <meta property="article:published_time" content="{published}" />\n'
+                     f'  <meta property="article:modified_time" content="{bp["dateModified"]}" />\n'
+                     f'  <meta property="article:author" content="https://www.linkedin.com/in/roykylam" />\n')
+            t = t[:og_image.end()] + extra + t[og_image.end():]
+
+    if t != orig:
+        with open(path, "w", encoding="utf-8", newline="") as f:
+            f.write(t)
+        return True
+    return False
+
+
+def blog_index_schema():
+    posts = []
+    for path in glob.glob("blog/*.html"):
+        if os.path.basename(path) == "index.html":
+            continue
+        t, canonical, image, bp = post_info(path)
+        if bp and canonical:
+            posts.append({"@type": "BlogPosting", "@id": canonical + "#post", "headline": bp["headline"], "url": canonical,
+                          "datePublished": bp.get("datePublished"), "image": image,
+                          "author": {"@type": "Person", "@id": ROY_ID, "name": "Roy Lam"}})
+    posts.sort(key=lambda p: p["datePublished"] or "", reverse=True)
+    with open("blog/index.html", encoding="utf-8") as f:
+        bt = f.read()
+    desc = get(r'<meta name="description" content="(.*?)">', bt, "")
+    graph = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {"@type": "Blog", "@id": SITE + "/blog/#blog", "name": "Therapy with Roy Blog", "description": desc,
+             "url": SITE + "/blog/", "inLanguage": "en-GB",
+             "publisher": {"@type": "Organization", "name": "Therapy with Roy", "url": SITE},
+             "author": {"@type": "Person", "@id": ROY_ID, "name": "Roy Lam", "url": SITE},
+             "blogPost": posts},
+            {"@type": "BreadcrumbList", "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
+                {"@type": "ListItem", "position": 2, "name": "Blog", "item": SITE + "/blog/"}]},
+        ],
+    }
+    block = "  <script type=\"application/ld+json\">\n" + json.dumps(graph, indent=2, ensure_ascii=False) + "\n  </script>\n"
+    existing = LD_RE.search(bt)
+    if existing and '"@type": "Blog"' in existing.group(2):
+        new = bt[:existing.start()] + block + bt[existing.end():]
+    elif "</head>" in bt:
+        new = bt.replace("</head>", block + "</head>", 1)
+    else:
+        return False
+    if new != bt:
+        with open("blog/index.html", "w", encoding="utf-8", newline="") as f:
+            f.write(new)
+        return True
+    return False
+
+
+schema_changed = [p for p in sorted(glob.glob("blog/*.html")) if os.path.basename(p) != "index.html" and add_post_schema(p)]
+print(f"Post schema updated on {len(schema_changed)} posts")
+print("Blog index schema updated" if blog_index_schema() else "Blog index schema already up to date")
+
 # ---------- 3. robots.txt + sitemap.xml ----------
 
 def file_lastmod(path):

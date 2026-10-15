@@ -6,6 +6,15 @@ Update this file as part of the publish step whenever a new post goes live.
 
 ---
 
+## will-ai-take-my-job
+
+| URL | Anchor Text |
+|-----|-------------|
+| https://www.theguardian.com/business/2026/jan/25/more-than-quarter-britons-fear-losing-jobs-ai-next-five-years | Randstad survey reported by the Guardian |
+| https://www.theguardian.com/technology/2026/jan/26/ai-uk-jobs-us-japan-germany-australia | Morgan Stanley study reported by the Guardian |
+
+---
+
 ## why-talking-to-friends-isnt-enough
 
 | URL | Anchor Text |
