@@ -1,7 +1,7 @@
 {
-  "slug": "online-lgbtq-therapy",
-  "title": "Online LGBTQ+ Therapy UK | Therapy with Roy",
-  "description": "Online therapy for LGBTQ+ adults with Roy Lam, MBACP: identity, coming out, relationships and family. UK-based, worldwide. Sessions £80. Free consultation.",
+  "slug": "online-lgbtq-identity",
+  "title": "Online LGBTQ+ Identity Support UK | Therapy with Roy",
+  "description": "Online support for LGBTQ+ identity with Roy Lam, MBACP: coming out, relationships and family. UK-based, worldwide. Sessions £80. Free consultation.",
   "crumb": "LGBTQ+ identity",
   "featured_fee": "individual",
   "hero": {
@@ -82,8 +82,8 @@
     "online-couples-therapy"
   ],
   "schema": {
-    "name": "Online LGBTQ+ therapy",
-    "serviceType": "LGBTQ+ therapy",
+    "name": "Online LGBTQ+ identity support",
+    "serviceType": "LGBTQ+ identity support",
     "price": "80"
   }
 }
