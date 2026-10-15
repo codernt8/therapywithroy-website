@@ -232,7 +232,7 @@ def build_service_page(cfg, template, favicon, cards, faq, modals, services):
         "title": esc(cfg["title"]),
         "description": esc(cfg["description"]),
         "url": url,
-        "og_image": SITE + "/roy%20pic.jpg",
+        "og_image": SITE + "/roy-lam-online-therapist.jpg",
         "favicon": favicon,
         "breadcrumb_jsonld": breadcrumb,
         "crumb": cfg["crumb"],

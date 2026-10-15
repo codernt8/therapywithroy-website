@@ -24,19 +24,19 @@ orig = t
 
 if 'rel="canonical"' not in t:
     t = t.replace(
-        '<meta name="description" content="Online therapy with Roy Lam, MBACP registered counsellor. Support for anxiety, depression, relationships, identity and life transitions. UK-based, available worldwide. Book a free consultation.">',
-        '<meta name="description" content="Online therapy with Roy Lam, MBACP registered counsellor. Support for anxiety, depression, relationships, identity and life transitions. UK-based, available worldwide. Book a free consultation.">\n'
+        '<meta name="description" content="Online therapy with Roy Lam, MBACP: anxiety, depression, relationships, identity and life transitions. UK-based, available worldwide. Free consultation.">',
+        '<meta name="description" content="Online therapy with Roy Lam, MBACP: anxiety, depression, relationships, identity and life transitions. UK-based, available worldwide. Free consultation.">\n'
         '  <link rel="canonical" href="' + SITE + '/" />\n'
         '  <meta property="og:type" content="website" />\n'
         '  <meta property="og:site_name" content="Therapy with Roy" />\n'
         '  <meta property="og:title" content="Online Therapy UK | Therapy with Roy | Roy Lam MBACP" />\n'
         '  <meta property="og:description" content="Online therapy with Roy Lam, MBACP registered counsellor. Support for anxiety, depression, relationships, identity and life transitions. UK-based, available worldwide. Book a free consultation." />\n'
         '  <meta property="og:url" content="' + SITE + '/" />\n'
-        '  <meta property="og:image" content="' + SITE + '/roy%20pic.jpg" />\n'
+        '  <meta property="og:image" content="' + SITE + '/roy-lam-online-therapist.jpg" />\n'
         '  <meta name="twitter:card" content="summary_large_image" />\n'
         '  <meta name="twitter:title" content="Online Therapy UK | Therapy with Roy | Roy Lam MBACP" />\n'
         '  <meta name="twitter:description" content="Online therapy with Roy Lam, MBACP registered counsellor. Support for anxiety, depression, relationships, identity and life transitions. UK-based, available worldwide." />\n'
-        '  <meta name="twitter:image" content="' + SITE + '/roy%20pic.jpg" />'
+        '  <meta name="twitter:image" content="' + SITE + '/roy-lam-online-therapist.jpg" />'
     )
 
 if '"@type": "FAQPage"' not in t:
@@ -75,11 +75,11 @@ def add_og_tags(path, is_index=False):
     canonical = get(r'<link rel="canonical" href="(.*?)"\s*/>', t) or (SITE + "/blog/")
 
     if is_index:
-        image = SITE + "/roy%20pic.jpg"
+        image = SITE + "/roy-lam-online-therapist.jpg"
         og_type = "website"
     else:
         hero_src = get(r'<img src="([^"]*\.webp)"[^>]*class="blog-hero-img"', t)
-        image = SITE + "/blog/" + quote(hero_src) if hero_src else SITE + "/roy%20pic.jpg"
+        image = SITE + "/blog/" + quote(hero_src) if hero_src else SITE + "/roy-lam-online-therapist.jpg"
         og_type = "article"
 
     og_block = (
@@ -119,14 +119,25 @@ for c in changed:
     print(" -", c)
 
 # ---------- 3. robots.txt + sitemap.xml ----------
-urls = [(SITE + "/", None, "weekly", "1.0"), (SITE + "/blog/", None, "weekly", "0.8")]
+
+def file_lastmod(path):
+    """Date a page last changed: today if it has uncommitted edits, otherwise its last commit date."""
+    import datetime
+    import subprocess
+    dirty = subprocess.run(["git", "status", "--porcelain", "--", path], capture_output=True, text=True).stdout.strip()
+    if dirty:
+        return datetime.date.today().isoformat()
+    out = subprocess.run(["git", "log", "-1", "--format=%cs", "--", path], capture_output=True, text=True).stdout.strip()
+    return out or None
+
+urls = [(SITE + "/", file_lastmod("index.html"), "weekly", "1.0"), (SITE + "/blog/", file_lastmod("blog/index.html"), "weekly", "0.8")]
 with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "content", "services.json"), encoding="utf-8") as f:
     for service in json.load(f):
         if os.path.exists(service["slug"] + ".html"):
-            urls.append((SITE + "/" + service["slug"], None, "monthly", "0.9"))
-for page, prio in [("privacy-policy.html", "0.3"), ("client-agreement.html", "0.3")]:
-    if os.path.exists(page):
-        urls.append((SITE + "/" + page, None, "yearly", prio))
+            urls.append((SITE + "/" + service["slug"], file_lastmod(service["slug"] + ".html"), "monthly", "0.9"))
+for page, prio in [("privacy-policy", "0.3"), ("client-agreement", "0.3")]:
+    if os.path.exists(page + ".html"):
+        urls.append((SITE + "/" + page, file_lastmod(page + ".html"), "yearly", prio))
 
 for path in sorted(glob.glob("blog/*.html")):
     if os.path.basename(path) == "index.html":
