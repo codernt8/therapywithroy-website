@@ -1,5 +1,5 @@
 /* Shared behaviour for the home page and the service pages:
-   booking modals (Acuity iframes load on demand), mobile menu, "How I Can Help" dropdown,
+   booking modals (Acuity iframes load on demand), mobile menu, "Specialisms" dropdown,
    animated FAQ, and the obfuscated email link. Analytics consent stays in /footer-loader.js. */
 (function () {
   'use strict';
@@ -86,7 +86,7 @@
     });
   }
 
-  /* ---------- "How I Can Help" dropdown ---------- */
+  /* ---------- "Specialisms" dropdown ---------- */
   document.querySelectorAll('.has-sub').forEach(function (li) {
     var btn = li.querySelector('.sub-toggle');
     if (!btn) return;
