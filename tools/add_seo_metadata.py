@@ -70,7 +70,7 @@ def add_og_tags(path, is_index=False):
 
     title = get(r'<title>(.*?)</title>', t, "Therapy with Roy")
     title = title.replace('"', "&quot;")
-    desc = get(r'<meta name="description" content="(.*?)">', t, "")
+    desc = get(r'<meta name="description" content="([^"]*)"\s*/?>', t, "")
     desc = desc.replace('"', "&quot;")
     canonical = get(r'<link rel="canonical" href="(.*?)"\s*/>', t) or (SITE + "/blog/")
 
@@ -96,7 +96,7 @@ def add_og_tags(path, is_index=False):
     )
 
     if 'rel="canonical"' in t:
-        t = re.sub(r'(<link rel="canonical" href="[^"]*"\s*/>)', r'\1' + og_block, t, count=1)
+        t = re.sub(r'(<link rel="canonical" href="[^"]*"\s*/>)', lambda m: m.group(1) + og_block, t, count=1)
     else:
         t = re.sub(r'(<meta name="description" content="[^"]*">)', r'\1' + og_block, t, count=1)
 
@@ -109,6 +109,9 @@ def add_og_tags(path, is_index=False):
 changed = []
 if add_og_tags("blog/index.html", is_index=True):
     changed.append("blog/index.html")
+for legal in ("privacy-policy.html", "client-agreement.html"):
+    if add_og_tags(legal, is_index=True):
+        changed.append(legal)
 for path in glob.glob("blog/*.html"):
     if os.path.basename(path) == "index.html":
         continue
