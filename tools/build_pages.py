@@ -225,6 +225,21 @@ def build_service_page(cfg, template, favicon, cards, faq, modals, services):
         ],
     }, indent=2)
 
+    sch = cfg["schema"]
+    service_jsonld = json.dumps({
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": sch["name"],
+        "serviceType": sch["serviceType"],
+        "description": cfg["description"],
+        "url": url,
+        "provider": {"@type": "ProfessionalService", "@id": SITE + "/#practice", "name": "Therapy with Roy", "url": SITE + "/"},
+        "areaServed": [{"@type": "Country", "name": "United Kingdom"}, {"@type": "Place", "name": "Worldwide (online sessions)"}],
+        "availableLanguage": ["English", "Cantonese"],
+        "offers": {"@type": "Offer", "price": sch["price"], "priceCurrency": "GBP",
+                   "description": "50-minute online session via Google Meet"},
+    }, indent=2, ensure_ascii=False)
+
     h = cfg["hero"]
     p = cfg["problem"]
     book = cfg["book"]
@@ -235,6 +250,7 @@ def build_service_page(cfg, template, favicon, cards, faq, modals, services):
         "og_image": SITE + "/roy-lam-online-therapist.jpg",
         "favicon": favicon,
         "breadcrumb_jsonld": breadcrumb,
+        "service_jsonld": service_jsonld,
         "crumb": cfg["crumb"],
         "hero_eyebrow": h["eyebrow"],
         "hero_h1": h["h1"],

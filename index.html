@@ -338,28 +338,158 @@
   </style>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Roy Lam",
-    "alternateName": "Ka Yiu Lam",
-    "jobTitle": "Online Therapist & Counsellor",
-    "description": "MBACP registered online therapist specialising in anxiety, depression, relationships, identity and life transitions. UK-based, available worldwide.",
-    "url": "https://therapywithroy.co.uk",
-    "telephone": "07824426000",
-    "email": "roy@therapywithroy.co.uk",
-    "hasCredential": {
-      "@type": "EducationalOccupationalCredential",
-      "credentialCategory": "Professional Membership",
-      "recognizedBy": {"@type": "Organization", "name": "British Association for Counselling and Psychotherapy (BACP)", "url": "https://www.bacp.co.uk"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://therapywithroy.co.uk/#roy",
+      "name": "Roy Lam",
+      "alternateName": "Ka Yiu Lam",
+      "jobTitle": "Online Therapist & Counsellor",
+      "description": "MBACP registered online therapist specialising in anxiety, depression, relationships, identity and life transitions. UK-based, available worldwide.",
+      "url": "https://therapywithroy.co.uk",
+      "image": "https://therapywithroy.co.uk/roy-lam-online-therapist.jpg",
+      "email": "roy@therapywithroy.co.uk",
+      "telephone": "+447824426000",
+      "knowsLanguage": [
+        "en",
+        "yue"
+      ],
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Professional Membership",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "British Association for Counselling and Psychotherapy (BACP)",
+          "url": "https://www.bacp.co.uk"
+        }
+      },
+      "knowsAbout": [
+        "Cognitive Behavioural Therapy",
+        "Emotion-Focused Therapy",
+        "Bowen Family Systems Theory",
+        "Anxiety",
+        "Depression",
+        "Burnout",
+        "Relationship Therapy",
+        "Career Counselling",
+        "Job Displacement",
+        "AI Anxiety",
+        "Midlife Career Transitions",
+        "Life Transitions",
+        "LGBT Identity",
+        "Cultural Identity",
+        "Expat Relocation"
+      ],
+      "worksFor": {
+        "@id": "https://therapywithroy.co.uk/#practice"
+      },
+      "sameAs": [
+        "https://www.bacp.co.uk/therapists/397064/roy-ka-yiu-lam/london-se17",
+        "https://www.linkedin.com/in/roykylam"
+      ]
     },
-    "knowsAbout": ["Cognitive Behavioural Therapy","Emotion-Focused Therapy","Bowen Family Systems Theory","Anxiety","Depression","Burnout","Relationship Therapy","Career Counselling","Job Displacement","AI Anxiety","Midlife Career Transitions","Life Transitions","LGBT Identity","Cultural Identity","Expat Relocation"],
-    "offers": [
-      {"@type": "Offer", "name": "Free Initial Consultation", "price": "0", "priceCurrency": "GBP"},
-      {"@type": "Offer", "name": "Individual Therapy", "price": "80", "priceCurrency": "GBP"},
-      {"@type": "Offer", "name": "Couples Therapy", "price": "120", "priceCurrency": "GBP"}
-    ]
-  }
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://therapywithroy.co.uk/#practice",
+      "name": "Therapy with Roy",
+      "description": "Online counselling and therapy with Roy Lam, MBACP registered. Individual and couples sessions in English and Cantonese, via Google Meet.",
+      "url": "https://therapywithroy.co.uk/",
+      "image": "https://therapywithroy.co.uk/roy-lam-online-therapist.jpg",
+      "email": "roy@therapywithroy.co.uk",
+      "telephone": "+447824426000",
+      "priceRange": "£0-£120",
+      "currenciesAccepted": "GBP",
+      "knowsLanguage": [
+        "en",
+        "yue"
+      ],
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Place",
+          "name": "Worldwide (online sessions)"
+        }
+      ],
+      "founder": {
+        "@id": "https://therapywithroy.co.uk/#roy"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "19:00"
+        }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "roy@therapywithroy.co.uk",
+        "telephone": "+447824426000",
+        "availableLanguage": [
+          "English",
+          "Cantonese"
+        ]
+      },
+      "sameAs": [
+        "https://www.bacp.co.uk/therapists/397064/roy-ka-yiu-lam/london-se17",
+        "https://www.linkedin.com/in/roykylam",
+        "https://www.instagram.com/therapy_with_roy",
+        "https://x.com/therapywithroy"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Therapy sessions",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Free Initial Consultation",
+            "price": "0",
+            "priceCurrency": "GBP",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Free initial consultation (15-30 minutes, online via Google Meet)",
+              "serviceType": "Initial consultation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Individual Therapy",
+            "price": "80",
+            "priceCurrency": "GBP",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Individual therapy (50 minutes, online via Google Meet)",
+              "serviceType": "Individual therapy"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Couples Therapy",
+            "price": "120",
+            "priceCurrency": "GBP",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Couples therapy (50 minutes, online via Google Meet)",
+              "serviceType": "Couples therapy"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
   </script>
 <!-- FAQ-JSONLD:START (generated by tools/build_pages.py from tools/content/faq.json, do not edit by hand) -->
   <script type="application/ld+json">
