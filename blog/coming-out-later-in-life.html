@@ -319,35 +319,5 @@
     });
   </script>
 
-  <script>
-    (function() {
-      var GA_ID = 'G-EZDPQG16PQ';
-      function loadGA() {
-        var s = document.createElement('script');
-        s.async = true;
-        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
-        document.head.appendChild(s);
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){ dataLayer.push(arguments); }
-        window.gtag = gtag;
-        gtag('js', new Date());
-        gtag('config', GA_ID, { 'anonymize_ip': true });
-      }
-      function hideBanner() {
-        var b = document.getElementById('cookie-banner');
-        if (b) b.style.display = 'none';
-      }
-      var consent = localStorage.getItem('cookie-consent');
-      if (consent === 'accepted') { loadGA(); hideBanner(); }
-      else if (consent === 'declined') { hideBanner(); }
-      document.addEventListener('DOMContentLoaded', function() {
-        var a = document.getElementById('cookie-accept');
-        var d = document.getElementById('cookie-decline');
-        if (a) a.addEventListener('click', function() { localStorage.setItem('cookie-consent','accepted'); loadGA(); hideBanner(); });
-        if (d) d.addEventListener('click', function() { localStorage.setItem('cookie-consent','declined'); hideBanner(); });
-      });
-    })();
-  </script>
-
 </body>
 </html>
