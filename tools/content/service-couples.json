@@ -6,9 +6,14 @@
   "featured_fee": "couples",
   "hero": {
     "eyebrow": "Online couples therapy &middot; UK-based, available worldwide",
-    "h1": "Online <em>couples therapy</em><br/>in English or Cantonese",
+    "h1": "Online <em>couples therapy</em>",
     "subtitle": "A confidential, non-judgemental space for partners facing difficulties to communicate better, understand each other and decide how to move forward together.",
-    "badges": ["MBACP Registered Member", "50-minute sessions", "English &amp; Cantonese", "&pound;120 per session"]
+    "badges": [
+      "MBACP Registered Member",
+      "50-minute sessions",
+      "English &amp; Cantonese",
+      "&pound;120 per session"
+    ]
   },
   "problem": {
     "id": "when",
@@ -18,13 +23,30 @@
       "Couples reach out for many reasons: the same argument on repeat, feeling distant from each other, a loss of trust, or pressure from work, family and life changes. Some are not sure whether they want to stay together at all.",
       "Together we create a space where each of you can be heard, and where you can begin to understand the patterns that have developed between you. You do not need to be at breaking point to ask for help."
     ],
-    "tags": ["Communication &amp; conflict", "Feeling distant", "Rebuilding trust", "Family &amp; cultural expectations", "Work &amp; life pressure", "Life transitions", "Unsure about the future"],
+    "tags": [
+      "Communication &amp; conflict",
+      "Feeling distant",
+      "Rebuilding trust",
+      "Family &amp; cultural expectations",
+      "Work &amp; life pressure",
+      "Life transitions",
+      "Unsure about the future"
+    ],
     "quote": "&ldquo;I look forward to providing my support to you and helping you reflect, connect and grow.&rdquo;"
   },
   "steps": [
-    {"title": "Free Consultation", "text": "Book a free 15&ndash;30 minute call. We&rsquo;ll talk about what&rsquo;s brought you here and whether we&rsquo;re a good fit. No commitment required."},
-    {"title": "Your First Session", "text": "We meet online via Google Meet, Monday to Friday, 9am&ndash;7pm London time. Sessions are 50 minutes, and each of you has the chance to share what you would like to change."},
-    {"title": "Reflect &amp; Grow", "text": "Over time, work together on how you communicate, handle conflict and reconnect, at a pace that suits you both."}
+    {
+      "title": "Free Consultation",
+      "text": "Book a free 15&ndash;30 minute call. We&rsquo;ll talk about what&rsquo;s brought you here and whether we&rsquo;re a good fit. No commitment required."
+    },
+    {
+      "title": "Your First Session",
+      "text": "We meet online via Google Meet, Monday to Friday, 9am&ndash;7pm London time. Sessions are 50 minutes, and each of you has the chance to share what you would like to change."
+    },
+    {
+      "title": "Reflect &amp; Grow",
+      "text": "Over time, work together on how you communicate, handle conflict and reconnect, at a pace that suits you both."
+    }
   ],
   "approach": {
     "title": "Integrative and tailored to you both",
@@ -35,9 +57,18 @@
     ]
   },
   "reading": {
-    "slugs": ["couples-therapy", "attachment-styles-and-relationships", "cultural-identity-family-expectations", "family-estrangement-and-mental-health"],
-    "featured": "couples-therapy",
-    "featured_image": {"src": "/assets/img/couple-on-sofa-card.webp", "width": 800, "height": 446}
+    "slugs": [
+      "attachment-styles-and-relationships",
+      "couples-therapy",
+      "cultural-identity-family-expectations",
+      "family-estrangement-and-mental-health"
+    ],
+    "featured": "attachment-styles-and-relationships",
+    "featured_image": {
+      "src": "/assets/img/attachment-styles-card.webp",
+      "width": 800,
+      "height": 446
+    }
   },
   "book": {
     "title": "Ready to take the first step together?",
