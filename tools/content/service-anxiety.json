@@ -80,5 +80,10 @@
   "also": [
     "online-work-stress-career-therapy",
     "online-couples-therapy"
-  ]
+  ],
+  "schema": {
+    "name": "Online therapy for anxiety and depression",
+    "serviceType": "Anxiety and depression therapy",
+    "price": "80"
+  }
 }

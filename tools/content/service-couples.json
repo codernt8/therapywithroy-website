@@ -79,5 +79,10 @@
   "also": [
     "online-anxiety-depression-therapy",
     "online-cultural-identity-family-therapy"
-  ]
+  ],
+  "schema": {
+    "name": "Online couples therapy",
+    "serviceType": "Couples therapy",
+    "price": "120"
+  }
 }

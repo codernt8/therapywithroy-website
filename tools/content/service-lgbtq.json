@@ -80,5 +80,10 @@
   "also": [
     "online-cultural-identity-family-therapy",
     "online-couples-therapy"
-  ]
+  ],
+  "schema": {
+    "name": "Online LGBTQ+ therapy",
+    "serviceType": "LGBTQ+ therapy",
+    "price": "80"
+  }
 }
