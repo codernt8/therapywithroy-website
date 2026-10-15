@@ -16,6 +16,7 @@ What it does (all output is plain static HTML, committed to the repo):
 Edit the FAQ in tools/content/faq.json only. The "Further reading" lists are slugs in the
 service-*.json files; the cap of MAX_READING_POSTS is enforced here.
 """
+import glob
 import html
 import json
 import os
@@ -291,6 +292,49 @@ def build_service_page(cfg, template, favicon, cards, faq, modals, services):
     return page
 
 
+# ---------- "Keep reading" block at the end of each blog post ----------
+def related_block(slugs, cards):
+    out = []
+    for slug in slugs:
+        c = cards.get(slug)
+        if not c:
+            sys.exit(f"Related post not found on blog/index.html: {slug}")
+        out.append(
+            f'        <a class="related-card" href="/blog/{slug}">'
+            f'<span class="related-cat">{c["cat"]}</span>'
+            f'<span class="related-card-title">{c["title"]}</span>'
+            '<span class="related-more">Read the article &rarr;</span></a>')
+    return (
+        '  <section class="related-reading" aria-labelledby="related-heading">\n'
+        '    <div class="related-inner">\n'
+        '      <h2 id="related-heading" class="related-heading">Keep reading</h2>\n'
+        '      <div class="related-grid">\n' + "\n".join(out) + "\n"
+        '      </div>\n'
+        '    </div>\n'
+        '  </section>')
+
+
+def build_related(cards):
+    related = load_json("tools/content/related.json")
+    posts = sorted(os.path.basename(p)[:-5] for p in glob.glob(os.path.join(ROOT, "blog", "*.html"))
+                   if not p.endswith("index.html"))
+    missing = [p for p in posts if p not in related]
+    if missing:
+        sys.exit("No related posts listed in tools/content/related.json for: " + ", ".join(missing))
+    changed = 0
+    for slug in posts:
+        slugs = related[slug]
+        if len(slugs) != 3 or len(set(slugs)) != 3 or slug in slugs:
+            sys.exit(f"related.json: {slug} needs exactly 3 different other posts")
+        path = f"blog/{slug}.html"
+        text = read(path)
+        new = stamp(text, "RELATED", related_block(slugs, cards), path)
+        if new != text:
+            write(path, new)
+            changed += 1
+    print(f"related posts block updated on {changed} posts")
+
+
 def main():
     faq = load_json("tools/content/faq.json")
     modals = read("tools/templates/modals.html")
@@ -328,6 +372,8 @@ def main():
     if new_footer != footer:
         write("footer.html", new_footer)
         print("updated footer.html (specialism links)")
+
+    build_related(cards)
 
 
 if __name__ == "__main__":
