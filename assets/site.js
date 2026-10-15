@@ -77,6 +77,14 @@
     menuBtn.innerHTML = open ? '&times;' : '&#9776;';
     menuBtn.style.fontSize = open ? '2.2rem' : '1.8rem';
     menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (!open) {
+      // Collapse Specialisms again so it starts closed the next time the menu opens.
+      navList.querySelectorAll('.has-sub.open').forEach(function (li) {
+        li.classList.remove('open');
+        var t = li.querySelector('.sub-toggle');
+        if (t) t.setAttribute('aria-expanded', 'false');
+      });
+    }
   }
   if (menuBtn && navList) {
     menuBtn.setAttribute('aria-expanded', 'false');
