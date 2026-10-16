@@ -1,0 +1,47 @@
+[
+  {
+    "slug": "online-couples-therapy",
+    "nav": "Couples therapy",
+    "nav_small": "For partners facing difficulties",
+    "footer": "Couples Therapy",
+    "card_title": "Couples therapy",
+    "card_text": "For partners facing difficulties who want to communicate better, understand each other and decide how to move forward together.",
+    "card_link": "Explore couples therapy"
+  },
+  {
+    "slug": "online-anxiety-depression-therapy",
+    "nav": "Anxiety &amp; depression",
+    "nav_small": "Support for worry, low mood and burnout",
+    "footer": "Anxiety &amp; Depression",
+    "card_title": "Anxiety &amp; depression",
+    "card_text": "Support for constant worry, low mood, burnout and the pressure of keeping it all together.",
+    "card_link": "Explore anxiety &amp; depression support"
+  },
+  {
+    "slug": "online-work-stress-career-therapy",
+    "nav": "Work stress &amp; career",
+    "nav_small": "Burnout, change and what comes next",
+    "footer": "Work Stress &amp; Career",
+    "card_title": "Work stress &amp; career",
+    "card_text": "Support for work stress, burnout and career change, from a therapist with over 30 years in Human Resources leadership.",
+    "card_link": "Explore work stress &amp; career support"
+  },
+  {
+    "slug": "online-lgbtq-identity",
+    "nav": "LGBTQ+ identity",
+    "nav_small": "Identity, coming out and relationships",
+    "footer": "LGBTQ+ Identity",
+    "card_title": "LGBTQ+ identity",
+    "card_text": "A space to explore your identity, coming out, relationships and family, at your own pace.",
+    "card_link": "Explore LGBTQ+ identity support"
+  },
+  {
+    "slug": "online-cultural-identity-family-therapy",
+    "nav": "Cultural identity &amp; family",
+    "nav_small": "Between family expectations and your own path",
+    "footer": "Cultural Identity &amp; Family",
+    "card_title": "Cultural identity &amp; family",
+    "card_text": "Support for the pull between family expectations, culture and your own path, in English or Cantonese.",
+    "card_link": "Explore cultural identity &amp; family support"
+  }
+]

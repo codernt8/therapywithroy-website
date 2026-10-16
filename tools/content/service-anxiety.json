@@ -1,0 +1,89 @@
+{
+  "slug": "online-anxiety-depression-therapy",
+  "title": "Online Anxiety & Depression Therapy UK | Therapy with Roy",
+  "description": "Online therapy for anxiety and depression with Roy Lam, MBACP. UK-based, available worldwide. English and Cantonese. Sessions £80. Free consultation.",
+  "crumb": "Anxiety &amp; depression",
+  "featured_fee": "individual",
+  "hero": {
+    "eyebrow": "Online therapy for anxiety &amp; depression &middot; UK-based, available worldwide",
+    "h1": "Online therapy for<br/><em>anxiety and depression</em>",
+    "subtitle": "A confidential, non-judgemental space to understand what you are feeling, ease the pressure and build the resilience to move forward.",
+    "badges": [
+      "MBACP Registered Member",
+      "50-minute sessions",
+      "English &amp; Cantonese",
+      "&pound;80 per session"
+    ]
+  },
+  "problem": {
+    "id": "feeling",
+    "label": "What you may be feeling",
+    "title": "When worry or low mood is taking over",
+    "paragraphs": [
+      "Anxiety and low mood look different for everyone: constant worry, difficulty switching off, exhaustion, or a sense of being stuck while you keep performing on the outside. Reaching out is a courageous first step.",
+      "Many of my clients are navigating high-pressure professional lives alongside deeply personal challenges. I understand this from over 30 years working in Human Resources across banking, aviation, luxury retail and hospitality."
+    ],
+    "tags": [
+      "Anxiety &amp; stress",
+      "Depression",
+      "Burnout",
+      "Self-esteem &amp; confidence",
+      "Career &amp; workplace",
+      "Job displacement &amp; AI anxiety",
+      "Midlife career transitions",
+      "Motivation"
+    ],
+    "quote": "&ldquo;Without good mental health, it is very difficult<br/>to thrive in life.&rdquo;"
+  },
+  "steps": [
+    {
+      "title": "Free Consultation",
+      "text": "Book a free 15&ndash;30 minute call. We&rsquo;ll talk about what&rsquo;s brought you here and whether we&rsquo;re a good fit. No commitment required."
+    },
+    {
+      "title": "Begin Sessions",
+      "text": "We meet online via Google Meet, Monday to Friday, 9am&ndash;7pm London time. Sessions are 50 minutes, at your own pace."
+    },
+    {
+      "title": "Reflect &amp; Grow",
+      "text": "Over time, build greater self-awareness, emotional resilience and the tools to handle whatever life brings, with me alongside you every step of the way."
+    }
+  ],
+  "approach": {
+    "title": "Integrative and tailored to you",
+    "paragraphs": [
+      "My approach is integrative and tailored to each individual. I draw on Cognitive Behavioural Therapy (CBT), Emotion-Focused Therapy and Bowen&rsquo;s Family Systems Theory, combining evidence-based techniques with a warm, genuinely non-judgemental presence.",
+      "I graduated with a Master in Social Sciences (Counselling) from the University of Hong Kong in 2017, and volunteered as a counsellor working with clients facing family difficulties, relationship challenges, LGBT-related concerns, depression, anxiety and career development issues.",
+      "I am a registered member of the BACP (No. 397064), and I offer sessions in both English and Cantonese."
+    ]
+  },
+  "reading": {
+    "slugs": [
+      "social-anxiety-what-it-really-is-and-how-therapy-helps",
+      "perfectionism-and-anxiety",
+      "burnout-recognising-the-signs",
+      "you-are-not-lazy-you-are-depleted"
+    ],
+    "featured": "social-anxiety-what-it-really-is-and-how-therapy-helps",
+    "featured_image": {
+      "src": "/assets/img/social-anxiety-card.webp",
+      "width": 800,
+      "height": 446
+    }
+  },
+  "book": {
+    "title": "Ready to take the first step?",
+    "price_value": "&pound;80",
+    "price_label": "Per session",
+    "samaritans": true
+  },
+  "also": [
+    "online-work-stress-career-therapy",
+    "online-couples-therapy"
+  ],
+  "schema": {
+    "name": "Online therapy for anxiety and depression",
+    "serviceType": "Anxiety and depression therapy",
+    "price": "80"
+  }
+}

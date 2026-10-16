@@ -1,0 +1,127 @@
+{
+  "attachment-styles-and-relationships": [
+    "couples-therapy",
+    "family-estrangement-and-mental-health",
+    "trauma-and-the-body"
+  ],
+  "burnout-recognising-the-signs": [
+    "you-are-not-lazy-you-are-depleted",
+    "signed-off-with-stress-what-helps",
+    "perfectionism-and-anxiety"
+  ],
+  "code-switching-microaggressions-and-mental-health": [
+    "cultural-identity-family-expectations",
+    "moving-abroad-expat-mental-health",
+    "burnout-recognising-the-signs"
+  ],
+  "coming-out-later-in-life": [
+    "lgbtq-mental-health",
+    "grief-doesnt-follow-a-timeline-lgbtq",
+    "cultural-identity-family-expectations"
+  ],
+  "couples-therapy": [
+    "attachment-styles-and-relationships",
+    "menopause-and-mental-health",
+    "why-talking-to-friends-isnt-enough"
+  ],
+  "cultural-identity-family-expectations": [
+    "code-switching-microaggressions-and-mental-health",
+    "moving-abroad-expat-mental-health",
+    "family-estrangement-and-mental-health"
+  ],
+  "family-estrangement-and-mental-health": [
+    "attachment-styles-and-relationships",
+    "cultural-identity-family-expectations",
+    "loneliness-and-mental-health"
+  ],
+  "grief-doesnt-follow-a-timeline-lgbtq": [
+    "lgbtq-mental-health",
+    "coming-out-later-in-life",
+    "loneliness-and-mental-health"
+  ],
+  "lgbtq-mental-health": [
+    "coming-out-later-in-life",
+    "grief-doesnt-follow-a-timeline-lgbtq",
+    "code-switching-microaggressions-and-mental-health"
+  ],
+  "loneliness-and-mental-health": [
+    "why-talking-to-friends-isnt-enough",
+    "moving-abroad-expat-mental-health",
+    "men-asking-for-help"
+  ],
+  "men-asking-for-help": [
+    "why-talking-to-friends-isnt-enough",
+    "loneliness-and-mental-health",
+    "nhs-mental-health-funding-what-it-means-for-you"
+  ],
+  "menopause-and-mental-health": [
+    "couples-therapy",
+    "attachment-styles-and-relationships",
+    "why-sleep-and-mental-health-are-connected"
+  ],
+  "moving-abroad-expat-mental-health": [
+    "loneliness-and-mental-health",
+    "cultural-identity-family-expectations",
+    "starting-university-students-and-parents"
+  ],
+  "nhs-mental-health-funding-what-it-means-for-you": [
+    "uk-mental-health-act-what-it-means-for-you",
+    "why-talking-to-friends-isnt-enough",
+    "loneliness-and-mental-health"
+  ],
+  "perfectionism-and-anxiety": [
+    "burnout-recognising-the-signs",
+    "social-anxiety-what-it-really-is-and-how-therapy-helps",
+    "you-are-not-lazy-you-are-depleted"
+  ],
+  "signed-off-with-stress-what-helps": [
+    "burnout-recognising-the-signs",
+    "you-are-not-lazy-you-are-depleted",
+    "will-ai-take-my-job"
+  ],
+  "social-anxiety-what-it-really-is-and-how-therapy-helps": [
+    "perfectionism-and-anxiety",
+    "starting-university-students-and-parents",
+    "why-talking-to-friends-isnt-enough"
+  ],
+  "starting-university-students-and-parents": [
+    "moving-abroad-expat-mental-health",
+    "loneliness-and-mental-health",
+    "social-anxiety-what-it-really-is-and-how-therapy-helps"
+  ],
+  "trauma-and-the-body": [
+    "why-sleep-and-mental-health-are-connected",
+    "you-are-not-lazy-you-are-depleted",
+    "why-you-cant-stop-doomscrolling"
+  ],
+  "uk-mental-health-act-what-it-means-for-you": [
+    "nhs-mental-health-funding-what-it-means-for-you",
+    "why-talking-to-friends-isnt-enough",
+    "men-asking-for-help"
+  ],
+  "why-sleep-and-mental-health-are-connected": [
+    "why-you-cant-stop-doomscrolling",
+    "menopause-and-mental-health",
+    "trauma-and-the-body"
+  ],
+  "why-talking-to-friends-isnt-enough": [
+    "loneliness-and-mental-health",
+    "men-asking-for-help",
+    "uk-mental-health-act-what-it-means-for-you"
+  ],
+  "why-you-cant-stop-doomscrolling": [
+    "why-sleep-and-mental-health-are-connected",
+    "you-are-not-lazy-you-are-depleted",
+    "will-ai-take-my-job"
+  ],
+  "will-ai-take-my-job": [
+    "signed-off-with-stress-what-helps",
+    "burnout-recognising-the-signs",
+    "why-you-cant-stop-doomscrolling"
+  ],
+  "you-are-not-lazy-you-are-depleted": [
+    "burnout-recognising-the-signs",
+    "why-sleep-and-mental-health-are-connected",
+    "perfectionism-and-anxiety"
+  ]
+}
