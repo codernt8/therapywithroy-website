@@ -211,41 +211,6 @@
   <div class="blog-hero">
     <img src="images/what-therapy-actually-is-main.webp" alt="An East Asian man in his mid-30s with short black hair and light stubble, wearing a charcoal henley, sits at a white kitchen island in a bright modern apartment, resting his chin on his fist as he follows an online session on his laptop" class="blog-hero-img" id="hero-img-display" width="1400" height="781" style="object-position: center 15%;" />
 
-  <!-- DRAFT REVIEW ONLY: image picker, remove before publishing -->
-  <div style="background:#f0f4f4;border:2px dashed #4a6e6f;padding:1.2rem 2rem;max-width:760px;margin:1rem auto 0;border-radius:4px;font-family:Inter,sans-serif;">
-    <p style="font-size:0.8rem;color:#4a6e6f;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1rem;">Draft review: choose hero image</p>
-    <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-      <label style="cursor:pointer;flex:1;min-width:160px;">
-        <input type="radio" name="img-pick" value="what-therapy-actually-is-main.webp" data-pos="center 15%" data-alt="An East Asian man in his mid-30s with short black hair and light stubble, wearing a charcoal henley, sits at a white kitchen island in a bright modern apartment, resting his chin on his fist as he follows an online session on his laptop" checked style="margin-bottom:0.4rem;" />
-        <img src="images/what-therapy-actually-is-main.webp" class="pick-thumb" width="1400" height="781" loading="lazy" style="width:100%;height:auto;border-radius:3px;border:3px solid #4a6e6f;" />
-        <span style="font-size:0.75rem;color:#4a5e5e;display:block;margin-top:0.3rem;">Main: man at kitchen island, bright modern apartment, chin on fist</span>
-      </label>
-      <label style="cursor:pointer;flex:1;min-width:160px;">
-        <input type="radio" name="img-pick" value="what-therapy-actually-is-alt1.webp" data-pos="center 5%" data-alt="An East Asian man in his early 30s in a light grey sweater sits on a grey sofa in a modern apartment with floor-to-ceiling windows, looking thoughtfully at a laptop on the coffee table during an online session" style="margin-bottom:0.4rem;" />
-        <img src="images/what-therapy-actually-is-alt1.webp" class="pick-thumb" width="1400" height="781" loading="lazy" style="width:100%;height:auto;border-radius:3px;border:3px solid transparent;" />
-        <span style="font-size:0.75rem;color:#4a5e5e;display:block;margin-top:0.3rem;">Alt 1: man on sofa, floor-to-ceiling windows, laptop on coffee table</span>
-      </label>
-      <label style="cursor:pointer;flex:1;min-width:160px;">
-        <input type="radio" name="img-pick" value="what-therapy-actually-is-alt2.webp" data-pos="center 10%" data-alt="An East Asian man in his mid-30s in a navy jumper sits at a wooden desk beside a large window with autumn trees outside, resting his chin on his hand next to an open laptop" style="margin-bottom:0.4rem;" />
-        <img src="images/what-therapy-actually-is-alt2.webp" class="pick-thumb" width="1400" height="781" loading="lazy" style="width:100%;height:auto;border-radius:3px;border:3px solid transparent;" />
-        <span style="font-size:0.75rem;color:#4a5e5e;display:block;margin-top:0.3rem;">Alt 2: man at desk by the window, autumn trees outside, chin on hand</span>
-      </label>
-    </div>
-    <p style="font-size:0.78rem;color:#7a9090;margin-top:0.8rem;">Click an image above to preview it as the hero. Tell Roy which filename to use when approving.</p>
-  </div>
-  <script>
-    document.querySelectorAll('input[name="img-pick"]').forEach(function(r) {
-      r.addEventListener('change', function() {
-        var hero = document.getElementById('hero-img-display');
-        hero.src = 'images/' + r.value;
-        hero.style.objectPosition = r.dataset.pos;
-        hero.alt = r.dataset.alt;
-        document.querySelectorAll('.pick-thumb').forEach(function(i) { i.style.borderColor = 'transparent'; });
-        r.parentElement.querySelector('.pick-thumb').style.borderColor = '#4a6e6f';
-      });
-    });
-  </script>
-
     <div class="blog-hero-inner">
       <p class="blog-breadcrumb"><a href="/blog/">Blog</a> &rsaquo; Understanding Therapy</p>
       <span class="blog-category">Understanding Therapy</span>
@@ -276,7 +241,7 @@
 
     <p>Some of the most meaningful work I do with clients is not with people in acute crisis. It is with people who are functioning, holding things together, meeting their responsibilities, and carrying something underneath all of that which they cannot quite name or shift on their own. Persistent low mood, a recurring pattern in relationships, a creeping sense that life is going through the motions rather than actually being lived. These are not dramatic. They are also not nothing.</p>
 
-    <p>The <a href="https://www.apa.org/topics/psychotherapy/understanding" class="outbound" target="_blank" rel="noopener noreferrer">American Psychological Association is clear</a> that therapy is appropriate across a wide range of situations, from serious mental health conditions to ordinary life difficulties, career transitions, relationship patterns, and questions about identity and direction. You do not need a diagnosis to benefit from therapy. You need to be willing to show up and think.</p>
+    <p><a href="https://www.mind.org.uk/information-support/drugs-and-treatments/talking-therapy-and-counselling/understanding-therapy-and-counselling/" class="outbound" target="_blank" rel="noopener noreferrer">Mind&rsquo;s guide to therapy and counselling</a> describes therapy as a common treatment for mental health issues, and also lists difficult emotions such as grief and low self-esteem, difficult life events such as bereavement or losing your job, and major life changes among the things it can help with. You do not need a diagnosis to benefit from therapy. You need to be willing to show up and think.</p>
 
     <h2>Myth Two: The Therapist Will Tell You What to Do</h2>
 
@@ -286,7 +251,7 @@
 
     <p>What I do in a session is not give advice in the conventional sense. I ask questions. I reflect back what I am hearing, including things that might not be fully conscious yet. I notice patterns and name them. I create enough space for you to hear yourself more clearly. The insights that emerge in that process tend to be more durable and more genuinely useful than any advice I could offer, because they come from you.</p>
 
-    <p>That said, therapy is not entirely passive either. Depending on the modality, such as CBT, the work may involve specific tools, exercises, or frameworks that you practise between sessions. <a href="https://www.mind.org.uk/information-support/drugs-and-treatments/cognitive-behavioural-therapy-cbt/about-cbt/" class="outbound" target="_blank" rel="noopener noreferrer">Mind&rsquo;s guide to CBT</a> gives a good overview of what that more structured approach involves.</p>
+    <p>That said, therapy is not entirely passive either. Depending on the modality, such as CBT, the work may involve specific tools, exercises, or frameworks that you practise between sessions. <a href="https://www.mind.org.uk/information-support/drugs-and-treatments/talking-therapy-and-counselling/cognitive-behavioural-therapy-cbt/" class="outbound" target="_blank" rel="noopener noreferrer">Mind&rsquo;s guide to CBT</a> gives a good overview of what that more structured approach involves.</p>
 
     <div class="blog-pullquote">
       <p>The insights that come from therapy tend to be more durable because they are yours. A therapist who simply handed you the answers would be doing you a disservice.</p>
@@ -308,7 +273,7 @@
 
     <p>This is another legacy of psychoanalytic therapy, where long-term, open-ended work is the norm. For many people and many presenting concerns, this is not what is needed.</p>
 
-    <p>The <a href="https://www.nhs.uk/mental-health/talking-therapies-medicine-treatments/talking-therapies-and-counselling/types-of-talking-therapies/" class="outbound" target="_blank" rel="noopener noreferrer">NHS talking therapies</a> overview notes that many evidence-based treatments, including CBT for anxiety and depression, are typically delivered over six to twenty sessions. Some people find a relatively short course of therapy gives them what they need. Others find they want to continue working over a longer period, because the questions they are exploring are deeper or more complex. Neither is wrong.</p>
+    <p>The <a href="https://www.nhs.uk/tests-and-treatments/cognitive-behavioural-therapy-cbt/" class="outbound" target="_blank" rel="noopener noreferrer">NHS page on CBT</a> says you will usually have between 5 and 15 sessions, depending on what you are having it for. Some people find a relatively short course of therapy gives them what they need. Others find they want to continue working over a longer period, because the questions they are exploring are deeper or more complex. Neither is wrong.</p>
 
     <p>I tend to work in an open-ended way, meaning we do not set a fixed number of sessions at the outset, but we do keep checking in on how the work is going and whether it is still useful. The pace and duration are shaped by you and your situation, not by a predetermined structure.</p>
 
@@ -316,15 +281,15 @@
 
     <p>At its core, therapy is a structured, confidential relationship in which you have space to explore what is happening for you, with a trained professional whose job is to listen carefully, ask useful questions, and help you understand yourself more fully.</p>
 
-    <p>It is not a friendship, though it has warmth in it. It is not a transaction, though it has a professional frame around it. It is not advice, though it offers reflection. The therapeutic relationship itself, the quality of trust, honesty, and genuine attention that develops over time, is often one of the most significant factors in whether therapy is useful. Research consistently shows that the relationship between therapist and client is one of the strongest predictors of good outcomes, independent of the specific modality being used.</p>
+    <p>It is not a friendship, though it has warmth in it. It is not a transaction, though it has a professional frame around it. It is not advice, though it offers reflection. The therapeutic relationship itself, the quality of trust, honesty, and genuine attention that develops over time, is often one of the most significant factors in whether therapy is useful. <a href="https://www.mind.org.uk/information-support/drugs-and-treatments/talking-therapy-and-counselling/understanding-therapy-and-counselling/" class="outbound" target="_blank" rel="noopener noreferrer">Mind notes</a> that research shows the relationship you develop with your therapist makes a big difference, and that it can be as important as the type of therapy, or even more important.</p>
 
-    <p><a href="https://www.psychologytoday.com/gb/basics/therapy" class="outbound" target="_blank" rel="noopener noreferrer">Psychology Today&rsquo;s guide to therapy</a> covers what to look for in a therapist, what a first session typically involves, and what good therapy generally feels like. It is a useful starting point if you are still weighing up the decision.</p>
+    <p><a href="https://www.mind.org.uk/information-support/drugs-and-treatments/talking-therapy-and-counselling/what-to-expect-from-therapy/" class="outbound" target="_blank" rel="noopener noreferrer">Mind&rsquo;s guide to what to expect from therapy</a> covers what a first session typically involves, what a therapist should explain to you, and why it matters that you feel comfortable with them. It is a useful starting point if you are still weighing up the decision.</p>
 
     <p>One thing I would add from my own practice: therapy does not have to feel dramatic to be working. Some of the most significant shifts happen quietly. A reframe that changes how you see a situation. A pattern that becomes visible and, in becoming visible, loses some of its grip. A clearer sense of what you actually want, as distinct from what you have always assumed you should want.</p>
 
     <h2>How to Find the Right Therapist</h2>
 
-    <p>Not every therapist is right for every person. Finding someone you feel comfortable with, whose approach makes sense to you, matters a great deal. The <a href="https://www.bacp.co.uk/search/Therapists" class="outbound" target="_blank" rel="noopener noreferrer">BACP therapist directory</a> is one of the most reliable places to search for accredited therapists in the UK. BACP membership means the therapist is working to a professional code of ethics and has met specific training requirements. The <a href="https://www.counselling-directory.org.uk/counselling.html" class="outbound" target="_blank" rel="noopener noreferrer">Counselling Directory</a> is another useful resource, with profiles from therapists across a wide range of specialisms.</p>
+    <p>Not every therapist is right for every person. Finding someone you feel comfortable with, whose approach makes sense to you, matters a great deal. The <a href="https://www.bacp.co.uk/about-therapy/using-our-therapist-directory/" class="outbound" target="_blank" rel="noopener noreferrer">BACP therapist directory</a> is one of the most reliable places to search for a therapist in the UK. Anyone can call themselves a counsellor, so it helps that BACP says only registered or accredited members can advertise on its directory, and that those listed meet its standards for training, experience and ethical practice.</p>
 
     <p>Most therapists, myself included, offer an initial consultation. This is not a commitment to ongoing work. It is a conversation: a chance to get a sense of the person, ask questions about how they work, and decide whether it feels like the right fit. I offer a free 15 to 30 minute initial consultation for exactly this reason.</p>
 
