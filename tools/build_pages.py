@@ -340,9 +340,9 @@ def main():
     modals = read("tools/templates/modals.html")
     template = read("tools/templates/service-page.html")
     index = read("index.html")
-    favicon_lines = re.findall(r'^\s*<link rel="(?:icon|shortcut icon)"[^\n]*$', index, re.M)
-    if len(favicon_lines) != 2:
-        sys.exit("Could not find the two favicon links in index.html")
+    favicon_lines = re.findall(r'^\s*<link rel="(?:icon|shortcut icon|apple-touch-icon)"[^\n]*$', index, re.M)
+    if len(favicon_lines) != 4:
+        sys.exit("Could not find the four favicon links in index.html")
     favicon = "\n".join(favicon_lines)
     cards = blog_cards()
     services = load_json("tools/content/services.json")
