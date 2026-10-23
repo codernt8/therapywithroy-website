@@ -74,11 +74,6 @@
     "social-anxiety-what-it-really-is-and-how-therapy-helps",
     "you-are-not-lazy-you-are-depleted"
   ],
-  "seasonal-affective-disorder-shorter-days": [
-    "loneliness-and-mental-health",
-    "why-sleep-and-mental-health-are-connected",
-    "burnout-recognising-the-signs"
-  ],
   "signed-off-with-stress-what-helps": [
     "burnout-recognising-the-signs",
     "you-are-not-lazy-you-are-depleted",
@@ -104,11 +99,6 @@
     "why-talking-to-friends-isnt-enough",
     "men-asking-for-help"
   ],
-  "what-therapy-actually-is": [
-    "why-talking-to-friends-isnt-enough",
-    "men-asking-for-help",
-    "couples-therapy"
-  ],
   "why-sleep-and-mental-health-are-connected": [
     "why-you-cant-stop-doomscrolling",
     "menopause-and-mental-health",
@@ -133,5 +123,15 @@
     "burnout-recognising-the-signs",
     "why-sleep-and-mental-health-are-connected",
     "perfectionism-and-anxiety"
+  ],
+  "seasonal-affective-disorder-shorter-days": [
+    "loneliness-and-mental-health",
+    "why-sleep-and-mental-health-are-connected",
+    "burnout-recognising-the-signs"
+  ],
+  "what-therapy-actually-is": [
+    "why-talking-to-friends-isnt-enough",
+    "men-asking-for-help",
+    "couples-therapy"
   ]
 }
