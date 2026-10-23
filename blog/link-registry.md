@@ -237,3 +237,13 @@ Update this file as part of the publish step whenever a new post goes live.
 | https://www.nhs.uk/conditions/menopause-and-perimenopause/symptoms/ | NHS lists |
 | https://commonslibrary.parliament.uk/research-briefings/cbp-10349/ | House of Commons Library briefing on World Menopause Day |
 | https://www.nhs.uk/conditions/menopause-and-perimenopause/treatment/ | NHS treatment guidance |
+
+---
+
+## seasonal-affective-disorder-shorter-days
+
+| URL | Anchor Text |
+|-----|-------------|
+| https://www.nhs.uk/mental-health/conditions/seasonal-affective-disorder-sad/ | NHS describes seasonal affective disorder (SAD) |
+| https://www.mind.org.uk/information-support/types-of-mental-health-problems/seasonal-affective-disorder-sad/understanding-your-experiences/ | Mind is clear |
+| https://www.nhs.uk/tests-and-treatments/talking-therapies/ | NHS talking therapies |
