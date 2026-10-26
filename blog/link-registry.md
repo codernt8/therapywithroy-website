@@ -247,3 +247,28 @@ Update this file as part of the publish step whenever a new post goes live.
 | https://www.nhs.uk/mental-health/conditions/seasonal-affective-disorder-sad/ | NHS describes seasonal affective disorder (SAD) |
 | https://www.mind.org.uk/information-support/types-of-mental-health-problems/seasonal-affective-disorder-sad/understanding-your-experiences/ | Mind is clear |
 | https://www.nhs.uk/tests-and-treatments/talking-therapies/ | NHS talking therapies |
+
+---
+
+## ivf-infertility-and-the-strain-on-couples
+
+| URL | Anchor Text |
+|-----|-------------|
+| https://www.theguardian.com/lifeandstyle/2026/oct/25/greg-wise-on-how-he-and-emma-thompson-coped-with-failed-ivf-we-hit-an-existential-crisis-she-was-not-a-proper-woman-and-i-was-not-a-proper-man | Greg Wise’s interview in the Guardian |
+| https://www.nhs.uk/conditions/infertility/ | NHS information on infertility |
+| https://www.hfea.gov.uk/treatments/explore-all-treatments/getting-emotional-support | HFEA’s page on getting emotional support |
+| https://fertilitynetworkuk.org/ | Fertility Network UK |
+| https://www.nhs.uk/tests-and-treatments/talking-therapies/ | NHS talking therapies |
+
+---
+
+## gender-dysphoria-what-it-is-and-how-therapy-helps
+
+| URL | Anchor Text |
+|-----|-------------|
+| https://www.nhs.uk/conditions/gender-dysphoria/ | NHS describes gender dysphoria |
+| https://www.gov.uk/government/news/support-for-adults-facing-staggering-waits-for-gender-services | Support for adults facing staggering waits for gender services |
+| https://www.nhs.uk/tests-and-treatments/talking-therapies/ | NHS talking therapies |
+| https://switchboard.lgbt/ | Switchboard |
+| https://genderedintelligence.co.uk/ | Gendered Intelligence |
+| https://www.bacp.co.uk/events-and-resources/ethics-and-standards/good-practice-across-the-counselling-professions/gpacp001-gender-sexual-and-relationship-diversity | good practice guidance on gender, sexual and relationship diversity |
