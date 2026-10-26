@@ -17,17 +17,17 @@
   "coming-out-later-in-life": [
     "lgbtq-mental-health",
     "grief-doesnt-follow-a-timeline-lgbtq",
-    "gender-dysphoria-what-it-is-and-how-therapy-helps"
+    "cultural-identity-family-expectations"
   ],
   "couples-therapy": [
     "attachment-styles-and-relationships",
     "menopause-and-mental-health",
-    "ivf-infertility-and-the-strain-on-couples"
+    "why-talking-to-friends-isnt-enough"
   ],
   "cultural-identity-family-expectations": [
     "code-switching-microaggressions-and-mental-health",
     "moving-abroad-expat-mental-health",
-    "gender-dysphoria-what-it-is-and-how-therapy-helps"
+    "family-estrangement-and-mental-health"
   ],
   "family-estrangement-and-mental-health": [
     "attachment-styles-and-relationships",
@@ -37,12 +37,12 @@
   "grief-doesnt-follow-a-timeline-lgbtq": [
     "lgbtq-mental-health",
     "coming-out-later-in-life",
-    "ivf-infertility-and-the-strain-on-couples"
+    "loneliness-and-mental-health"
   ],
   "lgbtq-mental-health": [
     "coming-out-later-in-life",
     "grief-doesnt-follow-a-timeline-lgbtq",
-    "gender-dysphoria-what-it-is-and-how-therapy-helps"
+    "code-switching-microaggressions-and-mental-health"
   ],
   "loneliness-and-mental-health": [
     "why-talking-to-friends-isnt-enough",
@@ -57,7 +57,7 @@
   "menopause-and-mental-health": [
     "couples-therapy",
     "attachment-styles-and-relationships",
-    "ivf-infertility-and-the-strain-on-couples"
+    "why-sleep-and-mental-health-are-connected"
   ],
   "moving-abroad-expat-mental-health": [
     "loneliness-and-mental-health",
@@ -128,15 +128,5 @@
     "loneliness-and-mental-health",
     "why-sleep-and-mental-health-are-connected",
     "burnout-recognising-the-signs"
-  ],
-  "ivf-infertility-and-the-strain-on-couples": [
-    "couples-therapy",
-    "menopause-and-mental-health",
-    "grief-doesnt-follow-a-timeline-lgbtq"
-  ],
-  "gender-dysphoria-what-it-is-and-how-therapy-helps": [
-    "lgbtq-mental-health",
-    "coming-out-later-in-life",
-    "cultural-identity-family-expectations"
   ]
 }
