@@ -1,26 +1,44 @@
-// Loads the shared footer and initialises cookie banner + GA logic after injection
+// Loads the shared footer and initialises cookie banner + Google tag consent logic after injection
 (function() {
   var GA_ID = 'G-EZDPQG16PQ';
+  var ADS_ID = 'AW-18385023405';
   var CONSENT_KEY = 'cookie-consent';
 
-  function loadGA() {
-    if (window._gaLoaded) return;
-    window._gaLoaded = true;
-    var s = document.createElement('script');
-    s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
-    document.head.appendChild(s);
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    window.gtag = gtag;
-    gtag('js', new Date());
-    gtag('config', GA_ID, { 'anonymize_ip': true });
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  window.gtag = gtag;
+
+  // Consent Mode v2: everything starts denied. Until the visitor accepts, Google
+  // tags send cookieless pings only and set no cookies.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'analytics_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied'
+  });
+
+  // Accept grants analytics and ad measurement. ad_personalization is never
+  // granted, so no remarketing audiences are built from visits to a therapy site.
+  function grantConsent() {
+    gtag('consent', 'update', {
+      'ad_storage': 'granted',
+      'analytics_storage': 'granted',
+      'ad_user_data': 'granted'
+    });
   }
 
-  // Fire GA immediately if already accepted (e.g. returning visitor)
+  // Returning visitor who already accepted: grant before the tag configures
   if (localStorage.getItem(CONSENT_KEY) === 'accepted') {
-    loadGA();
+    grantConsent();
   }
+
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+  document.head.appendChild(s);
+  gtag('js', new Date());
+  gtag('config', GA_ID, { 'anonymize_ip': true });
+  gtag('config', ADS_ID, { 'allow_ad_personalization_signals': false });
 
   fetch('/footer.html')
     .then(function(res) { return res.text(); })
@@ -65,7 +83,7 @@
       acceptBtn.addEventListener('click', function() {
         localStorage.setItem(CONSENT_KEY, 'accepted');
         banner.style.display = 'none';
-        loadGA();
+        grantConsent();
       });
     }
 
