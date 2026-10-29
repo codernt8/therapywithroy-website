@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://therapywithroy.co.uk/blog/</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -44,7 +44,7 @@
   </url>
   <url>
     <loc>https://therapywithroy.co.uk/privacy-policy</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -177,6 +177,12 @@
   <url>
     <loc>https://therapywithroy.co.uk/blog/uk-mental-health-act-what-it-means-for-you</loc>
     <lastmod>2026-05-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://therapywithroy.co.uk/blog/what-therapy-actually-is</loc>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
