@@ -2,7 +2,7 @@
   "attachment-styles-and-relationships": [
     "couples-therapy",
     "family-estrangement-and-mental-health",
-    "trauma-and-the-body"
+    "ivf-and-mental-health"
   ],
   "burnout-recognising-the-signs": [
     "you-are-not-lazy-you-are-depleted",
@@ -22,7 +22,7 @@
   "couples-therapy": [
     "attachment-styles-and-relationships",
     "what-therapy-actually-is",
-    "why-talking-to-friends-isnt-enough"
+    "ivf-and-mental-health"
   ],
   "cultural-identity-family-expectations": [
     "code-switching-microaggressions-and-mental-health",
@@ -57,7 +57,7 @@
   "menopause-and-mental-health": [
     "couples-therapy",
     "attachment-styles-and-relationships",
-    "why-sleep-and-mental-health-are-connected"
+    "ivf-and-mental-health"
   ],
   "moving-abroad-expat-mental-health": [
     "loneliness-and-mental-health",
@@ -133,5 +133,10 @@
     "why-talking-to-friends-isnt-enough",
     "men-asking-for-help",
     "couples-therapy"
+  ],
+  "ivf-and-mental-health": [
+    "couples-therapy",
+    "menopause-and-mental-health",
+    "men-asking-for-help"
   ]
 }

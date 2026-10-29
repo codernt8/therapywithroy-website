@@ -259,3 +259,14 @@ Update this file as part of the publish step whenever a new post goes live.
 | https://www.nhs.uk/tests-and-treatments/cognitive-behavioural-therapy-cbt/ | The NHS page on CBT |
 | https://www.mind.org.uk/information-support/drugs-and-treatments/talking-therapy-and-counselling/what-to-expect-from-therapy/ | Mind's guide to what to expect from therapy |
 | https://www.bacp.co.uk/about-therapy/using-our-therapist-directory/ | The BACP therapist directory |
+
+---
+
+## ivf-and-mental-health
+
+| URL | Anchor Text |
+|-----|-------------|
+| https://www.nhs.uk/tests-and-treatments/ivf/ | NHS describes IVF; NHS recommends counselling |
+| https://www.nhs.uk/conditions/infertility/ | NHS says |
+| https://fertilitynetworkuk.org/learn-about-fertility/emotional-impact/ | Fertility Network UK; men experience the pain and grief |
+| https://www.hfea.gov.uk/treatments/explore-all-treatments/getting-emotional-support/ | HFEA, which regulates fertility clinics |
