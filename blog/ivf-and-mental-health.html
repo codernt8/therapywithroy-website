@@ -321,30 +321,6 @@
     <a href="/blog/">&larr; Back to all articles</a>
   </div>
 
-    <!-- DRAFT REVIEW ONLY: image picker, remove before publishing -->
-  <div id="draft-picker" style="position:fixed;bottom:12px;left:12px;z-index:9999;background:#fff;border:2px solid #c9a96e;border-radius:8px;padding:10px 14px;font:14px/1.5 Inter,sans-serif;box-shadow:0 2px 10px rgba(0,0,0,.2);max-width:320px;">
-    <strong>Draft review: choose hero image</strong><br>
-    <label><input type="radio" name="heropick" value="main" checked> Main: couple on the front step</label><br>
-    <label><input type="radio" name="heropick" value="alt1"> Alt 1: two women at the kitchen table</label><br>
-    <label><input type="radio" name="heropick" value="alt2"> Alt 2: man in the parked car</label>
-  </div>
-  <script>
-    (function(){
-      var opts = {
-        main: {src: "images/ivf-and-mental-health-main.webp", pos: "center 40%", alt: "A Black British woman and her husband sit side by side on the front step of a red-brick terraced house at dusk in early November, both looking down, his hand resting on her back, warm light from the open front door behind them"},
-        alt1: {src: "images/ivf-and-mental-health-alt1.webp", pos: "center 40%", alt: "Two women sit at opposite ends of a wooden kitchen table in a quietly lit kitchen on a rainy early-November evening, one looking down at her mug, the other looking across at her partner"},
-        alt2: {src: "images/ivf-and-mental-health-alt2.webp", pos: "center 45%", alt: "A South Asian British man in his late 30s sits in a parked car on a rainy early-November evening, both hands on the steering wheel, looking ahead with a tired, burdened expression under an orange streetlight"}
-      };
-      document.querySelectorAll('input[name="heropick"]').forEach(function(r){
-        r.addEventListener('change', function(){
-          var o = opts[r.value], img = document.getElementById('hero-img-display');
-          img.src = o.src; img.alt = o.alt; img.style.objectPosition = o.pos;
-        });
-      });
-    })();
-  </script>
-  <!-- END DRAFT REVIEW ONLY -->
-
   <div id="shared-footer"></div>
 
   <div class="modal-overlay" id="bookingModal" role="dialog" aria-modal="true" aria-label="Book a free consultation">
