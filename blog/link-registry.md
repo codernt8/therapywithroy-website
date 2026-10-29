@@ -247,3 +247,15 @@ Update this file as part of the publish step whenever a new post goes live.
 | https://www.nhs.uk/mental-health/conditions/seasonal-affective-disorder-sad/ | NHS describes seasonal affective disorder (SAD) |
 | https://www.mind.org.uk/information-support/types-of-mental-health-problems/seasonal-affective-disorder-sad/understanding-your-experiences/ | Mind is clear |
 | https://www.nhs.uk/tests-and-treatments/talking-therapies/ | NHS talking therapies |
+
+---
+
+## what-therapy-actually-is
+
+| URL | Anchor Text |
+|-----|-------------|
+| https://www.mind.org.uk/information-support/drugs-and-treatments/talking-therapy-and-counselling/understanding-therapy-and-counselling/ | Mind's guide to therapy and counselling; Mind notes |
+| https://www.mind.org.uk/information-support/drugs-and-treatments/talking-therapy-and-counselling/cognitive-behavioural-therapy-cbt/ | Mind's guide to CBT |
+| https://www.nhs.uk/tests-and-treatments/cognitive-behavioural-therapy-cbt/ | The NHS page on CBT |
+| https://www.mind.org.uk/information-support/drugs-and-treatments/talking-therapy-and-counselling/what-to-expect-from-therapy/ | Mind's guide to what to expect from therapy |
+| https://www.bacp.co.uk/about-therapy/using-our-therapist-directory/ | The BACP therapist directory |
